@@ -4,20 +4,22 @@
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Demos | DEEPBYTO</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>NOVA — Modern Essentials</title>
 
   <meta
     name="description"
-    content="Explore professional website demos and digital experiences developed by DEEPBYTO."
+    content="NOVA — a modern e-commerce website concept developed by DEEPBYTO."
   >
 
-  <meta name="robots" content="index, follow">
-
-  <link
-    rel="canonical"
-    href="https://deepbyto.github.io/demos/"
+  <meta
+    name="robots"
+    content="index, follow"
   >
 
   <link
@@ -26,71 +28,9 @@
     type="image/x-icon"
   >
 
-  <link
-    rel="shortcut icon"
-    href="https://deepbyto.github.io/favicon.ico"
-    type="image/x-icon"
-  >
+  <!-- Google Fonts -->
 
-  <meta name="theme-color" content="#000000">
-
-  <meta
-    property="og:title"
-    content="Website Demos | DEEPBYTO"
-  >
-
-  <meta
-    property="og:description"
-    content="Explore professional website demos and digital experiences developed by DEEPBYTO."
-  >
-
-  <meta
-    property="og:image"
-    content="https://deepbyto.github.io/image.jpg"
-  >
-
-  <meta
-    property="og:url"
-    content="https://deepbyto.github.io/demos/"
-  >
-
-  <meta
-    property="og:type"
-    content="website"
-  >
-
-  <meta
-    property="og:site_name"
-    content="DEEPBYTO"
-  >
-
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  >
-
-  <meta
-    name="twitter:title"
-    content="Website Demos | DEEPBYTO"
-  >
-
-  <meta
-    name="twitter:description"
-    content="Explore professional website demos and digital experiences developed by DEEPBYTO."
-  >
-
-  <meta
-    name="twitter:image"
-    content="https://deepbyto.github.io/image.jpg"
-  >
-
-
-  <!-- Fonts -->
-
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link
     rel="preconnect"
@@ -99,49 +39,23 @@
   >
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
     rel="stylesheet"
   >
-
 
   <!-- Font Awesome -->
 
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   >
-
-
-  <!-- Google Analytics -->
-
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-TLW2YM03KC">
-  </script>
-
-  <script>
-
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag(){
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag(
-      'config',
-      'G-TLW2YM03KC'
-    );
-
-  </script>
 
 
   <style>
 
-    /* =========================================
+    /* =====================================================
        RESET
-       ========================================= */
+       ===================================================== */
 
     * {
       margin: 0;
@@ -152,878 +66,274 @@
 
     :root {
 
-      --bg-primary: #000000;
+      --black: #111111;
 
-      --bg-secondary: #080808;
+      --white: #ffffff;
 
-      --bg-card: rgba(18,18,18,0.86);
+      --cream: #f7f5f1;
 
-      --text-primary: #ffffff;
+      --soft: #efede8;
 
-      --text-secondary: #dddddd;
+      --gray: #777777;
 
-      --text-muted: #999999;
+      --light-gray: #eeeeee;
 
-      --accent: #ffffff;
+      --border: #dddddd;
 
-      --accent-dim: rgba(255,255,255,0.08);
+      --dark-border: #252525;
 
-      --accent-glow: rgba(255,255,255,0.18);
+      --gold: #b08a4a;
 
-      --border: rgba(255,255,255,0.10);
-
-      --border-hover: rgba(255,255,255,0.45);
-
-      --nav-bg: rgba(0,0,0,0.72);
-
-      --nav-scrolled: rgba(0,0,0,0.96);
-
-      --shadow: rgba(0,0,0,0.65);
-
-      --radius: 18px;
+      --shadow:
+        0 15px 45px rgba(0,0,0,0.08);
 
       --transition:
         0.35s cubic-bezier(0.25,0.46,0.45,0.94);
 
-      --font-sans:
+      --sans:
         'Inter',
-        -apple-system,
-        BlinkMacSystemFont,
-        'Segoe UI',
-        Roboto,
+        Arial,
         sans-serif;
 
-      --font-display:
-        'Orbitron',
-        'Inter',
-        sans-serif;
+      --serif:
+        'Playfair Display',
+        Georgia,
+        serif;
     }
 
-
-    /* =========================================
-       LIGHT MODE
-       ========================================= */
-
-    [data-theme="light"] {
-
-      --bg-primary: #f5f5f5;
-
-      --bg-secondary: #eeeeee;
-
-      --bg-card: rgba(255,255,255,0.88);
-
-      --text-primary: #111111;
-
-      --text-secondary: #333333;
-
-      --text-muted: #666666;
-
-      --accent: #000000;
-
-      --accent-dim: rgba(0,0,0,0.06);
-
-      --accent-glow: rgba(0,0,0,0.12);
-
-      --border: rgba(0,0,0,0.10);
-
-      --border-hover: rgba(0,0,0,0.35);
-
-      --nav-bg: rgba(255,255,255,0.82);
-
-      --nav-scrolled: rgba(255,255,255,0.96);
-
-      --shadow: rgba(0,0,0,0.15);
-    }
-
-
-    /* =========================================
-       BASE
-       ========================================= */
 
     html {
 
       scroll-behavior: smooth;
-
-      -webkit-font-smoothing: antialiased;
     }
 
 
     body {
 
-      font-family: var(--font-sans);
+      font-family: var(--sans);
 
-      background: var(--bg-primary);
+      color: var(--black);
 
-      color: var(--text-primary);
+      background: var(--white);
 
       line-height: 1.6;
 
       overflow-x: hidden;
-
-      transition:
-        background 0.4s ease,
-        color 0.3s ease;
     }
 
 
-    ::selection {
+    body.no-scroll {
 
-      background: var(--accent);
+      overflow: hidden;
+    }
 
-      color: var(--bg-primary);
+
+    img {
+
+      width: 100%;
+
+      display: block;
     }
 
 
     a {
 
-      color: var(--text-primary);
+      color: inherit;
 
       text-decoration: none;
     }
 
 
-    button {
+    button,
+    input {
 
       font-family: inherit;
     }
 
 
-    /* =========================================
-       BACKGROUND GRID
-       ========================================= */
+    button {
 
-    .background-grid {
-
-      position: fixed;
-
-      inset: 0;
-
-      pointer-events: none;
-
-      z-index: 0;
-
-      opacity: 0.25;
-
-      background-image:
-
-        linear-gradient(
-          rgba(255,255,255,0.025) 1px,
-          transparent 1px
-        ),
-
-        linear-gradient(
-          90deg,
-          rgba(255,255,255,0.025) 1px,
-          transparent 1px
-        );
-
-      background-size: 60px 60px;
+      cursor: pointer;
     }
 
 
-    [data-theme="light"] .background-grid {
+    ::selection {
 
-      opacity: 0.18;
+      background: var(--black);
 
-      background-image:
-
-        linear-gradient(
-          rgba(0,0,0,0.035) 1px,
-          transparent 1px
-        ),
-
-        linear-gradient(
-          90deg,
-          rgba(0,0,0,0.035) 1px,
-          transparent 1px
-        );
+      color: var(--white);
     }
 
 
-    /* =========================================
-       CONTAINER
-       ========================================= */
+    /* =====================================================
+       ANNOUNCEMENT
+       ===================================================== */
 
-    .container {
+    .announcement {
 
-      width: 100%;
+      min-height: 38px;
 
-      max-width: 1240px;
+      display: flex;
 
-      margin: 0 auto;
+      align-items: center;
 
-      padding-left: 24px;
+      justify-content: center;
 
-      padding-right: 24px;
+      padding: 8px 20px;
 
-      position: relative;
+      background: var(--black);
 
-      z-index: 2;
+      color: var(--white);
+
+      text-align: center;
+
+      font-size: 0.72rem;
+
+      letter-spacing: 0.08em;
+
+      text-transform: uppercase;
     }
 
 
-    /* =========================================
-       NAVBAR
-       ========================================= */
+    /* =====================================================
+       HEADER
+       ===================================================== */
 
-    .navbar {
+    .header {
 
-      position: fixed;
+      position: sticky;
 
       top: 0;
 
-      left: 0;
-
-      width: 100%;
-
       z-index: 1000;
 
-      padding: 16px 0;
-
-      background: var(--nav-bg);
+      background: rgba(255,255,255,0.96);
 
       backdrop-filter: blur(18px);
 
-      -webkit-backdrop-filter: blur(18px);
-
       border-bottom: 1px solid var(--border);
-
-      transition:
-        background var(--transition),
-        box-shadow var(--transition);
     }
 
 
-    .navbar.scrolled {
+    .header-inner {
 
-      background: var(--nav-scrolled);
+      max-width: 1320px;
 
-      box-shadow:
-        0 8px 30px var(--shadow);
-    }
+      min-height: 78px;
 
+      margin: auto;
 
-    .navbar .container {
+      padding: 0 30px;
 
       display: flex;
 
       align-items: center;
 
       justify-content: space-between;
+
+      gap: 30px;
     }
 
 
     /* BRAND */
 
-    .nav-brand {
+    .brand {
 
-      font-family: var(--font-display);
+      font-family: var(--serif);
 
-      font-size: 1.15rem;
+      font-size: 1.7rem;
 
-      font-weight: 800;
+      font-weight: 700;
 
-      letter-spacing: 0.08em;
-
-      color: var(--text-primary);
-
-      transition: opacity 0.3s ease;
+      letter-spacing: 0.04em;
     }
 
 
-    .nav-brand:hover {
+    .brand span {
 
-      opacity: 0.7;
+      color: var(--gold);
     }
 
 
-    /* NAV LINKS */
+    /* NAV */
 
-    .nav-links {
+    .nav {
 
       display: flex;
 
       align-items: center;
 
       gap: 30px;
-
-      list-style: none;
     }
 
 
-    .nav-links a {
+    .nav a {
 
       position: relative;
-
-      font-size: 0.85rem;
-
-      font-weight: 500;
-
-      color: var(--text-secondary);
-
-      transition: color 0.3s ease;
-    }
-
-
-    .nav-links a::after {
-
-      content: '';
-
-      position: absolute;
-
-      left: 0;
-
-      bottom: -6px;
-
-      width: 0;
-
-      height: 2px;
-
-      background: var(--accent);
-
-      border-radius: 4px;
-
-      transition: width 0.3s ease;
-    }
-
-
-    .nav-links a:hover,
-    .nav-links a.active {
-
-      color: var(--text-primary);
-    }
-
-
-    .nav-links a:hover::after,
-    .nav-links a.active::after {
-
-      width: 100%;
-    }
-
-
-    /* =========================================
-       THEME BUTTON
-       ========================================= */
-
-    .theme-toggle {
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 7px;
-
-      padding: 7px 13px;
-
-      border-radius: 50px;
-
-      background: var(--accent-dim);
-
-      border: 1px solid var(--border);
-
-      color: var(--text-secondary);
-
-      cursor: pointer;
-
-      font-size: 0.75rem;
-
-      transition: all 0.3s ease;
-    }
-
-
-    .theme-toggle:hover {
-
-      border-color: var(--accent);
-
-      color: var(--text-primary);
-    }
-
-
-    /* =========================================
-       MOBILE BUTTON
-       ========================================= */
-
-    .nav-toggle {
-
-      display: none;
-
-      width: 42px;
-
-      height: 42px;
-
-      align-items: center;
-
-      justify-content: center;
-
-      flex-direction: column;
-
-      gap: 5px;
-
-      background: transparent;
-
-      border: 1px solid var(--border);
-
-      border-radius: 10px;
-
-      cursor: pointer;
-    }
-
-
-    .nav-toggle span {
-
-      width: 22px;
-
-      height: 2px;
-
-      background: var(--text-primary);
-
-      border-radius: 5px;
-
-      transition: all 0.3s ease;
-    }
-
-
-    .nav-toggle.active span:nth-child(1) {
-
-      transform:
-        rotate(45deg)
-        translate(5px,5px);
-    }
-
-
-    .nav-toggle.active span:nth-child(2) {
-
-      opacity: 0;
-    }
-
-
-    .nav-toggle.active span:nth-child(3) {
-
-      transform:
-        rotate(-45deg)
-        translate(5px,-5px);
-    }
-
-
-    /* =========================================
-       DEMOS SECTION
-       ========================================= */
-
-    .demos-section {
-
-      padding: 145px 0 110px;
-
-      position: relative;
-
-      z-index: 2;
-    }
-
-
-    /* =========================================
-       DEMOS GRID
-       ========================================= */
-
-    .demos-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(
-          2,
-          minmax(0,1fr)
-        );
-
-      gap: 28px;
-    }
-
-
-    /* =========================================
-       DEMO CARD
-       ========================================= */
-
-    .demo-card {
-
-      background: var(--bg-card);
-
-      border: 1px solid var(--border);
-
-      border-radius: var(--radius);
-
-      overflow: hidden;
-
-      backdrop-filter: blur(12px);
-
-      -webkit-backdrop-filter: blur(12px);
-
-      box-shadow:
-        0 15px 45px var(--shadow);
-
-      transition:
-        transform 0.45s ease,
-        border-color 0.45s ease,
-        box-shadow 0.45s ease;
-
-      opacity: 0;
-
-      transform: translateY(35px);
-
-      animation:
-        cardReveal 0.7s ease forwards;
-    }
-
-
-    .demo-card:hover {
-
-      transform: translateY(-8px);
-
-      border-color: var(--border-hover);
-
-      box-shadow:
-        0 28px 60px var(--shadow),
-        0 0 45px var(--accent-glow);
-    }
-
-
-    @keyframes cardReveal {
-
-      to {
-
-        opacity: 1;
-
-        transform: translateY(0);
-      }
-    }
-
-
-    .demo-card:nth-child(1) {
-      animation-delay: 0.05s;
-    }
-
-    .demo-card:nth-child(2) {
-      animation-delay: 0.12s;
-    }
-
-    .demo-card:nth-child(3) {
-      animation-delay: 0.19s;
-    }
-
-    .demo-card:nth-child(4) {
-      animation-delay: 0.26s;
-    }
-
-    .demo-card:nth-child(5) {
-      animation-delay: 0.33s;
-    }
-
-    .demo-card:nth-child(6) {
-      animation-delay: 0.40s;
-    }
-
-
-    /* =========================================
-       LIVE WEBSITE PREVIEW
-       ========================================= */
-
-    .demo-preview {
-
-      position: relative;
-
-      width: 100%;
-
-      aspect-ratio: 16 / 10;
-
-      overflow: hidden;
-
-      background: #111;
-
-      border-bottom: 1px solid var(--border);
-    }
-
-
-    .demo-preview iframe {
-
-      position: absolute;
-
-      top: 0;
-
-      left: 0;
-
-      width: 200%;
-
-      height: 200%;
-
-      border: 0;
-
-      transform: scale(0.5);
-
-      transform-origin: top left;
-
-      background: #000;
-    }
-
-
-    /* =========================================
-       PREVIEW BAR
-       ========================================= */
-
-    .preview-bar {
-
-      position: absolute;
-
-      top: 0;
-
-      left: 0;
-
-      width: 100%;
-
-      height: 34px;
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 6px;
-
-      padding: 0 12px;
-
-      background: rgba(0,0,0,0.82);
-
-      backdrop-filter: blur(10px);
-
-      z-index: 5;
-
-      border-bottom:
-        1px solid rgba(255,255,255,0.12);
-    }
-
-
-    .preview-dot {
-
-      width: 7px;
-
-      height: 7px;
-
-      border-radius: 50%;
-
-      background: rgba(255,255,255,0.65);
-    }
-
-
-    .preview-url {
-
-      margin-left: 7px;
-
-      font-size: 0.58rem;
-
-      color: rgba(255,255,255,0.55);
-
-      white-space: nowrap;
-
-      overflow: hidden;
-
-      text-overflow: ellipsis;
-    }
-
-
-    /* =========================================
-       PREVIEW OVERLAY
-       ========================================= */
-
-    .preview-overlay {
-
-      position: absolute;
-
-      inset: 0;
-
-      z-index: 4;
-
-      pointer-events: none;
-
-      background:
-        linear-gradient(
-          to top,
-          rgba(0,0,0,0.25),
-          transparent 30%
-        );
-    }
-
-
-    /* =========================================
-       CARD BODY
-       ========================================= */
-
-    .demo-body {
-
-      padding: 24px;
-
-      display: flex;
-
-      flex-direction: column;
-
-      gap: 13px;
-    }
-
-
-    .demo-top {
-
-      display: flex;
-
-      align-items: flex-start;
-
-      justify-content: space-between;
-
-      gap: 15px;
-    }
-
-
-    .demo-number {
-
-      font-family: var(--font-display);
-
-      font-size: 0.62rem;
-
-      letter-spacing: 0.15em;
-
-      color: var(--text-muted);
-
-      margin-bottom: 5px;
-    }
-
-
-    .demo-title {
-
-      font-family: var(--font-display);
-
-      font-size: 1.2rem;
-
-      font-weight: 700;
-
-      line-height: 1.25;
-    }
-
-
-    .demo-category {
-
-      display: inline-flex;
-
-      align-items: center;
-
-      padding: 5px 10px;
-
-      border-radius: 50px;
-
-      background: var(--accent-dim);
-
-      border: 1px solid var(--border);
-
-      color: var(--text-secondary);
-
-      font-size: 0.65rem;
-
-      font-weight: 600;
-
-      white-space: nowrap;
-    }
-
-
-    .demo-description {
-
-      color: var(--text-secondary);
-
-      font-size: 0.84rem;
-
-      line-height: 1.7;
-    }
-
-
-    /* =========================================
-       BUTTONS
-       ========================================= */
-
-    .demo-actions {
-
-      display: flex;
-
-      gap: 10px;
-
-      margin-top: 5px;
-    }
-
-
-    .demo-button {
-
-      display: inline-flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      gap: 8px;
-
-      min-height: 42px;
-
-      padding: 10px 18px;
-
-      border-radius: 50px;
 
       font-size: 0.78rem;
 
       font-weight: 600;
 
-      transition: all 0.3s ease;
+      letter-spacing: 0.05em;
+
+      text-transform: uppercase;
+
+      color: #444;
+
+      transition: color var(--transition);
     }
 
 
-    .demo-button.primary {
+    .nav a::after {
 
-      background: var(--accent);
+      content: "";
 
-      color: var(--bg-primary);
+      position: absolute;
 
-      flex: 1;
+      left: 0;
+
+      bottom: -7px;
+
+      width: 0;
+
+      height: 1px;
+
+      background: var(--black);
+
+      transition: width var(--transition);
     }
 
 
-    .demo-button.primary:hover {
+    .nav a:hover {
 
-      transform: translateY(-2px);
-
-      opacity: 0.82;
-
-      box-shadow:
-        0 8px 20px var(--accent-glow);
+      color: var(--black);
     }
 
 
-    .demo-button.secondary {
-
-      border: 1px solid var(--border);
-
-      color: var(--text-primary);
-
-      background: transparent;
-    }
-
-
-    .demo-button.secondary:hover {
-
-      border-color: var(--accent);
-
-      background: var(--accent-dim);
-    }
-
-
-    /* =========================================
-       COMING SOON CARD PREVIEW
-       ========================================= */
-
-    .coming-preview {
+    .nav a:hover::after {
 
       width: 100%;
+    }
 
-      height: 100%;
 
-      min-height: 100%;
+    /* HEADER ACTIONS */
+
+    .header-actions {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 9px;
+    }
+
+
+    .icon-button {
+
+      width: 40px;
+
+      height: 40px;
 
       display: flex;
 
@@ -1031,95 +341,141 @@
 
       justify-content: center;
 
-      flex-direction: column;
+      border: 0;
 
-      gap: 12px;
+      background: transparent;
+
+      color: var(--black);
+
+      border-radius: 50%;
+
+      transition:
+        background var(--transition),
+        transform var(--transition);
+    }
+
+
+    .icon-button:hover {
+
+      background: var(--soft);
+
+      transform: translateY(-1px);
+    }
+
+
+    .cart-button {
+
+      position: relative;
+    }
+
+
+    .cart-count {
+
+      position: absolute;
+
+      top: 1px;
+
+      right: 0;
+
+      width: 17px;
+
+      height: 17px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: var(--black);
+
+      color: var(--white);
+
+      font-size: 0.58rem;
+
+      font-weight: 700;
+    }
+
+
+    /* MOBILE MENU */
+
+    .menu-button {
+
+      display: none;
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero {
+
+      position: relative;
+
+      min-height: 680px;
+
+      display: flex;
+
+      align-items: center;
+
+      overflow: hidden;
+
+      background: var(--cream);
+    }
+
+
+    .hero-image {
+
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      object-position: center;
+    }
+
+
+    .hero-overlay {
+
+      position: absolute;
+
+      inset: 0;
 
       background:
-
-        radial-gradient(
-          circle at center,
-          rgba(255,255,255,0.08),
-          transparent 55%
-        ),
-
-        #090909;
-    }
-
-
-    .coming-preview i {
-
-      font-size: 30px;
-
-      color: rgba(255,255,255,0.5);
-    }
-
-
-    .coming-preview span {
-
-      font-family: var(--font-display);
-
-      font-size: 0.75rem;
-
-      letter-spacing: 0.14em;
-
-      color: rgba(255,255,255,0.55);
-
-      text-transform: uppercase;
-    }
-
-
-    /* =========================================
-       CTA
-       ========================================= */
-
-    .bottom-cta {
-
-      margin-top: 70px;
-
-      padding: 55px 35px;
-
-      text-align: center;
-
-      background: var(--accent-dim);
-
-      border: 1px solid var(--border);
-
-      border-radius: var(--radius);
-
-      backdrop-filter: blur(10px);
-    }
-
-
-    .bottom-cta h2 {
-
-      font-family: var(--font-display);
-
-      font-size:
-        clamp(
-          1.5rem,
-          3vw,
-          2.3rem
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,0.64) 0%,
+          rgba(0,0,0,0.30) 48%,
+          rgba(0,0,0,0.08) 100%
         );
-
-      margin-bottom: 12px;
     }
 
 
-    .bottom-cta p {
+    .hero-content {
 
-      max-width: 650px;
+      position: relative;
 
-      margin:
-        0 auto 24px;
+      z-index: 2;
 
-      color: var(--text-secondary);
+      max-width: 1320px;
 
-      font-size: 0.95rem;
+      width: 100%;
+
+      margin: auto;
+
+      padding: 90px 30px;
     }
 
 
-    .cta-button {
+    .hero-label {
 
       display: inline-flex;
 
@@ -1127,116 +483,1160 @@
 
       gap: 9px;
 
-      padding: 13px 25px;
+      margin-bottom: 18px;
 
-      border-radius: 50px;
+      color: rgba(255,255,255,0.85);
 
-      background: var(--accent);
+      font-size: 0.72rem;
 
-      color: var(--bg-primary);
+      font-weight: 700;
 
-      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+
+      text-transform: uppercase;
+    }
+
+
+    .hero-label::before {
+
+      content: "";
+
+      width: 28px;
+
+      height: 1px;
+
+      background: rgba(255,255,255,0.8);
+    }
+
+
+    .hero h1 {
+
+      max-width: 720px;
+
+      color: var(--white);
+
+      font-family: var(--serif);
+
+      font-size:
+        clamp(
+          3.3rem,
+          7vw,
+          6.8rem
+        );
 
       font-weight: 600;
 
-      transition: all 0.3s ease;
+      line-height: 0.98;
+
+      letter-spacing: -0.04em;
     }
 
 
-    .cta-button:hover {
+    .hero h1 span {
 
-      transform: translateY(-2px);
+      display: block;
 
-      opacity: 0.85;
+      font-style: italic;
 
-      box-shadow:
-        0 12px 30px var(--accent-glow);
+      color: #e7d7bb;
     }
 
 
-    /* =========================================
-       FOOTER
-       ========================================= */
+    .hero p {
 
-    .footer {
+      max-width: 530px;
 
-      padding: 45px 0 30px;
+      margin-top: 28px;
 
-      border-top: 1px solid var(--border);
+      color: rgba(255,255,255,0.84);
 
-      background: var(--bg-secondary);
+      font-size: 0.96rem;
 
-      position: relative;
-
-      z-index: 2;
+      line-height: 1.8;
     }
 
 
-    .footer-main {
-
-      display: flex;
-
-      justify-content: space-between;
-
-      align-items: center;
-
-      gap: 30px;
-
-      padding-bottom: 28px;
-
-      border-bottom: 1px solid var(--border);
-    }
-
-
-    .footer-brand {
-
-      font-family: var(--font-display);
-
-      font-weight: 800;
-
-      font-size: 1.1rem;
-
-      letter-spacing: 0.07em;
-    }
-
-
-    .footer-tagline {
-
-      color: var(--text-muted);
-
-      font-size: 0.75rem;
-
-      margin-top: 4px;
-    }
-
-
-    .footer-links {
+    .hero-buttons {
 
       display: flex;
 
       flex-wrap: wrap;
 
+      gap: 12px;
+
+      margin-top: 34px;
+    }
+
+
+    .button {
+
+      min-height: 48px;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 9px;
+
+      padding: 13px 24px;
+
+      border: 1px solid transparent;
+
+      font-size: 0.76rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.07em;
+
+      text-transform: uppercase;
+
+      transition: all var(--transition);
+    }
+
+
+    .button-light {
+
+      background: var(--white);
+
+      color: var(--black);
+    }
+
+
+    .button-light:hover {
+
+      background: transparent;
+
+      color: var(--white);
+
+      border-color: var(--white);
+    }
+
+
+    .button-outline-light {
+
+      background: transparent;
+
+      color: var(--white);
+
+      border-color: rgba(255,255,255,0.65);
+    }
+
+
+    .button-outline-light:hover {
+
+      background: var(--white);
+
+      color: var(--black);
+    }
+
+
+    /* =====================================================
+       TRUST STRIP
+       ===================================================== */
+
+    .trust-strip {
+
+      border-bottom: 1px solid var(--border);
+
+      background: var(--white);
+    }
+
+
+    .trust-inner {
+
+      max-width: 1320px;
+
+      margin: auto;
+
+      padding: 21px 30px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4,1fr);
+
       gap: 20px;
     }
 
 
-    .footer-links a {
+    .trust-item {
 
-      font-size: 0.75rem;
+      display: flex;
 
-      color: var(--text-secondary);
+      align-items: center;
 
-      transition: color 0.3s ease;
+      justify-content: center;
+
+      gap: 11px;
+
+      color: #555;
+
+      font-size: 0.72rem;
+
+      font-weight: 600;
+
+      letter-spacing: 0.04em;
     }
 
 
-    .footer-links a:hover {
+    .trust-item i {
 
-      color: var(--text-primary);
+      font-size: 0.95rem;
+
+      color: var(--gold);
+    }
+
+
+    /* =====================================================
+       GENERAL SECTION
+       ===================================================== */
+
+    .section {
+
+      padding: 100px 0;
+    }
+
+
+    .container {
+
+      max-width: 1320px;
+
+      margin: auto;
+
+      padding: 0 30px;
+    }
+
+
+    .section-header {
+
+      margin-bottom: 45px;
+
+      text-align: center;
+    }
+
+
+    .section-label {
+
+      display: block;
+
+      margin-bottom: 9px;
+
+      color: var(--gold);
+
+      font-size: 0.68rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.16em;
+
+      text-transform: uppercase;
+    }
+
+
+    .section-title {
+
+      font-family: var(--serif);
+
+      font-size:
+        clamp(
+          2rem,
+          4vw,
+          3.2rem
+        );
+
+      line-height: 1.1;
+
+      font-weight: 600;
+    }
+
+
+    .section-subtitle {
+
+      max-width: 600px;
+
+      margin: 15px auto 0;
+
+      color: var(--gray);
+
+      font-size: 0.88rem;
+    }
+
+
+    /* =====================================================
+       CATEGORIES
+       ===================================================== */
+
+    .categories {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4,1fr);
+
+      gap: 18px;
+    }
+
+
+    .category {
+
+      position: relative;
+
+      min-height: 390px;
+
+      overflow: hidden;
+
+      background: var(--soft);
+    }
+
+
+    .category img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      transition:
+        transform 0.8s ease;
+    }
+
+
+    .category:hover img {
+
+      transform: scale(1.06);
+    }
+
+
+    .category::after {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,0.68),
+          rgba(0,0,0,0.02) 60%
+        );
+    }
+
+
+    .category-content {
+
+      position: absolute;
+
+      left: 25px;
+
+      right: 25px;
+
+      bottom: 25px;
+
+      z-index: 2;
+
+      color: var(--white);
+    }
+
+
+    .category-content h3 {
+
+      font-family: var(--serif);
+
+      font-size: 1.65rem;
+
+      font-weight: 600;
+    }
+
+
+    .category-content span {
+
+      display: inline-flex;
+
+      margin-top: 6px;
+
+      font-size: 0.67rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.1em;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =====================================================
+       PRODUCTS
+       ===================================================== */
+
+    .products {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4,1fr);
+
+      gap: 24px;
+    }
+
+
+    .product {
+
+      position: relative;
+    }
+
+
+    .product-image {
+
+      position: relative;
+
+      overflow: hidden;
+
+      background: var(--soft);
+
+      aspect-ratio: 0.82;
+    }
+
+
+    .product-image img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      transition:
+        transform 0.7s ease;
+    }
+
+
+    .product:hover .product-image img {
+
+      transform: scale(1.045);
+    }
+
+
+    .product-badge {
+
+      position: absolute;
+
+      top: 14px;
+
+      left: 14px;
+
+      z-index: 3;
+
+      padding: 6px 9px;
+
+      background: var(--white);
+
+      color: var(--black);
+
+      font-size: 0.6rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.08em;
+
+      text-transform: uppercase;
+    }
+
+
+    .product-wishlist {
+
+      position: absolute;
+
+      top: 10px;
+
+      right: 10px;
+
+      z-index: 3;
+
+      width: 38px;
+
+      height: 38px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border: 0;
+
+      border-radius: 50%;
+
+      background: rgba(255,255,255,0.92);
+
+      transition:
+        transform var(--transition);
+    }
+
+
+    .product-wishlist:hover {
+
+      transform: scale(1.08);
+    }
+
+
+    .product-info {
+
+      padding: 16px 2px 0;
+    }
+
+
+    .product-category {
+
+      color: var(--gray);
+
+      font-size: 0.62rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.09em;
+
+      text-transform: uppercase;
+    }
+
+
+    .product-name {
+
+      margin-top: 5px;
+
+      font-size: 0.92rem;
+
+      font-weight: 600;
+    }
+
+
+    .product-price {
+
+      margin-top: 7px;
+
+      font-size: 0.82rem;
+
+      font-weight: 700;
+    }
+
+
+    .old-price {
+
+      margin-left: 6px;
+
+      color: #999;
+
+      font-weight: 400;
+
+      text-decoration: line-through;
+    }
+
+
+    .stars {
+
+      margin-top: 6px;
+
+      color: var(--gold);
+
+      font-size: 0.63rem;
+    }
+
+
+    .add-product {
+
+      width: 100%;
+
+      margin-top: 13px;
+
+      min-height: 42px;
+
+      border: 1px solid var(--black);
+
+      background: var(--black);
+
+      color: var(--white);
+
+      font-size: 0.68rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.08em;
+
+      text-transform: uppercase;
+
+      transition: all var(--transition);
+    }
+
+
+    .add-product:hover {
+
+      background: var(--white);
+
+      color: var(--black);
+    }
+
+
+    /* =====================================================
+       PROMO
+       ===================================================== */
+
+    .promo {
+
+      position: relative;
+
+      min-height: 520px;
+
+      overflow: hidden;
+
+      display: flex;
+
+      align-items: center;
+
+      background: #191919;
+    }
+
+
+    .promo img {
+
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+
+    .promo::after {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,0.78),
+          rgba(0,0,0,0.18)
+        );
+    }
+
+
+    .promo-content {
+
+      position: relative;
+
+      z-index: 2;
+
+      max-width: 600px;
+
+      color: var(--white);
+    }
+
+
+    .promo-content .section-label {
+
+      color: #dfc08d;
+    }
+
+
+    .promo-content h2 {
+
+      font-family: var(--serif);
+
+      font-size:
+        clamp(
+          2.5rem,
+          5vw,
+          4.7rem
+        );
+
+      line-height: 1.02;
+    }
+
+
+    .promo-content p {
+
+      max-width: 500px;
+
+      margin-top: 20px;
+
+      color: rgba(255,255,255,0.78);
+
+      font-size: 0.9rem;
+    }
+
+
+    .promo-content .button {
+
+      margin-top: 28px;
+    }
+
+
+    /* =====================================================
+       FEATURE SECTION
+       ===================================================== */
+
+    .feature-layout {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+
+    .feature-image {
+
+      overflow: hidden;
+
+      background: var(--soft);
+    }
+
+
+    .feature-image img {
+
+      aspect-ratio: 1 / 1.05;
+
+      object-fit: cover;
+    }
+
+
+    .feature-content {
+
+      max-width: 540px;
+    }
+
+
+    .feature-content h2 {
+
+      font-family: var(--serif);
+
+      font-size:
+        clamp(
+          2.3rem,
+          4vw,
+          4rem
+        );
+
+      line-height: 1.08;
+    }
+
+
+    .feature-content p {
+
+      margin-top: 20px;
+
+      color: var(--gray);
+
+      font-size: 0.9rem;
+
+      line-height: 1.9;
+    }
+
+
+    .feature-list {
+
+      margin-top: 28px;
+
+      display: grid;
+
+      gap: 18px;
+    }
+
+
+    .feature-item {
+
+      display: flex;
+
+      gap: 15px;
+
+      align-items: flex-start;
+    }
+
+
+    .feature-item-icon {
+
+      flex: 0 0 auto;
+
+      width: 38px;
+
+      height: 38px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border: 1px solid var(--border);
+
+      border-radius: 50%;
+
+      color: var(--gold);
+
+      font-size: 0.8rem;
+    }
+
+
+    .feature-item h4 {
+
+      font-size: 0.82rem;
+    }
+
+
+    .feature-item p {
+
+      margin-top: 3px;
+
+      font-size: 0.72rem;
+    }
+
+
+    .feature-content .button {
+
+      margin-top: 30px;
+
+      background: var(--black);
+
+      color: var(--white);
+    }
+
+
+    .feature-content .button:hover {
+
+      background: var(--gold);
+
+      border-color: var(--gold);
+    }
+
+
+    /* =====================================================
+       NEWSLETTER
+       ===================================================== */
+
+    .newsletter {
+
+      padding: 90px 0;
+
+      background: var(--cream);
+
+      text-align: center;
+    }
+
+
+    .newsletter h2 {
+
+      font-family: var(--serif);
+
+      font-size:
+        clamp(
+          2rem,
+          4vw,
+          3.1rem
+        );
+    }
+
+
+    .newsletter p {
+
+      max-width: 520px;
+
+      margin: 13px auto 0;
+
+      color: var(--gray);
+
+      font-size: 0.82rem;
+    }
+
+
+    .newsletter-form {
+
+      max-width: 500px;
+
+      margin: 28px auto 0;
+
+      display: flex;
+
+      border-bottom: 1px solid var(--black);
+    }
+
+
+    .newsletter-form input {
+
+      flex: 1;
+
+      min-width: 0;
+
+      padding: 14px 3px;
+
+      border: 0;
+
+      outline: 0;
+
+      background: transparent;
+
+      font-size: 0.78rem;
+    }
+
+
+    .newsletter-form button {
+
+      border: 0;
+
+      background: transparent;
+
+      font-size: 0.7rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.08em;
+
+      text-transform: uppercase;
+    }
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    .footer {
+
+      background: var(--black);
+
+      color: var(--white);
+
+      padding: 75px 0 25px;
+    }
+
+
+    .footer-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1.4fr
+        repeat(3,1fr);
+
+      gap: 50px;
+
+      padding-bottom: 55px;
+
+      border-bottom:
+        1px solid var(--dark-border);
+    }
+
+
+    .footer-brand {
+
+      font-family: var(--serif);
+
+      font-size: 2rem;
+    }
+
+
+    .footer-about {
+
+      max-width: 330px;
+
+      margin-top: 15px;
+
+      color: #999;
+
+      font-size: 0.76rem;
+
+      line-height: 1.8;
+    }
+
+
+    .footer-column h4 {
+
+      margin-bottom: 18px;
+
+      font-size: 0.7rem;
+
+      letter-spacing: 0.1em;
+
+      text-transform: uppercase;
+    }
+
+
+    .footer-column a {
+
+      display: block;
+
+      margin-bottom: 9px;
+
+      color: #999;
+
+      font-size: 0.74rem;
+
+      transition: color var(--transition);
+    }
+
+
+    .footer-column a:hover {
+
+      color: var(--white);
+    }
+
+
+    .socials {
+
+      display: flex;
+
+      gap: 8px;
+
+      margin-top: 20px;
+    }
+
+
+    .social {
+
+      width: 36px;
+
+      height: 36px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border: 1px solid var(--dark-border);
+
+      border-radius: 50%;
+
+      color: #aaa;
+
+      font-size: 0.75rem;
+
+      transition: all var(--transition);
+    }
+
+
+    .social:hover {
+
+      border-color: var(--white);
+
+      color: var(--white);
+
+      transform: translateY(-2px);
     }
 
 
     .footer-bottom {
+
+      padding-top: 22px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      color: #777;
+
+      font-size: 0.65rem;
+    }
+
+
+    .deepbyto-link {
+
+      color: #aaa;
+
+      transition: color var(--transition);
+    }
+
+
+    .deepbyto-link:hover {
+
+      color: var(--white);
+    }
+
+
+    /* =====================================================
+       CART DRAWER
+       ===================================================== */
+
+    .cart-overlay {
+
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 1500;
+
+      background: rgba(0,0,0,0.52);
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      transition:
+        opacity var(--transition),
+        visibility var(--transition);
+    }
+
+
+    .cart-overlay.open {
+
+      opacity: 1;
+
+      visibility: visible;
+    }
+
+
+    .cart-drawer {
+
+      position: absolute;
+
+      top: 0;
+
+      right: 0;
+
+      width: min(430px,100%);
+
+      height: 100%;
+
+      display: flex;
+
+      flex-direction: column;
+
+      background: var(--white);
+
+      transform: translateX(100%);
+
+      transition:
+        transform 0.45s
+        cubic-bezier(0.25,0.46,0.45,0.94);
+    }
+
+
+    .cart-overlay.open .cart-drawer {
+
+      transform: translateX(0);
+    }
+
+
+    .cart-header {
+
+      min-height: 75px;
+
+      padding: 0 24px;
 
       display: flex;
 
@@ -1244,94 +1644,628 @@
 
       justify-content: space-between;
 
-      gap: 20px;
-
-      padding-top: 20px;
+      border-bottom: 1px solid var(--border);
     }
 
 
-    .footer-bottom p {
+    .cart-header h3 {
 
-      color: var(--text-muted);
+      font-family: var(--serif);
+
+      font-size: 1.45rem;
+    }
+
+
+    .cart-close {
+
+      width: 38px;
+
+      height: 38px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border: 0;
+
+      background: transparent;
+
+      font-size: 1rem;
+    }
+
+
+    .cart-items {
+
+      flex: 1;
+
+      overflow-y: auto;
+
+      padding: 20px 24px;
+    }
+
+
+    .empty-cart {
+
+      min-height: 300px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      flex-direction: column;
+
+      gap: 10px;
+
+      text-align: center;
+
+      color: var(--gray);
+    }
+
+
+    .empty-cart i {
+
+      font-size: 1.8rem;
+
+      color: #bbb;
+    }
+
+
+    .empty-cart p {
+
+      font-size: 0.8rem;
+    }
+
+
+    .cart-item {
+
+      display: grid;
+
+      grid-template-columns: 70px 1fr auto;
+
+      gap: 13px;
+
+      align-items: center;
+
+      padding: 15px 0;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+
+    .cart-item img {
+
+      width: 70px;
+
+      height: 80px;
+
+      object-fit: cover;
+
+      background: var(--soft);
+    }
+
+
+    .cart-item-name {
+
+      font-size: 0.78rem;
+
+      font-weight: 600;
+    }
+
+
+    .cart-item-price {
+
+      margin-top: 3px;
+
+      font-size: 0.72rem;
+
+      color: var(--gray);
+    }
+
+
+    .cart-remove {
+
+      border: 0;
+
+      background: transparent;
+
+      color: #999;
+
+      font-size: 0.72rem;
+    }
+
+
+    .cart-footer {
+
+      padding: 22px 24px;
+
+      border-top: 1px solid var(--border);
+    }
+
+
+    .cart-total {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      margin-bottom: 15px;
+
+      font-size: 0.85rem;
+
+      font-weight: 700;
+    }
+
+
+    .checkout-button {
+
+      width: 100%;
+
+      min-height: 48px;
+
+      border: 1px solid var(--black);
+
+      background: var(--black);
+
+      color: var(--white);
 
       font-size: 0.7rem;
+
+      font-weight: 800;
+
+      letter-spacing: 0.08em;
+
+      text-transform: uppercase;
+
+      transition: all var(--transition);
     }
 
 
-    /* =========================================
+    .checkout-button:hover {
+
+      background: var(--white);
+
+      color: var(--black);
+    }
+
+
+    /* =====================================================
+       SEARCH
+       ===================================================== */
+
+    .search-panel {
+
+      position: fixed;
+
+      top: 0;
+
+      left: 0;
+
+      right: 0;
+
+      z-index: 1400;
+
+      padding: 28px 30px;
+
+      background: var(--white);
+
+      border-bottom: 1px solid var(--border);
+
+      transform: translateY(-100%);
+
+      transition:
+        transform 0.4s ease;
+    }
+
+
+    .search-panel.open {
+
+      transform: translateY(0);
+    }
+
+
+    .search-inner {
+
+      max-width: 900px;
+
+      margin: auto;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 15px;
+    }
+
+
+    .search-inner input {
+
+      flex: 1;
+
+      padding: 14px 0;
+
+      border: 0;
+
+      border-bottom: 1px solid var(--black);
+
+      outline: 0;
+
+      font-family: var(--serif);
+
+      font-size: 1.5rem;
+    }
+
+
+    .search-close {
+
+      width: 40px;
+
+      height: 40px;
+
+      border: 0;
+
+      background: transparent;
+
+      font-size: 1rem;
+    }
+
+
+    /* =====================================================
+       MOBILE NAV
+       ===================================================== */
+
+    .mobile-menu {
+
+      position: fixed;
+
+      top: 0;
+
+      left: 0;
+
+      width: 100%;
+
+      height: 100vh;
+
+      z-index: 1200;
+
+      padding: 110px 30px 40px;
+
+      background: var(--white);
+
+      transform: translateX(100%);
+
+      transition:
+        transform 0.4s ease;
+    }
+
+
+    .mobile-menu.open {
+
+      transform: translateX(0);
+    }
+
+
+    .mobile-menu a {
+
+      display: block;
+
+      padding: 16px 0;
+
+      border-bottom: 1px solid var(--border);
+
+      font-family: var(--serif);
+
+      font-size: 1.7rem;
+    }
+
+
+    .mobile-menu-contact {
+
+      margin-top: 35px;
+
+      color: var(--gray);
+
+      font-size: 0.76rem;
+    }
+
+
+    /* =====================================================
+       TOAST
+       ===================================================== */
+
+    .toast {
+
+      position: fixed;
+
+      left: 50%;
+
+      bottom: 28px;
+
+      z-index: 3000;
+
+      transform:
+        translate(-50%, 25px);
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      padding: 13px 20px;
+
+      background: var(--black);
+
+      color: var(--white);
+
+      font-size: 0.72rem;
+
+      box-shadow:
+        0 12px 30px rgba(0,0,0,0.25);
+
+      transition:
+        all 0.35s ease;
+    }
+
+
+    .toast.show {
+
+      transform:
+        translate(-50%,0);
+
+      opacity: 1;
+
+      visibility: visible;
+    }
+
+
+    /* =====================================================
        RESPONSIVE
-       ========================================= */
+       ===================================================== */
 
-    @media (max-width: 900px) {
+    @media (max-width: 1050px) {
 
-      .demos-grid {
+      .nav {
+
+        gap: 18px;
+      }
+
+
+      .categories {
+
+        grid-template-columns:
+          repeat(2,1fr);
+      }
+
+
+      .products {
+
+        grid-template-columns:
+          repeat(2,1fr);
+      }
+
+
+      .category {
+
+        min-height: 350px;
+      }
+    }
+
+
+    @media (max-width: 800px) {
+
+      .header-inner {
+
+        min-height: 68px;
+
+        padding: 0 20px;
+      }
+
+
+      .nav {
+
+        display: none;
+      }
+
+
+      .menu-button {
+
+        display: flex;
+      }
+
+
+      .header-actions {
+
+        margin-left: auto;
+      }
+
+
+      .hero {
+
+        min-height: 600px;
+      }
+
+
+      .hero-content {
+
+        padding: 70px 20px;
+      }
+
+
+      .hero-overlay {
+
+        background:
+          linear-gradient(
+            90deg,
+            rgba(0,0,0,0.68),
+            rgba(0,0,0,0.25)
+          );
+      }
+
+
+      .trust-inner {
+
+        grid-template-columns:
+          repeat(2,1fr);
+
+        padding:
+          20px;
+      }
+
+
+      .section {
+
+        padding: 75px 0;
+      }
+
+
+      .container {
+
+        padding: 0 20px;
+      }
+
+
+      .feature-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+      }
+
+
+      .feature-content {
+
+        max-width: none;
+      }
+
+
+      .footer-grid {
+
+        grid-template-columns:
+          repeat(2,1fr);
+
+        gap: 40px;
+      }
+    }
+
+
+    @media (max-width: 560px) {
+
+      .announcement {
+
+        font-size: 0.6rem;
+      }
+
+
+      .brand {
+
+        font-size: 1.45rem;
+      }
+
+
+      .hero h1 {
+
+        font-size: 3.25rem;
+      }
+
+
+      .hero p {
+
+        font-size: 0.84rem;
+      }
+
+
+      .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        max-width: 260px;
+      }
+
+
+      .trust-inner {
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 15px 8px;
+      }
+
+
+      .trust-item {
+
+        flex-direction: column;
+
+        gap: 5px;
+
+        text-align: center;
+
+        font-size: 0.62rem;
+      }
+
+
+      .categories {
 
         grid-template-columns: 1fr;
       }
-    }
 
 
-    @media (max-width: 768px) {
+      .category {
 
-      .nav-links {
-
-        position: fixed;
-
-        top: 0;
-
-        right: -100%;
-
-        width: 280px;
-
-        height: 100vh;
-
-        flex-direction: column;
-
-        justify-content: center;
-
-        gap: 28px;
-
-        background: var(--bg-primary);
-
-        border-left: 1px solid var(--border);
-
-        transition: right 0.4s ease;
+        min-height: 430px;
       }
 
 
-      .nav-links.open {
+      .products {
 
-        right: 0;
+        grid-template-columns:
+          repeat(2,1fr);
+
+        gap: 16px;
       }
 
 
-      .nav-links a {
+      .product-name {
 
-        font-size: 1rem;
+        font-size: 0.78rem;
       }
 
 
-      .theme-toggle {
+      .product-price {
 
-        margin-top: 10px;
+        font-size: 0.74rem;
       }
 
 
-      .nav-toggle {
+      .add-product {
 
-        display: flex;
+        font-size: 0.58rem;
 
-        position: relative;
-
-        z-index: 1001;
+        min-height: 39px;
       }
 
 
-      .footer-main {
+      .promo {
 
-        flex-direction: column;
+        min-height: 570px;
+      }
 
-        text-align: center;
+
+      .newsletter-form {
+
+        margin-left: 10px;
+
+        margin-right: 10px;
+      }
+
+
+      .footer-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
       }
 
 
@@ -1341,67 +2275,20 @@
 
         text-align: center;
       }
-    }
 
 
-    @media (max-width: 480px) {
-
-      .container {
-
-        padding-left: 16px;
-
-        padding-right: 16px;
-      }
-
-
-      .demos-section {
-
-        padding-top: 125px;
-      }
-
-
-      .demo-body {
+      .search-panel {
 
         padding: 20px;
       }
 
 
-      .demo-top {
+      .search-inner input {
 
-        flex-direction: column;
-
-        gap: 8px;
-      }
-
-
-      .demo-category {
-
-        align-self: flex-start;
-      }
-
-
-      .demo-actions {
-
-        flex-direction: column;
-      }
-
-
-      .demo-button.secondary {
-
-        width: 100%;
-      }
-
-
-      .bottom-cta {
-
-        padding: 40px 20px;
+        font-size: 1.1rem;
       }
     }
 
-
-    /* =========================================
-       REDUCED MOTION
-       ========================================= */
 
     @media (prefers-reduced-motion: reduce) {
 
@@ -1419,8 +2306,6 @@
 
         animation-duration: 0.01ms !important;
 
-        animation-iteration-count: 1 !important;
-
         transition-duration: 0.01ms !important;
       }
     }
@@ -1433,788 +2318,250 @@
 <body>
 
 
-  <div class="background-grid"></div>
+  <!-- =====================================================
+       ANNOUNCEMENT
+       ===================================================== -->
+
+  <div class="announcement">
+
+    Complimentary shipping on orders over $100
+
+  </div>
 
 
-  <!-- =========================================
-       NAVBAR
-       ========================================= -->
+  <!-- =====================================================
+       HEADER
+       ===================================================== -->
 
-  <nav class="navbar" id="navbar">
+  <header class="header">
 
-    <div class="container">
+    <div class="header-inner">
+
 
       <a
-        href="https://deepbyto.github.io/"
-        class="nav-brand"
-        aria-label="DEEPBYTO Home"
+        href="#"
+        class="brand"
+        aria-label="NOVA Home"
       >
-        DEEPBYTO
+
+        NOVA<span>.</span>
+
       </a>
 
 
-      <ul class="nav-links" id="navLinks">
+      <nav class="nav">
 
-        <li>
-          <a href="https://deepbyto.github.io/">
-            Home
-          </a>
-        </li>
+        <a href="#new">
+          New
+        </a>
 
-        <li>
-          <a href="https://deepbyto.github.io/#about">
-            About
-          </a>
-        </li>
+        <a href="#shop">
+          Shop
+        </a>
 
-        <li>
-          <a href="https://deepbyto.github.io/#services">
-            Services
-          </a>
-        </li>
+        <a href="#collections">
+          Collections
+        </a>
 
-        <li>
-          <a href="https://deepbyto.github.io/#projects">
-            Projects
-          </a>
-        </li>
+        <a href="#story">
+          Our Story
+        </a>
 
-        <li>
-          <a
-            href="https://deepbyto.github.io/demos/"
-            class="active"
+        <a href="#contact">
+          Contact
+        </a>
+
+      </nav>
+
+
+      <div class="header-actions">
+
+
+        <button
+          class="icon-button"
+          id="searchButton"
+          aria-label="Search"
+        >
+
+          <i class="fas fa-search"></i>
+
+        </button>
+
+
+        <button
+          class="icon-button cart-button"
+          id="cartButton"
+          aria-label="Shopping cart"
+        >
+
+          <i class="fas fa-bag-shopping"></i>
+
+          <span
+            class="cart-count"
+            id="cartCount"
           >
-            Demos
-          </a>
-        </li>
+            0
+          </span>
 
-        <li>
-          <a href="https://deepbyto.github.io/#contact">
-            Contact
-          </a>
-        </li>
-
-        <li>
-
-          <button
-            class="theme-toggle"
-            id="themeToggle"
-            aria-label="Toggle theme"
-          >
-
-            <i
-              class="fas fa-moon"
-              id="themeIcon"
-            ></i>
-
-            <span id="themeText">
-              Dark
-            </span>
-
-          </button>
-
-        </li>
-
-      </ul>
+        </button>
 
 
-      <button
-        class="nav-toggle"
-        id="navToggle"
-        aria-label="Open navigation"
-        aria-expanded="false"
+        <button
+          class="icon-button menu-button"
+          id="menuButton"
+          aria-label="Open menu"
+        >
+
+          <i class="fas fa-bars"></i>
+
+        </button>
+
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =====================================================
+       MOBILE MENU
+       ===================================================== -->
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
+
+    <a href="#new">
+      New Arrivals
+    </a>
+
+    <a href="#shop">
+      Shop
+    </a>
+
+    <a href="#collections">
+      Collections
+    </a>
+
+    <a href="#story">
+      Our Story
+    </a>
+
+    <a href="#contact">
+      Contact
+    </a>
+
+
+    <div class="mobile-menu-contact">
+
+      Designed for modern everyday living.
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       SEARCH
+       ===================================================== -->
+
+  <div
+    class="search-panel"
+    id="searchPanel"
+  >
+
+    <div class="search-inner">
+
+      <i class="fas fa-search"></i>
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search products..."
+        autocomplete="off"
       >
 
-        <span></span>
+      <button
+        class="search-close"
+        id="searchClose"
+        aria-label="Close search"
+      >
 
-        <span></span>
-
-        <span></span>
+        <i class="fas fa-xmark"></i>
 
       </button>
 
     </div>
 
-  </nav>
+  </div>
 
 
-  <!-- =========================================
-       DEMOS
-       ========================================= -->
+  <!-- =====================================================
+       HERO
+       ===================================================== -->
 
   <main>
 
-    <section class="demos-section">
 
-      <div class="container">
+    <section class="hero" id="new">
 
 
-        <div class="demos-grid">
+      <img
+        class="hero-image"
+        src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=2200&q=85"
+        alt="Modern fashion store"
+      >
 
 
-          <!-- =================================
-               01 — GYM
-               ================================= -->
+      <div class="hero-overlay"></div>
 
-          <article class="demo-card">
 
-            <div class="demo-preview">
+      <div class="hero-content">
 
-              <div class="preview-bar">
+        <span class="hero-label">
+          The new everyday
+        </span>
 
-                <span class="preview-dot"></span>
 
-                <span class="preview-dot"></span>
+        <h1>
 
-                <span class="preview-dot"></span>
+          Less noise.
+          <span>More style.</span>
 
-                <span class="preview-url">
-                  deepbyto.github.io/demo-websites/gym/
-                </span>
+        </h1>
 
-              </div>
 
+        <p>
 
-              <iframe
-                src="https://deepbyto.github.io/demo-websites/gym/"
-                title="Gym Website Demo"
-                loading="lazy"
-                scrolling="no"
-              ></iframe>
+          Thoughtfully selected essentials for
+          modern living. Designed with simplicity,
+          quality, and everyday confidence in mind.
 
+        </p>
 
-              <div class="preview-overlay"></div>
 
-            </div>
+        <div class="hero-buttons">
 
+          <a
+            href="#shop"
+            class="button button-light"
+          >
 
-            <div class="demo-body">
+            Shop Collection
 
-              <div class="demo-top">
+            <i class="fas fa-arrow-right"></i>
 
-                <div>
-
-                  <div class="demo-number">
-                    01 / 06
-                  </div>
-
-                  <h3 class="demo-title">
-                    Gym & Fitness
-                  </h3>
-
-                </div>
-
-
-                <span class="demo-category">
-                  Business
-                </span>
-
-              </div>
-
-
-              <p class="demo-description">
-
-                A modern fitness website designed for
-                gyms, fitness centers, personal trainers,
-                and wellness businesses.
-
-              </p>
-
-
-              <div class="demo-actions">
-
-                <a
-                  href="https://deepbyto.github.io/demo-websites/gym/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="demo-button primary"
-                >
-
-                  View Live Demo
-
-                  <i
-                    class="fas fa-arrow-up-right-from-square"
-                  ></i>
-
-                </a>
-
-
-                <a
-                  href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20the%20Gym%20Website%20Demo."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="demo-button secondary"
-                >
-
-                  <i class="fab fa-whatsapp"></i>
-
-                  Inquire
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- =================================
-               02 — RESTAURANT
-               ================================= -->
-
-          <article class="demo-card">
-
-            <div class="demo-preview">
-
-              <div class="preview-bar">
-
-                <span class="preview-dot"></span>
-
-                <span class="preview-dot"></span>
-
-                <span class="preview-dot"></span>
-
-                <span class="preview-url">
-                  deepbyto.github.io/demo-websites/restaurant/
-                </span>
-
-              </div>
-
-
-              <iframe
-                src="https://deepbyto.github.io/demo-websites/restaurant/"
-                title="Restaurant Website Demo"
-                loading="lazy"
-                scrolling="no"
-              ></iframe>
-
-
-              <div class="preview-overlay"></div>
-
-            </div>
-
-
-            <div class="demo-body">
-
-              <div class="demo-top">
-
-                <div>
-
-                  <div class="demo-number">
-                    02 / 06
-                  </div>
-
-                  <h3 class="demo-title">
-                    Restaurant
-                  </h3>
-
-                </div>
-
-
-                <span class="demo-category">
-                  Food & Dining
-                </span>
-
-              </div>
-
-
-              <p class="demo-description">
-
-                A premium restaurant website focused on
-                menu presentation, brand identity,
-                reservations, and customer conversion.
-
-              </p>
-
-
-              <div class="demo-actions">
-
-                <a
-                  href="https://deepbyto.github.io/demo-websites/restaurant/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="demo-button primary"
-                >
-
-                  View Live Demo
-
-                  <i
-                    class="fas fa-arrow-up-right-from-square"
-                  ></i>
-
-                </a>
-
-
-                <a
-                  href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20the%20Restaurant%20Website."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="demo-button secondary"
-                >
-
-                  <i class="fab fa-whatsapp"></i>
-
-                  Inquire
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- =================================
-               03 — ECOMMERCE
-               ================================= -->
-
-          <article class="demo-card">
-
-            <div class="demo-preview">
-
-              <div class="preview-bar">
-
-                <span class="preview-dot"></span>
-
-                <span class="preview-dot"></span>
-
-                <span class="preview-dot"></span>
-
-                <span class="preview-url">
-                  E-Commerce Website
-                </span>
-
-              </div>
-
-
-              <div class="coming-preview">
-
-                <i class="fas fa-bag-shopping"></i>
-
-                <span>
-                  Coming Soon
-                </span>
-
-              </div>
-
-            </div>
-
-
-            <div class="demo-body">
-
-              <div class="demo-top">
-
-                <div>
-
-                  <div class="demo-number">
-                    03 / 06
-                  </div>
-
-                  <h3 class="demo-title">
-                    E-Commerce
-                  </h3>
-
-                </div>
-
-
-                <span class="demo-category">
-                  Online Store
-                </span>
-
-              </div>
-
-
-              <p class="demo-description">
-
-                A modern online store experience designed
-                for product discovery, mobile shopping,
-                and digital commerce.
-
-              </p>
-
-
-              <div class="demo-actions">
-
-                <a
-                  href="#"
-                  class="demo-button primary"
-                  onclick="comingSoon(event)"
-                >
-
-                  Coming Soon
-
-                  <i class="fas fa-arrow-right"></i>
-
-                </a>
-
-
-                <a
-                  href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20the%20E-Commerce%20Website."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="demo-button secondary"
-                >
-
-                  <i class="fab fa-whatsapp"></i>
-
-                  Inquire
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- =================================
-               04 — PORTFOLIO
-               ================================= -->
-
-          <article class="demo-card">
-
-            <div class="demo-preview">
-
-              <div class="preview-bar">
-
-                <span class="preview-dot"></span>
-
-                <span class="preview-dot"></span>
-
-                <span class="preview-dot"></span>
-
-                <span class="preview-url">
-                  Portfolio Website
-                </span>
-
-              </div>
-
-
-              <div class="coming-preview">
-
-                <i class="fas fa-user"></i>
-
-                <span>
-                  Coming Soon
-                </span>
-
-              </div>
-
-            </div>
-
-
-            <div class="demo-body">
-
-              <div class="demo-top">
-
-                <div>
-
-                  <div class="demo-number">
-                    04 / 06
-                  </div>
-
-                  <h3 class="demo-title">
-                    Personal Portfolio
-                  </h3>
-
-                </div>
-
-
-                <span class="demo-category">
-                  Portfolio
-                </span>
-
-              </div>
-
-
-              <p class="demo-description">
-
-                A professional portfolio experience for
-                developers, designers, creators,
-                freelancers, and professionals.
-
-              </p>
-
-
-              <div class="demo-actions">
-
-                <a
-                  href="#"
-                  class="demo-button primary"
-                  onclick="comingSoon(event)"
-                >
-
-                  Coming Soon
-
-                  <i class="fas fa-arrow-right"></i>
-
-                </a>
-
-
-                <a
-                  href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20the%20Portfolio%20Website."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="demo-button secondary"
-                >
-
-                  <i class="fab fa-whatsapp"></i>
-
-                  Inquire
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- =================================
-               05 — REAL ESTATE
-               ================================= -->
-
-          <article class="demo-card">
-
-            <div class="demo-preview">
-
-              <div class="preview-bar">
-
-                <span class="preview-dot"></span>
-
-                <span class="preview-dot"></span>
-
-                <span class="preview-dot"></span>
-
-                <span class="preview-url">
-                  Real Estate Website
-                </span>
-
-              </div>
-
-
-              <div class="coming-preview">
-
-                <i class="fas fa-building"></i>
-
-                <span>
-                  Coming Soon
-                </span>
-
-              </div>
-
-            </div>
-
-
-            <div class="demo-body">
-
-              <div class="demo-top">
-
-                <div>
-
-                  <div class="demo-number">
-                    05 / 06
-                  </div>
-
-                  <h3 class="demo-title">
-                    Real Estate
-                  </h3>
-
-                </div>
-
-
-                <span class="demo-category">
-                  Property
-                </span>
-
-              </div>
-
-
-              <p class="demo-description">
-
-                A professional property website concept
-                designed for agencies, property listings,
-                and real estate businesses.
-
-              </p>
-
-
-              <div class="demo-actions">
-
-                <a
-                  href="#"
-                  class="demo-button primary"
-                  onclick="comingSoon(event)"
-                >
-
-                  Coming Soon
-
-                  <i class="fas fa-arrow-right"></i>
-
-                </a>
-
-
-                <a
-                  href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20the%20Real%20Estate%20Website."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="demo-button secondary"
-                >
-
-                  <i class="fab fa-whatsapp"></i>
-
-                  Inquire
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- =================================
-               06 — BUSINESS
-               ================================= -->
-
-          <article class="demo-card">
-
-            <div class="demo-preview">
-
-              <div class="preview-bar">
-
-                <span class="preview-dot"></span>
-
-                <span class="preview-dot"></span>
-
-                <span class="preview-dot"></span>
-
-                <span class="preview-url">
-                  Business Website
-                </span>
-
-              </div>
-
-
-              <div class="coming-preview">
-
-                <i class="fas fa-building-circle-check"></i>
-
-                <span>
-                  Coming Soon
-                </span>
-
-              </div>
-
-            </div>
-
-
-            <div class="demo-body">
-
-              <div class="demo-top">
-
-                <div>
-
-                  <div class="demo-number">
-                    06 / 06
-                  </div>
-
-                  <h3 class="demo-title">
-                    Business Website
-                  </h3>
-
-                </div>
-
-
-                <span class="demo-category">
-                  Corporate
-                </span>
-
-              </div>
-
-
-              <p class="demo-description">
-
-                A flexible professional website concept
-                for companies, agencies, startups,
-                organizations, and service businesses.
-
-              </p>
-
-
-              <div class="demo-actions">
-
-                <a
-                  href="#"
-                  class="demo-button primary"
-                  onclick="comingSoon(event)"
-                >
-
-                  Coming Soon
-
-                  <i class="fas fa-arrow-right"></i>
-
-                </a>
-
-
-                <a
-                  href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20the%20Business%20Website."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="demo-button secondary"
-                >
-
-                  <i class="fab fa-whatsapp"></i>
-
-                  Inquire
-
-                </a>
-
-              </div>
-
-            </div>
-
-          </article>
-
-
-        </div>
-
-
-        <!-- =================================
-             CTA
-             ================================= -->
-
-        <div class="bottom-cta">
-
-          <h2>
-            Need a Website Like These?
-          </h2>
-
-
-          <p>
-
-            DEEPBYTO builds modern, responsive,
-            professional websites for businesses,
-            startups, individuals, and organizations.
-
-          </p>
+          </a>
 
 
           <a
-            href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20a%20professional%20website."
-            target="_blank"
-            rel="noopener noreferrer"
-            class="cta-button"
+            href="#collections"
+            class="button button-outline-light"
           >
 
-            <i class="fab fa-whatsapp"></i>
-
-            Contact DEEPBYTO
+            Explore Categories
 
           </a>
 
@@ -2224,69 +2571,1232 @@
 
     </section>
 
-  </main>
+
+    <!-- ===================================================
+         TRUST
+         =================================================== -->
+
+    <section class="trust-strip">
+
+      <div class="trust-inner">
 
 
-  <!-- =========================================
-       FOOTER
-       ========================================= -->
+        <div class="trust-item">
 
-  <footer class="footer">
+          <i class="fas fa-truck-fast"></i>
 
-    <div class="container">
-
-
-      <div class="footer-main">
-
-        <div>
-
-          <div class="footer-brand">
-            DEEPBYTO
-          </div>
-
-          <div class="footer-tagline">
-            AI & Software Innovation
-          </div>
+          Free Shipping Over $100
 
         </div>
 
 
-        <div class="footer-links">
+        <div class="trust-item">
 
-          <a href="https://deepbyto.github.io/">
-            Home
+          <i class="fas fa-shield-halved"></i>
+
+          Secure Checkout
+
+        </div>
+
+
+        <div class="trust-item">
+
+          <i class="fas fa-rotate-left"></i>
+
+          Easy Returns
+
+        </div>
+
+
+        <div class="trust-item">
+
+          <i class="fas fa-headset"></i>
+
+          Dedicated Support
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         CATEGORIES
+         =================================================== -->
+
+    <section
+      class="section"
+      id="collections"
+    >
+
+      <div class="container">
+
+
+        <div class="section-header">
+
+          <span class="section-label">
+            Explore
+          </span>
+
+          <h2 class="section-title">
+            Shop by Category
+          </h2>
+
+          <p class="section-subtitle">
+
+            Discover considered essentials across
+            fashion, lifestyle, and everyday living.
+
+          </p>
+
+        </div>
+
+
+        <div class="categories">
+
+
+          <a
+            href="#shop"
+            class="category"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=900&q=80"
+              alt="Fashion collection"
+              loading="lazy"
+            >
+
+
+            <div class="category-content">
+
+              <h3>
+                Apparel
+              </h3>
+
+              <span>
+                Explore Collection →
+              </span>
+
+            </div>
+
           </a>
 
-          <a href="https://deepbyto.github.io/#services">
-            Services
+
+          <a
+            href="#shop"
+            class="category"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=900&q=80"
+              alt="Accessories collection"
+              loading="lazy"
+            >
+
+
+            <div class="category-content">
+
+              <h3>
+                Accessories
+              </h3>
+
+              <span>
+                Explore Collection →
+              </span>
+
+            </div>
+
           </a>
 
-          <a href="https://deepbyto.github.io/#projects">
-            Projects
+
+          <a
+            href="#shop"
+            class="category"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=900&q=80"
+              alt="Home collection"
+              loading="lazy"
+            >
+
+
+            <div class="category-content">
+
+              <h3>
+                Home
+              </h3>
+
+              <span>
+                Explore Collection →
+              </span>
+
+            </div>
+
           </a>
 
-          <a href="https://deepbyto.github.io/demos/">
-            Demos
+
+          <a
+            href="#shop"
+            class="category"
+          >
+
+            <img
+              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80"
+              alt="Lifestyle collection"
+              loading="lazy"
+            >
+
+
+            <div class="category-content">
+
+              <h3>
+                Lifestyle
+              </h3>
+
+              <span>
+                Explore Collection →
+              </span>
+
+            </div>
+
           </a>
 
-          <a href="https://deepbyto.github.io/#contact">
-            Contact
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         PRODUCTS
+         =================================================== -->
+
+    <section
+      class="section"
+      id="shop"
+      style="padding-top:20px;"
+    >
+
+      <div class="container">
+
+
+        <div class="section-header">
+
+          <span class="section-label">
+            Selected for you
+          </span>
+
+          <h2 class="section-title">
+            Featured Essentials
+          </h2>
+
+          <p class="section-subtitle">
+
+            A curated selection of products
+            designed to fit effortlessly into your life.
+
+          </p>
+
+        </div>
+
+
+        <div class="products">
+
+
+          <!-- PRODUCT 1 -->
+
+          <article
+            class="product"
+            data-name="Essential Overshirt"
+          >
+
+            <div class="product-image">
+
+              <span class="product-badge">
+                New
+              </span>
+
+
+              <button
+                class="product-wishlist"
+                aria-label="Add to wishlist"
+              >
+
+                <i class="far fa-heart"></i>
+
+              </button>
+
+
+              <img
+                src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=900&q=80"
+                alt="Essential Overshirt"
+                loading="lazy"
+              >
+
+            </div>
+
+
+            <div class="product-info">
+
+              <div class="product-category">
+                Apparel
+              </div>
+
+              <h3 class="product-name">
+                Essential Overshirt
+              </h3>
+
+              <div class="product-price">
+                $68
+              </div>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+
+
+              <button
+                class="add-product"
+                data-product="Essential Overshirt"
+                data-price="68"
+                data-image="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=300&q=80"
+              >
+
+                Add to Bag
+
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 2 -->
+
+          <article
+            class="product"
+            data-name="Minimal Leather Bag"
+          >
+
+            <div class="product-image">
+
+              <span class="product-badge">
+                Bestseller
+              </span>
+
+
+              <button
+                class="product-wishlist"
+                aria-label="Add to wishlist"
+              >
+
+                <i class="far fa-heart"></i>
+
+              </button>
+
+
+              <img
+                src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=900&q=80"
+                alt="Minimal Leather Bag"
+                loading="lazy"
+              >
+
+            </div>
+
+
+            <div class="product-info">
+
+              <div class="product-category">
+                Accessories
+              </div>
+
+              <h3 class="product-name">
+                Minimal Leather Bag
+              </h3>
+
+              <div class="product-price">
+                $94
+              </div>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+
+
+              <button
+                class="add-product"
+                data-product="Minimal Leather Bag"
+                data-price="94"
+                data-image="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=300&q=80"
+              >
+
+                Add to Bag
+
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 3 -->
+
+          <article
+            class="product"
+            data-name="Classic Sneakers"
+          >
+
+            <div class="product-image">
+
+              <span class="product-badge">
+                Popular
+              </span>
+
+
+              <button
+                class="product-wishlist"
+                aria-label="Add to wishlist"
+              >
+
+                <i class="far fa-heart"></i>
+
+              </button>
+
+
+              <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+                alt="Classic Sneakers"
+                loading="lazy"
+              >
+
+            </div>
+
+
+            <div class="product-info">
+
+              <div class="product-category">
+                Footwear
+              </div>
+
+              <h3 class="product-name">
+                Classic Sneakers
+              </h3>
+
+              <div class="product-price">
+                $82
+
+                <span class="old-price">
+                  $105
+                </span>
+
+              </div>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+
+
+              <button
+                class="add-product"
+                data-product="Classic Sneakers"
+                data-price="82"
+                data-image="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=300&q=80"
+              >
+
+                Add to Bag
+
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 4 -->
+
+          <article
+            class="product"
+            data-name="Everyday Watch"
+          >
+
+            <div class="product-image">
+
+              <button
+                class="product-wishlist"
+                aria-label="Add to wishlist"
+              >
+
+                <i class="far fa-heart"></i>
+
+              </button>
+
+
+              <img
+                src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=80"
+                alt="Everyday Watch"
+                loading="lazy"
+              >
+
+            </div>
+
+
+            <div class="product-info">
+
+              <div class="product-category">
+                Accessories
+              </div>
+
+              <h3 class="product-name">
+                Everyday Watch
+              </h3>
+
+              <div class="product-price">
+                $129
+              </div>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+
+
+              <button
+                class="add-product"
+                data-product="Everyday Watch"
+                data-price="129"
+                data-image="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=300&q=80"
+              >
+
+                Add to Bag
+
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 5 -->
+
+          <article
+            class="product"
+            data-name="Modern Sunglasses"
+          >
+
+            <div class="product-image">
+
+              <span class="product-badge">
+                New
+              </span>
+
+
+              <button
+                class="product-wishlist"
+                aria-label="Add to wishlist"
+              >
+
+                <i class="far fa-heart"></i>
+
+              </button>
+
+
+              <img
+                src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=900&q=80"
+                alt="Modern Sunglasses"
+                loading="lazy"
+              >
+
+            </div>
+
+
+            <div class="product-info">
+
+              <div class="product-category">
+                Accessories
+              </div>
+
+              <h3 class="product-name">
+                Modern Sunglasses
+              </h3>
+
+              <div class="product-price">
+                $54
+              </div>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+
+
+              <button
+                class="add-product"
+                data-product="Modern Sunglasses"
+                data-price="54"
+                data-image="https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=300&q=80"
+              >
+
+                Add to Bag
+
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 6 -->
+
+          <article
+            class="product"
+            data-name="Daily Knit"
+          >
+
+            <div class="product-image">
+
+              <button
+                class="product-wishlist"
+                aria-label="Add to wishlist"
+              >
+
+                <i class="far fa-heart"></i>
+
+              </button>
+
+
+              <img
+                src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=900&q=80"
+                alt="Daily Knit"
+                loading="lazy"
+              >
+
+            </div>
+
+
+            <div class="product-info">
+
+              <div class="product-category">
+                Apparel
+              </div>
+
+              <h3 class="product-name">
+                Daily Knit
+              </h3>
+
+              <div class="product-price">
+                $59
+              </div>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+
+
+              <button
+                class="add-product"
+                data-product="Daily Knit"
+                data-price="59"
+                data-image="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=300&q=80"
+              >
+
+                Add to Bag
+
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 7 -->
+
+          <article
+            class="product"
+            data-name="Everyday Backpack"
+          >
+
+            <div class="product-image">
+
+              <span class="product-badge">
+                Popular
+              </span>
+
+
+              <button
+                class="product-wishlist"
+                aria-label="Add to wishlist"
+              >
+
+                <i class="far fa-heart"></i>
+
+              </button>
+
+
+              <img
+                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=80"
+                alt="Everyday Backpack"
+                loading="lazy"
+              >
+
+            </div>
+
+
+            <div class="product-info">
+
+              <div class="product-category">
+                Bags
+              </div>
+
+              <h3 class="product-name">
+                Everyday Backpack
+              </h3>
+
+              <div class="product-price">
+                $76
+              </div>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+
+
+              <button
+                class="add-product"
+                data-product="Everyday Backpack"
+                data-price="76"
+                data-image="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=300&q=80"
+              >
+
+                Add to Bag
+
+              </button>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 8 -->
+
+          <article
+            class="product"
+            data-name="Signature Fragrance"
+          >
+
+            <div class="product-image">
+
+              <button
+                class="product-wishlist"
+                aria-label="Add to wishlist"
+              >
+
+                <i class="far fa-heart"></i>
+
+              </button>
+
+
+              <img
+                src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=900&q=80"
+                alt="Signature Fragrance"
+                loading="lazy"
+              >
+
+            </div>
+
+
+            <div class="product-info">
+
+              <div class="product-category">
+                Beauty
+              </div>
+
+              <h3 class="product-name">
+                Signature Fragrance
+              </h3>
+
+              <div class="product-price">
+                $88
+              </div>
+
+              <div class="stars">
+                ★★★★★
+              </div>
+
+
+              <button
+                class="add-product"
+                data-product="Signature Fragrance"
+                data-price="88"
+                data-image="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=300&q=80"
+              >
+
+                Add to Bag
+
+              </button>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         PROMO
+         =================================================== -->
+
+    <section class="promo">
+
+      <img
+        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=2200&q=85"
+        alt="NOVA collection"
+        loading="lazy"
+      >
+
+
+      <div class="container">
+
+        <div class="promo-content">
+
+          <span class="section-label">
+            The collection
+          </span>
+
+
+          <h2>
+            Designed for
+            the everyday.
+          </h2>
+
+
+          <p>
+
+            Clean silhouettes, timeless details,
+            and versatile pieces made to move
+            naturally through your day.
+
+          </p>
+
+
+          <a
+            href="#shop"
+            class="button button-light"
+          >
+
+            Discover the Collection
+
+            <i class="fas fa-arrow-right"></i>
+
           </a>
 
         </div>
 
       </div>
 
+    </section>
+
+
+    <!-- ===================================================
+         STORY
+         =================================================== -->
+
+    <section
+      class="section"
+      id="story"
+    >
+
+      <div class="container">
+
+
+        <div class="feature-layout">
+
+
+          <div class="feature-image">
+
+            <img
+              src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85"
+              alt="NOVA lifestyle"
+              loading="lazy"
+            >
+
+          </div>
+
+
+          <div class="feature-content">
+
+            <span class="section-label">
+              Our philosophy
+            </span>
+
+
+            <h2>
+              Good design
+              should feel effortless.
+            </h2>
+
+
+            <p>
+
+              NOVA is a fictional e-commerce concept
+              created to demonstrate how a modern
+              online store can combine strong visual
+              identity with a clean, intuitive shopping
+              experience.
+
+            </p>
+
+
+            <div class="feature-list">
+
+
+              <div class="feature-item">
+
+                <div class="feature-item-icon">
+
+                  <i class="fas fa-gem"></i>
+
+                </div>
+
+
+                <div>
+
+                  <h4>
+                    Considered Design
+                  </h4>
+
+                  <p>
+                    Simple products with a refined visual language.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="feature-item">
+
+                <div class="feature-item-icon">
+
+                  <i class="fas fa-leaf"></i>
+
+                </div>
+
+
+                <div>
+
+                  <h4>
+                    Everyday Versatility
+                  </h4>
+
+                  <p>
+                    Designed to work across different moments and styles.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="feature-item">
+
+                <div class="feature-item-icon">
+
+                  <i class="fas fa-heart"></i>
+
+                </div>
+
+
+                <div>
+
+                  <h4>
+                    Customer First
+                  </h4>
+
+                  <p>
+                    A shopping experience built around clarity and ease.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+            </div>
+
+
+            <a
+              href="#contact"
+              class="button"
+            >
+
+              Learn More
+
+              <i class="fas fa-arrow-right"></i>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         NEWSLETTER
+         =================================================== -->
+
+    <section class="newsletter">
+
+      <div class="container">
+
+        <span class="section-label">
+          Stay in the loop
+        </span>
+
+
+        <h2>
+          Join the NOVA list.
+        </h2>
+
+
+        <p>
+
+          New arrivals, curated edits, and
+          occasional offers — straight to your inbox.
+
+        </p>
+
+
+        <form
+          class="newsletter-form"
+          id="newsletterForm"
+        >
+
+          <input
+            type="email"
+            id="emailInput"
+            placeholder="Your email address"
+            required
+          >
+
+
+          <button type="submit">
+
+            Subscribe
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer
+    class="footer"
+    id="contact"
+  >
+
+    <div class="container">
+
+
+      <div class="footer-grid">
+
+
+        <div>
+
+          <div class="footer-brand">
+            NOVA.
+          </div>
+
+
+          <p class="footer-about">
+
+            A fictional modern e-commerce brand
+            created as a website demonstration
+            by DEEPBYTO.
+
+          </p>
+
+
+          <div class="socials">
+
+
+            <a
+              href="#"
+              class="social"
+              aria-label="Instagram"
+              onclick="demoLink(event)"
+            >
+
+              <i class="fab fa-instagram"></i>
+
+            </a>
+
+
+            <a
+              href="#"
+              class="social"
+              aria-label="Facebook"
+              onclick="demoLink(event)"
+            >
+
+              <i class="fab fa-facebook-f"></i>
+
+            </a>
+
+
+            <a
+              href="#"
+              class="social"
+              aria-label="Pinterest"
+              onclick="demoLink(event)"
+            >
+
+              <i class="fab fa-pinterest-p"></i>
+
+            </a>
+
+
+            <a
+              href="#"
+              class="social"
+              aria-label="TikTok"
+              onclick="demoLink(event)"
+            >
+
+              <i class="fab fa-tiktok"></i>
+
+            </a>
+
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Shop
+          </h4>
+
+          <a href="#shop">
+            New Arrivals
+          </a>
+
+          <a href="#shop">
+            Best Sellers
+          </a>
+
+          <a href="#collections">
+            Apparel
+          </a>
+
+          <a href="#collections">
+            Accessories
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Help
+          </h4>
+
+          <a href="#contact">
+            Contact Us
+          </a>
+
+          <a href="#contact">
+            Shipping
+          </a>
+
+          <a href="#contact">
+            Returns
+          </a>
+
+          <a href="#contact">
+            FAQs
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Company
+          </h4>
+
+          <a href="#story">
+            Our Story
+          </a>
+
+          <a href="#story">
+            Philosophy
+          </a>
+
+          <a href="#new">
+            Journal
+          </a>
+
+          <a
+            href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20an%20E-Commerce%20Website."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Build a Store
+          </a>
+
+        </div>
+
+
+      </div>
+
 
       <div class="footer-bottom">
 
-        <p>
-          © 2026 DEEPBYTO. All rights reserved.
-        </p>
+        <span>
+          © 2026 NOVA. All rights reserved.
+        </span>
 
-        <p>
-          Developed by DEEPBYTO
-        </p>
+
+        <span>
+
+          E-Commerce Demo ·
+
+          <a
+            href="https://deepbyto.github.io/"
+            class="deepbyto-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Developed by DEEPBYTO
+          </a>
+
+        </span>
 
       </div>
 
@@ -2295,34 +3805,229 @@
   </footer>
 
 
-  <!-- =========================================
+  <!-- =====================================================
+       CART
+       ===================================================== -->
+
+  <div
+    class="cart-overlay"
+    id="cartOverlay"
+  >
+
+    <aside class="cart-drawer">
+
+
+      <div class="cart-header">
+
+        <h3>
+          Your Bag
+        </h3>
+
+
+        <button
+          class="cart-close"
+          id="cartClose"
+          aria-label="Close cart"
+        >
+
+          <i class="fas fa-xmark"></i>
+
+        </button>
+
+      </div>
+
+
+      <div
+        class="cart-items"
+        id="cartItems"
+      >
+
+        <div class="empty-cart">
+
+          <i class="fas fa-bag-shopping"></i>
+
+          <p>
+            Your bag is currently empty.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="cart-footer">
+
+        <div class="cart-total">
+
+          <span>
+            Subtotal
+          </span>
+
+          <span id="cartTotal">
+            $0
+          </span>
+
+        </div>
+
+
+        <button
+          class="checkout-button"
+          id="checkoutButton"
+        >
+
+          Proceed to Checkout
+
+        </button>
+
+      </div>
+
+    </aside>
+
+  </div>
+
+
+  <!-- =====================================================
+       TOAST
+       ===================================================== -->
+
+  <div
+    class="toast"
+    id="toast"
+  ></div>
+
+
+  <!-- =====================================================
        JAVASCRIPT
-       ========================================= -->
+       ===================================================== -->
 
   <script>
 
     'use strict';
 
 
-    /* =========================================
-       NAVBAR
-       ========================================= */
+    /* =====================================================
+       ELEMENTS
+       ===================================================== */
 
-    const navbar =
-      document.getElementById('navbar');
+    const cartButton =
+      document.getElementById('cartButton');
+
+    const cartOverlay =
+      document.getElementById('cartOverlay');
+
+    const cartClose =
+      document.getElementById('cartClose');
+
+    const cartItems =
+      document.getElementById('cartItems');
+
+    const cartCount =
+      document.getElementById('cartCount');
+
+    const cartTotal =
+      document.getElementById('cartTotal');
+
+    const checkoutButton =
+      document.getElementById('checkoutButton');
+
+    const toast =
+      document.getElementById('toast');
+
+    const searchButton =
+      document.getElementById('searchButton');
+
+    const searchPanel =
+      document.getElementById('searchPanel');
+
+    const searchClose =
+      document.getElementById('searchClose');
+
+    const searchInput =
+      document.getElementById('searchInput');
+
+    const menuButton =
+      document.getElementById('menuButton');
+
+    const mobileMenu =
+      document.getElementById('mobileMenu');
 
 
-    window.addEventListener(
-      'scroll',
-      () => {
+    let cart = [];
 
-        if (window.scrollY > 20) {
 
-          navbar.classList.add('scrolled');
+    /* =====================================================
+       TOAST
+       ===================================================== */
 
-        } else {
+    let toastTimer;
 
-          navbar.classList.remove('scrolled');
+
+    function showToast(message) {
+
+      toast.textContent = message;
+
+      toast.classList.add('show');
+
+
+      clearTimeout(toastTimer);
+
+
+      toastTimer =
+        setTimeout(
+          () => {
+
+            toast.classList.remove('show');
+
+          },
+          2500
+        );
+
+    }
+
+
+    /* =====================================================
+       CART OPEN / CLOSE
+       ===================================================== */
+
+    function openCart() {
+
+      cartOverlay.classList.add('open');
+
+      document.body.classList.add('no-scroll');
+
+    }
+
+
+    function closeCart() {
+
+      cartOverlay.classList.remove('open');
+
+      document.body.classList.remove('no-scroll');
+
+    }
+
+
+    cartButton.addEventListener(
+      'click',
+      openCart
+    );
+
+
+    cartClose.addEventListener(
+      'click',
+      closeCart
+    );
+
+
+    cartOverlay.addEventListener(
+      'click',
+      event => {
+
+        if (
+          event.target === cartOverlay
+        ) {
+
+          closeCart();
 
         }
 
@@ -2330,60 +4035,45 @@
     );
 
 
-    /* =========================================
-       MOBILE NAVIGATION
-       ========================================= */
+    /* =====================================================
+       ADD TO CART
+       ===================================================== */
 
-    const navToggle =
-      document.getElementById('navToggle');
-
-    const navLinks =
-      document.getElementById('navLinks');
-
-
-    navToggle.addEventListener(
-      'click',
-      () => {
-
-        const open =
-          navLinks.classList.toggle('open');
-
-
-        navToggle.classList.toggle(
-          'active'
-        );
-
-
-        navToggle.setAttribute(
-          'aria-expanded',
-          open
-        );
-
-      }
-    );
-
-
-    navLinks
-      .querySelectorAll('a')
+    document
+      .querySelectorAll('.add-product')
       .forEach(
-        link => {
+        button => {
 
-          link.addEventListener(
+          button.addEventListener(
             'click',
             () => {
 
-              navLinks.classList.remove(
-                'open'
+              const product = {
+
+                name:
+                  button.dataset.product,
+
+                price:
+                  Number(button.dataset.price),
+
+                image:
+                  button.dataset.image
+
+              };
+
+
+              cart.push(product);
+
+
+              updateCart();
+
+
+              showToast(
+                `${product.name} added to your bag.`
               );
 
-              navToggle.classList.remove(
-                'active'
-              );
 
-              navToggle.setAttribute(
-                'aria-expanded',
-                'false'
-              );
+              openCart();
 
             }
           );
@@ -2392,27 +4082,253 @@
       );
 
 
+    /* =====================================================
+       UPDATE CART
+       ===================================================== */
+
+    function updateCart() {
+
+      cartCount.textContent =
+        cart.length;
+
+
+      if (cart.length === 0) {
+
+        cartItems.innerHTML = `
+
+          <div class="empty-cart">
+
+            <i class="fas fa-bag-shopping"></i>
+
+            <p>
+              Your bag is currently empty.
+            </p>
+
+          </div>
+
+        `;
+
+        cartTotal.textContent =
+          '$0';
+
+        return;
+
+      }
+
+
+      cartItems.innerHTML =
+        cart
+          .map(
+            (item,index) => `
+
+              <div class="cart-item">
+
+                <img
+                  src="${item.image}"
+                  alt="${item.name}"
+                >
+
+                <div>
+
+                  <div class="cart-item-name">
+                    ${item.name}
+                  </div>
+
+                  <div class="cart-item-price">
+                    $${item.price}
+                  </div>
+
+                </div>
+
+                <button
+                  class="cart-remove"
+                  onclick="removeCartItem(${index})"
+                  aria-label="Remove item"
+                >
+
+                  <i class="fas fa-trash"></i>
+
+                </button>
+
+              </div>
+
+            `
+          )
+          .join('');
+
+
+      const total =
+        cart.reduce(
+          (sum,item) =>
+            sum + item.price,
+          0
+        );
+
+
+      cartTotal.textContent =
+        '$' + total.toFixed(2);
+
+    }
+
+
+    /* =====================================================
+       REMOVE CART ITEM
+       ===================================================== */
+
+    function removeCartItem(index) {
+
+      const removed =
+        cart[index];
+
+
+      cart.splice(index,1);
+
+
+      updateCart();
+
+
+      showToast(
+        `${removed.name} removed from your bag.`
+      );
+
+    }
+
+
+    /* =====================================================
+       CHECKOUT
+       ===================================================== */
+
+    checkoutButton.addEventListener(
+      'click',
+      () => {
+
+        if (cart.length === 0) {
+
+          showToast(
+            'Your bag is empty.'
+          );
+
+          return;
+
+        }
+
+
+        showToast(
+          'Checkout is available in the full store version.'
+        );
+
+      }
+    );
+
+
+    /* =====================================================
+       WISHLIST
+       ===================================================== */
+
+    document
+      .querySelectorAll('.product-wishlist')
+      .forEach(
+        button => {
+
+          button.addEventListener(
+            'click',
+            () => {
+
+              const icon =
+                button.querySelector('i');
+
+
+              const active =
+                icon.classList.contains(
+                  'fas'
+                );
+
+
+              if (active) {
+
+                icon.className =
+                  'far fa-heart';
+
+                showToast(
+                  'Removed from wishlist.'
+                );
+
+              } else {
+
+                icon.className =
+                  'fas fa-heart';
+
+                showToast(
+                  'Added to wishlist.'
+                );
+
+              }
+
+            }
+          );
+
+        }
+      );
+
+
+    /* =====================================================
+       SEARCH
+       ===================================================== */
+
+    function openSearch() {
+
+      searchPanel.classList.add('open');
+
+      setTimeout(
+        () => {
+
+          searchInput.focus();
+
+        },
+        300
+      );
+
+    }
+
+
+    function closeSearch() {
+
+      searchPanel.classList.remove(
+        'open'
+      );
+
+      searchInput.value = '';
+
+      showAllProducts();
+
+    }
+
+
+    searchButton.addEventListener(
+      'click',
+      openSearch
+    );
+
+
+    searchClose.addEventListener(
+      'click',
+      closeSearch
+    );
+
+
     document.addEventListener(
       'keydown',
       event => {
 
         if (
-          event.key === 'Escape' &&
-          navLinks.classList.contains('open')
+          event.key === 'Escape'
         ) {
 
-          navLinks.classList.remove(
-            'open'
-          );
+          closeSearch();
 
-          navToggle.classList.remove(
-            'active'
-          );
+          closeCart();
 
-          navToggle.setAttribute(
-            'aria-expanded',
-            'false'
-          );
+          closeMobileMenu();
 
         }
 
@@ -2420,118 +4336,265 @@
     );
 
 
-    /* =========================================
-       THEME
-       ========================================= */
+    /* =====================================================
+       PRODUCT SEARCH
+       ===================================================== */
 
-    const themeToggle =
-      document.getElementById('themeToggle');
-
-    const themeIcon =
-      document.getElementById('themeIcon');
-
-    const themeText =
-      document.getElementById('themeText');
-
-
-    function setTheme(theme) {
-
-      document.documentElement
-        .setAttribute(
-          'data-theme',
-          theme
-        );
-
-
-      localStorage.setItem(
-        'deepbyto-theme',
-        theme
-      );
-
-
-      if (theme === 'light') {
-
-        themeIcon.className =
-          'fas fa-sun';
-
-        themeText.textContent =
-          'Light';
-
-      } else {
-
-        themeIcon.className =
-          'fas fa-moon';
-
-        themeText.textContent =
-          'Dark';
-
-      }
-
-
-      const meta =
-        document.querySelector(
-          'meta[name="theme-color"]'
-        );
-
-
-      if (meta) {
-
-        meta.content =
-          theme === 'light'
-            ? '#f5f5f5'
-            : '#000000';
-
-      }
-
-    }
-
-
-    const savedTheme =
-      localStorage.getItem(
-        'deepbyto-theme'
-      ) || 'dark';
-
-
-    setTheme(savedTheme);
-
-
-    themeToggle.addEventListener(
-      'click',
+    searchInput.addEventListener(
+      'input',
       () => {
 
-        const current =
-          document.documentElement
-            .getAttribute(
-              'data-theme'
-            );
+        const query =
+          searchInput.value
+            .trim()
+            .toLowerCase();
 
 
-        setTheme(
-          current === 'light'
-            ? 'dark'
-            : 'light'
+        const products =
+          document.querySelectorAll(
+            '.product'
+          );
+
+
+        products.forEach(
+          product => {
+
+            const name =
+              product.dataset.name
+                .toLowerCase();
+
+
+            if (
+              !query ||
+              name.includes(query)
+            ) {
+
+              product.style.display =
+                '';
+
+            } else {
+
+              product.style.display =
+                'none';
+
+            }
+
+          }
         );
 
       }
     );
 
 
-    /* =========================================
-       COMING SOON
-       ========================================= */
+    function showAllProducts() {
 
-    function comingSoon(event) {
+      document
+        .querySelectorAll('.product')
+        .forEach(
+          product => {
+
+            product.style.display =
+              '';
+
+          }
+        );
+
+    }
+
+
+    /* =====================================================
+       MOBILE MENU
+       ===================================================== */
+
+    function openMobileMenu() {
+
+      mobileMenu.classList.add('open');
+
+      document.body.classList.add(
+        'no-scroll'
+      );
+
+      menuButton.innerHTML =
+        '<i class="fas fa-xmark"></i>';
+
+    }
+
+
+    function closeMobileMenu() {
+
+      mobileMenu.classList.remove('open');
+
+      document.body.classList.remove(
+        'no-scroll'
+      );
+
+      menuButton.innerHTML =
+        '<i class="fas fa-bars"></i>';
+
+    }
+
+
+    menuButton.addEventListener(
+      'click',
+      () => {
+
+        if (
+          mobileMenu.classList.contains(
+            'open'
+          )
+        ) {
+
+          closeMobileMenu();
+
+        } else {
+
+          openMobileMenu();
+
+        }
+
+      }
+    );
+
+
+    mobileMenu
+      .querySelectorAll('a')
+      .forEach(
+        link => {
+
+          link.addEventListener(
+            'click',
+            closeMobileMenu
+          );
+
+        }
+      );
+
+
+    /* =====================================================
+       NEWSLETTER
+       ===================================================== */
+
+    const newsletterForm =
+      document.getElementById(
+        'newsletterForm'
+      );
+
+
+    newsletterForm.addEventListener(
+      'submit',
+      event => {
+
+        event.preventDefault();
+
+
+        const email =
+          document.getElementById(
+            'emailInput'
+          ).value.trim();
+
+
+        if (!email) {
+
+          return;
+
+        }
+
+
+        showToast(
+          'Thank you for subscribing.'
+        );
+
+
+        newsletterForm.reset();
+
+      }
+    );
+
+
+    /* =====================================================
+       DEMO LINKS
+       ===================================================== */
+
+    function demoLink(event) {
 
       event.preventDefault();
 
-      alert(
-        'This demo is currently being developed by DEEPBYTO.'
+      showToast(
+        'Social profile is not connected in this demo.'
       );
 
     }
+
+
+    /* =====================================================
+       SMOOTH SCROLL
+       ===================================================== */
+
+    document
+      .querySelectorAll(
+        'a[href^="#"]'
+      )
+      .forEach(
+        link => {
+
+          link.addEventListener(
+            'click',
+            event => {
+
+              const targetId =
+                link.getAttribute('href');
+
+
+              if (
+                targetId === '#'
+              ) {
+
+                event.preventDefault();
+
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+                });
+
+                return;
+
+              }
+
+
+              const target =
+                document.querySelector(
+                  targetId
+                );
+
+
+              if (target) {
+
+                event.preventDefault();
+
+
+                target.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start'
+                });
+
+              }
+
+            }
+          );
+
+        }
+      );
+
+
+    /* =====================================================
+       INITIAL STATE
+       ===================================================== */
+
+    updateCart();
 
   </script>
 
 
 </body>
 </html>
+
