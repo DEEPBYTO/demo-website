@@ -1,28 +1,89 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>NOVA — Modern Online Store</title>
+  <title>Demos | DEEPBYTO</title>
 
   <meta
     name="description"
-    content="NOVA — a modern e-commerce website experience developed by DEEPBYTO."
+    content="Explore professional website demos and digital experiences developed by DEEPBYTO."
   >
 
   <meta name="robots" content="index, follow">
 
-  <meta
-    name="theme-color"
-    content="#0a0a0a"
+  <link
+    rel="canonical"
+    href="https://deepbyto.github.io/demos/"
   >
+
+  <link
+    rel="icon"
+    href="https://deepbyto.github.io/favicon.ico"
+    type="image/x-icon"
+  >
+
+  <link
+    rel="shortcut icon"
+    href="https://deepbyto.github.io/favicon.ico"
+    type="image/x-icon"
+  >
+
+  <meta name="theme-color" content="#000000">
+
+  <meta
+    property="og:title"
+    content="Website Demos | DEEPBYTO"
+  >
+
+  <meta
+    property="og:description"
+    content="Explore professional website demos and digital experiences developed by DEEPBYTO."
+  >
+
+  <meta
+    property="og:image"
+    content="https://deepbyto.github.io/image.jpg"
+  >
+
+  <meta
+    property="og:url"
+    content="https://deepbyto.github.io/demos/"
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:site_name"
+    content="DEEPBYTO"
+  >
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Website Demos | DEEPBYTO"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Explore professional website demos and digital experiences developed by DEEPBYTO."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://deepbyto.github.io/image.jpg"
+  >
+
 
   <!-- Fonts -->
 
@@ -38,151 +99,170 @@
   >
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet"
   >
+
 
   <!-- Font Awesome -->
 
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
   >
 
 
+  <!-- Google Analytics -->
+
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-TLW2YM03KC">
+  </script>
+
+  <script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag(){
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag(
+      'config',
+      'G-TLW2YM03KC'
+    );
+
+  </script>
+
+
   <style>
-
-    /* =========================================
-       ROOT
-       ========================================= */
-
-    :root {
-
-      --bg: #080808;
-
-      --bg-soft: #101010;
-
-      --card: #111111;
-
-      --card-hover: #171717;
-
-      --text: #ffffff;
-
-      --text-soft: #d0d0d0;
-
-      --muted: #858585;
-
-      --border: rgba(255,255,255,0.09);
-
-      --border-hover: rgba(255,255,255,0.25);
-
-      --white: #ffffff;
-
-      --black: #000000;
-
-      --accent: #ffffff;
-
-      --max-width: 1240px;
-
-      --radius: 16px;
-
-      --transition:
-        0.3s cubic-bezier(.25,.46,.45,.94);
-    }
-
-
-    [data-theme="light"] {
-
-      --bg: #f5f5f5;
-
-      --bg-soft: #ffffff;
-
-      --card: #ffffff;
-
-      --card-hover: #f1f1f1;
-
-      --text: #0b0b0b;
-
-      --text-soft: #3c3c3c;
-
-      --muted: #777777;
-
-      --border: rgba(0,0,0,0.09);
-
-      --border-hover: rgba(0,0,0,0.25);
-
-      --accent: #000000;
-
-      --white: #000000;
-
-      --black: #ffffff;
-    }
-
 
     /* =========================================
        RESET
        ========================================= */
 
     * {
-
       margin: 0;
-
       padding: 0;
-
       box-sizing: border-box;
     }
 
 
+    :root {
+
+      --bg-primary: #000000;
+
+      --bg-secondary: #080808;
+
+      --bg-card: rgba(18,18,18,0.86);
+
+      --text-primary: #ffffff;
+
+      --text-secondary: #dddddd;
+
+      --text-muted: #999999;
+
+      --accent: #ffffff;
+
+      --accent-dim: rgba(255,255,255,0.08);
+
+      --accent-glow: rgba(255,255,255,0.18);
+
+      --border: rgba(255,255,255,0.10);
+
+      --border-hover: rgba(255,255,255,0.45);
+
+      --nav-bg: rgba(0,0,0,0.72);
+
+      --nav-scrolled: rgba(0,0,0,0.96);
+
+      --shadow: rgba(0,0,0,0.65);
+
+      --radius: 18px;
+
+      --transition:
+        0.35s cubic-bezier(0.25,0.46,0.45,0.94);
+
+      --font-sans:
+        'Inter',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        sans-serif;
+
+      --font-display:
+        'Orbitron',
+        'Inter',
+        sans-serif;
+    }
+
+
+    /* =========================================
+       LIGHT MODE
+       ========================================= */
+
+    [data-theme="light"] {
+
+      --bg-primary: #f5f5f5;
+
+      --bg-secondary: #eeeeee;
+
+      --bg-card: rgba(255,255,255,0.88);
+
+      --text-primary: #111111;
+
+      --text-secondary: #333333;
+
+      --text-muted: #666666;
+
+      --accent: #000000;
+
+      --accent-dim: rgba(0,0,0,0.06);
+
+      --accent-glow: rgba(0,0,0,0.12);
+
+      --border: rgba(0,0,0,0.10);
+
+      --border-hover: rgba(0,0,0,0.35);
+
+      --nav-bg: rgba(255,255,255,0.82);
+
+      --nav-scrolled: rgba(255,255,255,0.96);
+
+      --shadow: rgba(0,0,0,0.15);
+    }
+
+
+    /* =========================================
+       BASE
+       ========================================= */
+
     html {
 
       scroll-behavior: smooth;
+
+      -webkit-font-smoothing: antialiased;
     }
 
 
     body {
 
-      font-family: 'Inter', sans-serif;
+      font-family: var(--font-sans);
 
-      background: var(--bg);
+      background: var(--bg-primary);
 
-      color: var(--text);
+      color: var(--text-primary);
 
       line-height: 1.6;
 
       overflow-x: hidden;
 
       transition:
-        background .3s ease,
-        color .3s ease;
-    }
-
-
-    img {
-
-      display: block;
-
-      width: 100%;
-    }
-
-
-    a {
-
-      text-decoration: none;
-
-      color: inherit;
-    }
-
-
-    button,
-    input {
-
-      font-family: inherit;
-    }
-
-
-    button {
-
-      cursor: pointer;
+        background 0.4s ease,
+        color 0.3s ease;
     }
 
 
@@ -190,7 +270,73 @@
 
       background: var(--accent);
 
-      color: var(--black);
+      color: var(--bg-primary);
+    }
+
+
+    a {
+
+      color: var(--text-primary);
+
+      text-decoration: none;
+    }
+
+
+    button {
+
+      font-family: inherit;
+    }
+
+
+    /* =========================================
+       BACKGROUND GRID
+       ========================================= */
+
+    .background-grid {
+
+      position: fixed;
+
+      inset: 0;
+
+      pointer-events: none;
+
+      z-index: 0;
+
+      opacity: 0.25;
+
+      background-image:
+
+        linear-gradient(
+          rgba(255,255,255,0.025) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.025) 1px,
+          transparent 1px
+        );
+
+      background-size: 60px 60px;
+    }
+
+
+    [data-theme="light"] .background-grid {
+
+      opacity: 0.18;
+
+      background-image:
+
+        linear-gradient(
+          rgba(0,0,0,0.035) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,0.035) 1px,
+          transparent 1px
+        );
     }
 
 
@@ -200,36 +346,19 @@
 
     .container {
 
-      width: min(
-        calc(100% - 40px),
-        var(--max-width)
-      );
+      width: 100%;
 
-      margin: auto;
-    }
+      max-width: 1240px;
 
+      margin: 0 auto;
 
-    /* =========================================
-       ANNOUNCEMENT
-       ========================================= */
+      padding-left: 24px;
 
-    .announcement {
+      padding-right: 24px;
 
-      background: var(--text);
+      position: relative;
 
-      color: var(--bg);
-
-      text-align: center;
-
-      padding: 9px 20px;
-
-      font-size: .72rem;
-
-      font-weight: 600;
-
-      letter-spacing: .08em;
-
-      text-transform: uppercase;
+      z-index: 2;
     }
 
 
@@ -239,59 +368,76 @@
 
     .navbar {
 
-      position: sticky;
+      position: fixed;
 
       top: 0;
 
+      left: 0;
+
+      width: 100%;
+
       z-index: 1000;
 
-      background: rgba(8,8,8,.88);
+      padding: 16px 0;
+
+      background: var(--nav-bg);
 
       backdrop-filter: blur(18px);
 
       -webkit-backdrop-filter: blur(18px);
 
       border-bottom: 1px solid var(--border);
+
+      transition:
+        background var(--transition),
+        box-shadow var(--transition);
     }
 
 
-    [data-theme="light"] .navbar {
+    .navbar.scrolled {
 
-      background: rgba(245,245,245,.9);
+      background: var(--nav-scrolled);
+
+      box-shadow:
+        0 8px 30px var(--shadow);
     }
 
 
-    .nav-inner {
-
-      height: 76px;
+    .navbar .container {
 
       display: flex;
 
       align-items: center;
 
       justify-content: space-between;
-
-      gap: 25px;
     }
 
 
-    .brand {
+    /* BRAND */
 
-      font-family: 'Space Grotesk', sans-serif;
+    .nav-brand {
 
-      font-size: 1.4rem;
+      font-family: var(--font-display);
 
-      font-weight: 700;
+      font-size: 1.15rem;
 
-      letter-spacing: -.04em;
+      font-weight: 800;
+
+      letter-spacing: 0.08em;
+
+      color: var(--text-primary);
+
+      transition: opacity 0.3s ease;
     }
 
 
-    .brand span {
+    .nav-brand:hover {
 
-      opacity: .45;
+      opacity: 0.7;
     }
 
+
+    /* NAV LINKS */
 
     .nav-links {
 
@@ -307,637 +453,577 @@
 
     .nav-links a {
 
-      font-size: .8rem;
+      position: relative;
+
+      font-size: 0.85rem;
 
       font-weight: 500;
 
-      color: var(--text-soft);
+      color: var(--text-secondary);
 
-      transition: color var(--transition);
+      transition: color 0.3s ease;
     }
 
 
-    .nav-links a:hover {
+    .nav-links a::after {
 
-      color: var(--text);
-    }
-
-
-    .nav-actions {
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 9px;
-    }
-
-
-    .icon-btn {
-
-      width: 40px;
-
-      height: 40px;
-
-      border: 1px solid var(--border);
-
-      background: transparent;
-
-      color: var(--text);
-
-      border-radius: 50%;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      transition: all var(--transition);
-
-      position: relative;
-    }
-
-
-    .icon-btn:hover {
-
-      border-color: var(--border-hover);
-
-      background: var(--card);
-    }
-
-
-    .cart-count {
+      content: '';
 
       position: absolute;
 
-      top: -3px;
+      left: 0;
 
-      right: -3px;
+      bottom: -6px;
 
-      width: 17px;
+      width: 0;
 
-      height: 17px;
+      height: 2px;
 
-      border-radius: 50%;
+      background: var(--accent);
 
-      background: var(--text);
+      border-radius: 4px;
 
-      color: var(--bg);
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      font-size: .58rem;
-
-      font-weight: 700;
+      transition: width 0.3s ease;
     }
 
 
-    .menu-btn {
+    .nav-links a:hover,
+    .nav-links a.active {
 
-      display: none;
+      color: var(--text-primary);
+    }
+
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+
+      width: 100%;
     }
 
 
     /* =========================================
-       HERO
+       THEME BUTTON
        ========================================= */
 
-    .hero {
-
-      min-height: 680px;
+    .theme-toggle {
 
       display: flex;
 
       align-items: center;
 
-      position: relative;
+      gap: 7px;
 
-      overflow: hidden;
-
-      background:
-        linear-gradient(
-          90deg,
-          rgba(0,0,0,.92) 0%,
-          rgba(0,0,0,.65) 45%,
-          rgba(0,0,0,.12) 100%
-        ),
-
-        url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=2200&q=85')
-        center/cover no-repeat;
-    }
-
-
-    [data-theme="light"] .hero {
-
-      background:
-        linear-gradient(
-          90deg,
-          rgba(255,255,255,.94) 0%,
-          rgba(255,255,255,.68) 45%,
-          rgba(255,255,255,.1) 100%
-        ),
-
-        url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=2200&q=85')
-        center/cover no-repeat;
-    }
-
-
-    .hero-content {
-
-      max-width: 680px;
-
-      padding: 100px 0;
-    }
-
-
-    .eyebrow {
-
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 9px;
-
-      font-size: .7rem;
-
-      letter-spacing: .16em;
-
-      text-transform: uppercase;
-
-      font-weight: 700;
-
-      color: var(--text-soft);
-
-      margin-bottom: 20px;
-    }
-
-
-    .eyebrow::before {
-
-      content: '';
-
-      width: 25px;
-
-      height: 1px;
-
-      background: var(--text);
-    }
-
-
-    .hero h1 {
-
-      font-family: 'Space Grotesk', sans-serif;
-
-      font-size:
-        clamp(
-          3.3rem,
-          7vw,
-          6.6rem
-        );
-
-      line-height: .95;
-
-      letter-spacing: -.07em;
-
-      margin-bottom: 28px;
-    }
-
-
-    .hero h1 span {
-
-      display: block;
-
-      color: transparent;
-
-      -webkit-text-stroke:
-        1px var(--text);
-    }
-
-
-    .hero p {
-
-      max-width: 520px;
-
-      color: var(--text-soft);
-
-      font-size: .95rem;
-
-      line-height: 1.8;
-
-      margin-bottom: 32px;
-    }
-
-
-    .hero-buttons {
-
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 12px;
-    }
-
-
-    .btn {
-
-      min-height: 48px;
-
-      padding: 12px 23px;
-
-      display: inline-flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      gap: 9px;
+      padding: 7px 13px;
 
       border-radius: 50px;
 
-      font-size: .78rem;
+      background: var(--accent-dim);
 
-      font-weight: 600;
+      border: 1px solid var(--border);
 
-      transition: all var(--transition);
+      color: var(--text-secondary);
+
+      cursor: pointer;
+
+      font-size: 0.75rem;
+
+      transition: all 0.3s ease;
     }
 
 
-    .btn-primary {
+    .theme-toggle:hover {
 
-      background: var(--text);
+      border-color: var(--accent);
 
-      color: var(--bg);
-    }
-
-
-    .btn-primary:hover {
-
-      transform: translateY(-3px);
-
-      opacity: .84;
-    }
-
-
-    .btn-outline {
-
-      border: 1px solid var(--border-hover);
-
-      color: var(--text);
-
-      background: rgba(0,0,0,.18);
-    }
-
-
-    .btn-outline:hover {
-
-      background: var(--text);
-
-      color: var(--bg);
+      color: var(--text-primary);
     }
 
 
     /* =========================================
-       TRUST STRIP
+       MOBILE BUTTON
        ========================================= */
 
-    .trust-strip {
+    .nav-toggle {
 
-      border-bottom: 1px solid var(--border);
+      display: none;
 
-      border-top: 1px solid var(--border);
+      width: 42px;
 
-      background: var(--bg-soft);
-    }
-
-
-    .trust-inner {
-
-      min-height: 86px;
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(4,1fr);
-
-      align-items: center;
-
-      gap: 20px;
-    }
-
-
-    .trust-item {
-
-      display: flex;
+      height: 42px;
 
       align-items: center;
 
       justify-content: center;
 
-      gap: 12px;
+      flex-direction: column;
 
-      color: var(--text-soft);
+      gap: 5px;
 
-      font-size: .72rem;
-
-      font-weight: 600;
-
-      text-transform: uppercase;
-
-      letter-spacing: .05em;
-    }
-
-
-    .trust-item i {
-
-      font-size: 1rem;
-
-      color: var(--text);
-    }
-
-
-    /* =========================================
-       SECTION
-       ========================================= */
-
-    section {
-
-      position: relative;
-    }
-
-
-    .section {
-
-      padding: 100px 0;
-    }
-
-
-    .section-header {
-
-      display: flex;
-
-      align-items: end;
-
-      justify-content: space-between;
-
-      gap: 25px;
-
-      margin-bottom: 40px;
-    }
-
-
-    .section-label {
-
-      font-size: .67rem;
-
-      letter-spacing: .17em;
-
-      text-transform: uppercase;
-
-      font-weight: 700;
-
-      color: var(--muted);
-
-      margin-bottom: 9px;
-    }
-
-
-    .section-title {
-
-      font-family: 'Space Grotesk', sans-serif;
-
-      font-size:
-        clamp(
-          2rem,
-          4vw,
-          3.2rem
-        );
-
-      letter-spacing: -.05em;
-
-      line-height: 1.05;
-    }
-
-
-    .section-description {
-
-      max-width: 430px;
-
-      color: var(--muted);
-
-      font-size: .82rem;
-    }
-
-
-    /* =========================================
-       CATEGORIES
-       ========================================= */
-
-    .categories {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(4,1fr);
-
-      gap: 16px;
-    }
-
-
-    .category {
-
-      min-height: 230px;
-
-      position: relative;
-
-      overflow: hidden;
-
-      border-radius: var(--radius);
+      background: transparent;
 
       border: 1px solid var(--border);
 
-      background: var(--card);
+      border-radius: 10px;
+
+      cursor: pointer;
     }
 
 
-    .category img {
+    .nav-toggle span {
 
-      height: 100%;
+      width: 22px;
 
-      object-fit: cover;
+      height: 2px;
 
-      transition:
-        transform .6s ease;
+      background: var(--text-primary);
 
-      opacity: .78;
+      border-radius: 5px;
+
+      transition: all 0.3s ease;
     }
 
 
-    .category:hover img {
+    .nav-toggle.active span:nth-child(1) {
 
-      transform: scale(1.07);
+      transform:
+        rotate(45deg)
+        translate(5px,5px);
     }
 
 
-    .category::after {
+    .nav-toggle.active span:nth-child(2) {
 
-      content: '';
-
-      position: absolute;
-
-      inset: 0;
-
-      background:
-        linear-gradient(
-          to top,
-          rgba(0,0,0,.82),
-          transparent 65%
-        );
+      opacity: 0;
     }
 
 
-    .category-info {
+    .nav-toggle.active span:nth-child(3) {
 
-      position: absolute;
+      transform:
+        rotate(-45deg)
+        translate(5px,-5px);
+    }
 
-      left: 20px;
 
-      right: 20px;
+    /* =========================================
+       DEMOS SECTION
+       ========================================= */
 
-      bottom: 18px;
+    .demos-section {
+
+      padding: 145px 0 110px;
+
+      position: relative;
 
       z-index: 2;
     }
 
 
-    .category-info h3 {
-
-      font-family: 'Space Grotesk', sans-serif;
-
-      font-size: 1.2rem;
-
-      margin-bottom: 3px;
-    }
-
-
-    .category-info p {
-
-      font-size: .7rem;
-
-      color: rgba(255,255,255,.7);
-    }
-
-
     /* =========================================
-       PRODUCTS
+       DEMOS GRID
        ========================================= */
 
-    .products {
+    .demos-grid {
 
       display: grid;
 
       grid-template-columns:
-        repeat(4,1fr);
+        repeat(
+          2,
+          minmax(0,1fr)
+        );
 
-      gap: 18px;
+      gap: 28px;
     }
 
 
-    .product {
+    /* =========================================
+       DEMO CARD
+       ========================================= */
 
-      position: relative;
+    .demo-card {
 
-      min-width: 0;
-    }
+      background: var(--bg-card);
 
-
-    .product-image {
-
-      position: relative;
-
-      aspect-ratio: 1 / 1.08;
-
-      overflow: hidden;
+      border: 1px solid var(--border);
 
       border-radius: var(--radius);
 
-      background: var(--card);
+      overflow: hidden;
 
-      border: 1px solid var(--border);
-    }
+      backdrop-filter: blur(12px);
 
+      -webkit-backdrop-filter: blur(12px);
 
-    .product-image img {
-
-      height: 100%;
-
-      object-fit: cover;
+      box-shadow:
+        0 15px 45px var(--shadow);
 
       transition:
-        transform .55s ease;
+        transform 0.45s ease,
+        border-color 0.45s ease,
+        box-shadow 0.45s ease;
+
+      opacity: 0;
+
+      transform: translateY(35px);
+
+      animation:
+        cardReveal 0.7s ease forwards;
     }
 
 
-    .product:hover
-    .product-image img {
+    .demo-card:hover {
 
-      transform: scale(1.06);
+      transform: translateY(-8px);
+
+      border-color: var(--border-hover);
+
+      box-shadow:
+        0 28px 60px var(--shadow),
+        0 0 45px var(--accent-glow);
     }
 
 
-    .product-badge {
+    @keyframes cardReveal {
+
+      to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+      }
+    }
+
+
+    .demo-card:nth-child(1) {
+      animation-delay: 0.05s;
+    }
+
+    .demo-card:nth-child(2) {
+      animation-delay: 0.12s;
+    }
+
+    .demo-card:nth-child(3) {
+      animation-delay: 0.19s;
+    }
+
+    .demo-card:nth-child(4) {
+      animation-delay: 0.26s;
+    }
+
+    .demo-card:nth-child(5) {
+      animation-delay: 0.33s;
+    }
+
+    .demo-card:nth-child(6) {
+      animation-delay: 0.40s;
+    }
+
+
+    /* =========================================
+       LIVE WEBSITE PREVIEW
+       ========================================= */
+
+    .demo-preview {
+
+      position: relative;
+
+      width: 100%;
+
+      aspect-ratio: 16 / 10;
+
+      overflow: hidden;
+
+      background: #111;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+
+    .demo-preview iframe {
 
       position: absolute;
 
-      top: 13px;
+      top: 0;
 
-      left: 13px;
+      left: 0;
 
-      z-index: 3;
+      width: 200%;
 
-      padding: 5px 9px;
-
-      border-radius: 50px;
-
-      background: var(--text);
-
-      color: var(--bg);
-
-      font-size: .57rem;
-
-      font-weight: 700;
-
-      text-transform: uppercase;
-
-      letter-spacing: .06em;
-    }
-
-
-    .quick-add {
-
-      position: absolute;
-
-      right: 13px;
-
-      bottom: 13px;
-
-      z-index: 3;
-
-      width: 40px;
-
-      height: 40px;
-
-      border-radius: 50%;
+      height: 200%;
 
       border: 0;
 
-      background: var(--text);
+      transform: scale(0.5);
 
-      color: var(--bg);
+      transform-origin: top left;
+
+      background: #000;
+    }
+
+
+    /* =========================================
+       PREVIEW BAR
+       ========================================= */
+
+    .preview-bar {
+
+      position: absolute;
+
+      top: 0;
+
+      left: 0;
+
+      width: 100%;
+
+      height: 34px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 6px;
+
+      padding: 0 12px;
+
+      background: rgba(0,0,0,0.82);
+
+      backdrop-filter: blur(10px);
+
+      z-index: 5;
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.12);
+    }
+
+
+    .preview-dot {
+
+      width: 7px;
+
+      height: 7px;
+
+      border-radius: 50%;
+
+      background: rgba(255,255,255,0.65);
+    }
+
+
+    .preview-url {
+
+      margin-left: 7px;
+
+      font-size: 0.58rem;
+
+      color: rgba(255,255,255,0.55);
+
+      white-space: nowrap;
+
+      overflow: hidden;
+
+      text-overflow: ellipsis;
+    }
+
+
+    /* =========================================
+       PREVIEW OVERLAY
+       ========================================= */
+
+    .preview-overlay {
+
+      position: absolute;
+
+      inset: 0;
+
+      z-index: 4;
+
+      pointer-events: none;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,0.25),
+          transparent 30%
+        );
+    }
+
+
+    /* =========================================
+       CARD BODY
+       ========================================= */
+
+    .demo-body {
+
+      padding: 24px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 13px;
+    }
+
+
+    .demo-top {
+
+      display: flex;
+
+      align-items: flex-start;
+
+      justify-content: space-between;
+
+      gap: 15px;
+    }
+
+
+    .demo-number {
+
+      font-family: var(--font-display);
+
+      font-size: 0.62rem;
+
+      letter-spacing: 0.15em;
+
+      color: var(--text-muted);
+
+      margin-bottom: 5px;
+    }
+
+
+    .demo-title {
+
+      font-family: var(--font-display);
+
+      font-size: 1.2rem;
+
+      font-weight: 700;
+
+      line-height: 1.25;
+    }
+
+
+    .demo-category {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      padding: 5px 10px;
+
+      border-radius: 50px;
+
+      background: var(--accent-dim);
+
+      border: 1px solid var(--border);
+
+      color: var(--text-secondary);
+
+      font-size: 0.65rem;
+
+      font-weight: 600;
+
+      white-space: nowrap;
+    }
+
+
+    .demo-description {
+
+      color: var(--text-secondary);
+
+      font-size: 0.84rem;
+
+      line-height: 1.7;
+    }
+
+
+    /* =========================================
+       BUTTONS
+       ========================================= */
+
+    .demo-actions {
+
+      display: flex;
+
+      gap: 10px;
+
+      margin-top: 5px;
+    }
+
+
+    .demo-button {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 8px;
+
+      min-height: 42px;
+
+      padding: 10px 18px;
+
+      border-radius: 50px;
+
+      font-size: 0.78rem;
+
+      font-weight: 600;
+
+      transition: all 0.3s ease;
+    }
+
+
+    .demo-button.primary {
+
+      background: var(--accent);
+
+      color: var(--bg-primary);
+
+      flex: 1;
+    }
+
+
+    .demo-button.primary:hover {
+
+      transform: translateY(-2px);
+
+      opacity: 0.82;
+
+      box-shadow:
+        0 8px 20px var(--accent-glow);
+    }
+
+
+    .demo-button.secondary {
+
+      border: 1px solid var(--border);
+
+      color: var(--text-primary);
+
+      background: transparent;
+    }
+
+
+    .demo-button.secondary:hover {
+
+      border-color: var(--accent);
+
+      background: var(--accent-dim);
+    }
+
+
+    /* =========================================
+       COMING SOON CARD PREVIEW
+       ========================================= */
+
+    .coming-preview {
+
+      width: 100%;
+
+      height: 100%;
+
+      min-height: 100%;
 
       display: flex;
 
@@ -945,406 +1031,126 @@
 
       justify-content: center;
 
-      opacity: 0;
+      flex-direction: column;
 
-      transform: translateY(8px);
-
-      transition: all var(--transition);
-    }
-
-
-    .product:hover .quick-add {
-
-      opacity: 1;
-
-      transform: translateY(0);
-    }
-
-
-    .product-details {
-
-      padding: 15px 2px;
-    }
-
-
-    .product-category {
-
-      font-size: .61rem;
-
-      color: var(--muted);
-
-      text-transform: uppercase;
-
-      letter-spacing: .08em;
-
-      margin-bottom: 5px;
-    }
-
-
-    .product-name {
-
-      font-size: .84rem;
-
-      font-weight: 600;
-
-      margin-bottom: 7px;
-    }
-
-
-    .product-bottom {
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-      gap: 10px;
-    }
-
-
-    .price {
-
-      font-size: .82rem;
-
-      font-weight: 700;
-    }
-
-
-    .old-price {
-
-      color: var(--muted);
-
-      text-decoration: line-through;
-
-      font-size: .7rem;
-
-      margin-left: 5px;
-
-      font-weight: 400;
-    }
-
-
-    .rating {
-
-      color: var(--text);
-
-      font-size: .65rem;
-
-      letter-spacing: 1px;
-    }
-
-
-    .rating span {
-
-      color: var(--muted);
-
-      margin-left: 4px;
-
-      letter-spacing: 0;
-    }
-
-
-    /* =========================================
-       PROMO
-       ========================================= */
-
-    .promo {
-
-      padding: 100px 0;
-    }
-
-
-    .promo-box {
-
-      min-height: 390px;
-
-      border-radius: 20px;
-
-      overflow: hidden;
-
-      position: relative;
-
-      display: flex;
-
-      align-items: center;
+      gap: 12px;
 
       background:
-        linear-gradient(
-          90deg,
-          rgba(0,0,0,.9),
-          rgba(0,0,0,.2)
+
+        radial-gradient(
+          circle at center,
+          rgba(255,255,255,0.08),
+          transparent 55%
         ),
 
-        url('https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1800&q=85')
-        center/cover;
+        #090909;
     }
 
 
-    .promo-content {
+    .coming-preview i {
 
-      padding: 60px;
+      font-size: 30px;
 
-      max-width: 570px;
+      color: rgba(255,255,255,0.5);
     }
 
 
-    .promo-content h2 {
+    .coming-preview span {
 
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
 
-      font-size:
-        clamp(
-          2rem,
-          4vw,
-          3.6rem
-        );
+      font-size: 0.75rem;
 
-      line-height: 1;
+      letter-spacing: 0.14em;
 
-      letter-spacing: -.05em;
+      color: rgba(255,255,255,0.55);
 
-      margin-bottom: 17px;
-    }
-
-
-    .promo-content p {
-
-      color: rgba(255,255,255,.72);
-
-      font-size: .82rem;
-
-      line-height: 1.7;
-
-      margin-bottom: 25px;
+      text-transform: uppercase;
     }
 
 
     /* =========================================
-       FEATURE ROW
+       CTA
        ========================================= */
 
-    .feature-grid {
+    .bottom-cta {
 
-      display: grid;
+      margin-top: 70px;
 
-      grid-template-columns:
-        repeat(3,1fr);
-
-      border-top: 1px solid var(--border);
-
-      border-bottom: 1px solid var(--border);
-    }
-
-
-    .feature {
-
-      padding: 40px 30px;
-
-      border-right: 1px solid var(--border);
-
-      text-align: center;
-    }
-
-
-    .feature:last-child {
-
-      border-right: 0;
-    }
-
-
-    .feature i {
-
-      font-size: 1.3rem;
-
-      margin-bottom: 15px;
-    }
-
-
-    .feature h3 {
-
-      font-size: .82rem;
-
-      margin-bottom: 7px;
-    }
-
-
-    .feature p {
-
-      color: var(--muted);
-
-      font-size: .72rem;
-
-      max-width: 260px;
-
-      margin: auto;
-    }
-
-
-    /* =========================================
-       NEWSLETTER
-       ========================================= */
-
-    .newsletter {
-
-      padding: 100px 0;
-    }
-
-
-    .newsletter-box {
+      padding: 55px 35px;
 
       text-align: center;
 
-      max-width: 720px;
+      background: var(--accent-dim);
 
-      margin: auto;
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius);
+
+      backdrop-filter: blur(10px);
     }
 
 
-    .newsletter-box h2 {
+    .bottom-cta h2 {
 
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
 
       font-size:
         clamp(
-          2rem,
-          4vw,
-          3rem
+          1.5rem,
+          3vw,
+          2.3rem
         );
-
-      letter-spacing: -.05em;
 
       margin-bottom: 12px;
     }
 
 
-    .newsletter-box p {
+    .bottom-cta p {
 
-      color: var(--muted);
+      max-width: 650px;
 
-      font-size: .82rem;
+      margin:
+        0 auto 24px;
 
-      margin-bottom: 25px;
+      color: var(--text-secondary);
+
+      font-size: 0.95rem;
     }
 
 
-    .newsletter-form {
+    .cta-button {
 
-      display: flex;
-
-      max-width: 500px;
-
-      margin: auto;
-
-      border: 1px solid var(--border-hover);
-
-      border-radius: 50px;
-
-      padding: 5px;
-
-      background: var(--card);
-    }
-
-
-    .newsletter-form input {
-
-      flex: 1;
-
-      min-width: 0;
-
-      border: 0;
-
-      outline: 0;
-
-      background: transparent;
-
-      color: var(--text);
-
-      padding: 0 17px;
-
-      font-size: .76rem;
-    }
-
-
-    .newsletter-form button {
-
-      border: 0;
-
-      background: var(--text);
-
-      color: var(--bg);
-
-      border-radius: 50px;
-
-      padding: 11px 20px;
-
-      font-size: .72rem;
-
-      font-weight: 700;
-    }
-
-
-    /* =========================================
-       DEEPBYTO CTA
-       ========================================= */
-
-    .deepbyto-cta {
-
-      padding: 0 0 100px;
-    }
-
-
-    .deepbyto-box {
-
-      padding: 55px;
-
-      border: 1px solid var(--border);
-
-      border-radius: 20px;
-
-      background:
-        radial-gradient(
-          circle at top right,
-          rgba(255,255,255,.08),
-          transparent 35%
-        ),
-
-        var(--card);
-
-      display: flex;
+      display: inline-flex;
 
       align-items: center;
 
-      justify-content: space-between;
+      gap: 9px;
 
-      gap: 30px;
+      padding: 13px 25px;
+
+      border-radius: 50px;
+
+      background: var(--accent);
+
+      color: var(--bg-primary);
+
+      font-size: 0.85rem;
+
+      font-weight: 600;
+
+      transition: all 0.3s ease;
     }
 
 
-    .deepbyto-box h2 {
+    .cta-button:hover {
 
-      font-family: 'Space Grotesk', sans-serif;
+      transform: translateY(-2px);
 
-      font-size:
-        clamp(
-          1.7rem,
-          3vw,
-          2.6rem
-        );
+      opacity: 0.85;
 
-      letter-spacing: -.04em;
-
-      margin-bottom: 9px;
-    }
-
-
-    .deepbyto-box p {
-
-      color: var(--muted);
-
-      font-size: .78rem;
-
-      max-width: 590px;
+      box-shadow:
+        0 12px 30px var(--accent-glow);
     }
 
 
@@ -1352,89 +1158,85 @@
        FOOTER
        ========================================= */
 
-    footer {
+    .footer {
+
+      padding: 45px 0 30px;
 
       border-top: 1px solid var(--border);
 
-      background: var(--bg-soft);
+      background: var(--bg-secondary);
+
+      position: relative;
+
+      z-index: 2;
     }
 
 
     .footer-main {
 
-      padding: 60px 0 45px;
+      display: flex;
 
-      display: grid;
+      justify-content: space-between;
 
-      grid-template-columns:
-        1.5fr
-        repeat(3,1fr);
+      align-items: center;
 
-      gap: 50px;
+      gap: 30px;
+
+      padding-bottom: 28px;
+
+      border-bottom: 1px solid var(--border);
     }
 
 
     .footer-brand {
 
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
 
-      font-size: 1.4rem;
+      font-weight: 800;
 
-      font-weight: 700;
+      font-size: 1.1rem;
 
-      margin-bottom: 12px;
+      letter-spacing: 0.07em;
     }
 
 
-    .footer-about {
+    .footer-tagline {
 
-      color: var(--muted);
+      color: var(--text-muted);
 
-      font-size: .73rem;
+      font-size: 0.75rem;
 
-      max-width: 300px;
-
-      line-height: 1.8;
+      margin-top: 4px;
     }
 
 
-    .footer-column h4 {
+    .footer-links {
 
-      font-size: .72rem;
+      display: flex;
 
-      text-transform: uppercase;
+      flex-wrap: wrap;
 
-      letter-spacing: .1em;
-
-      margin-bottom: 18px;
+      gap: 20px;
     }
 
 
-    .footer-column a {
+    .footer-links a {
 
-      display: block;
+      font-size: 0.75rem;
 
-      color: var(--muted);
+      color: var(--text-secondary);
 
-      font-size: .72rem;
-
-      margin-bottom: 9px;
-
-      transition: color var(--transition);
+      transition: color 0.3s ease;
     }
 
 
-    .footer-column a:hover {
+    .footer-links a:hover {
 
-      color: var(--text);
+      color: var(--text-primary);
     }
 
 
     .footer-bottom {
-
-      border-top: 1px solid var(--border);
-
-      padding: 22px 0;
 
       display: flex;
 
@@ -1443,166 +1245,16 @@
       justify-content: space-between;
 
       gap: 20px;
+
+      padding-top: 20px;
     }
 
 
     .footer-bottom p {
 
-      color: var(--muted);
+      color: var(--text-muted);
 
-      font-size: .65rem;
-    }
-
-
-    .footer-credit {
-
-      color: var(--text-soft) !important;
-    }
-
-
-    /* =========================================
-       CART DRAWER
-       ========================================= */
-
-    .cart-overlay {
-
-      position: fixed;
-
-      inset: 0;
-
-      background: rgba(0,0,0,.65);
-
-      z-index: 2000;
-
-      opacity: 0;
-
-      visibility: hidden;
-
-      transition: all .3s ease;
-    }
-
-
-    .cart-overlay.open {
-
-      opacity: 1;
-
-      visibility: visible;
-    }
-
-
-    .cart-drawer {
-
-      position: fixed;
-
-      top: 0;
-
-      right: -420px;
-
-      width: min(420px,100%);
-
-      height: 100vh;
-
-      z-index: 2001;
-
-      background: var(--bg-soft);
-
-      border-left: 1px solid var(--border);
-
-      transition: right .4s ease;
-
-      display: flex;
-
-      flex-direction: column;
-    }
-
-
-    .cart-drawer.open {
-
-      right: 0;
-    }
-
-
-    .cart-header {
-
-      height: 75px;
-
-      padding: 0 22px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-      border-bottom: 1px solid var(--border);
-    }
-
-
-    .cart-header h3 {
-
-      font-family: 'Space Grotesk', sans-serif;
-
-      font-size: 1rem;
-    }
-
-
-    .cart-close {
-
-      width: 36px;
-
-      height: 36px;
-
-      border-radius: 50%;
-
-      border: 1px solid var(--border);
-
-      background: transparent;
-
-      color: var(--text);
-    }
-
-
-    .cart-content {
-
-      flex: 1;
-
-      padding: 25px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      text-align: center;
-    }
-
-
-    .empty-cart i {
-
-      font-size: 2rem;
-
-      color: var(--muted);
-
-      margin-bottom: 15px;
-    }
-
-
-    .empty-cart p {
-
-      color: var(--muted);
-
-      font-size: .75rem;
-    }
-
-
-    /* =========================================
-       MOBILE NAV
-       ========================================= */
-
-    .mobile-menu {
-
-      display: none;
+      font-size: 0.7rem;
     }
 
 
@@ -1610,401 +1262,76 @@
        RESPONSIVE
        ========================================= */
 
-    @media (max-width: 1000px) {
+    @media (max-width: 900px) {
 
-      .products {
+      .demos-grid {
 
-        grid-template-columns:
-          repeat(2,1fr);
-      }
-
-
-      .categories {
-
-        grid-template-columns:
-          repeat(2,1fr);
-      }
-
-
-      .footer-main {
-
-        grid-template-columns:
-          repeat(2,1fr);
+        grid-template-columns: 1fr;
       }
     }
 
 
-    @media (max-width: 760px) {
-
-      .container {
-
-        width: min(
-          calc(100% - 30px),
-          var(--max-width)
-        );
-      }
-
+    @media (max-width: 768px) {
 
       .nav-links {
 
-        display: none;
-      }
-
-
-      .menu-btn {
-
-        display: flex;
-      }
-
-
-      .mobile-menu {
-
         position: fixed;
 
-        top: 76px;
+        top: 0;
 
-        left: 0;
+        right: -100%;
+
+        width: 280px;
+
+        height: 100vh;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 28px;
+
+        background: var(--bg-primary);
+
+        border-left: 1px solid var(--border);
+
+        transition: right 0.4s ease;
+      }
+
+
+      .nav-links.open {
 
         right: 0;
+      }
 
-        background: var(--bg-soft);
 
-        border-bottom: 1px solid var(--border);
+      .nav-links a {
 
-        padding: 25px 20px;
+        font-size: 1rem;
+      }
 
-        z-index: 999;
+
+      .theme-toggle {
+
+        margin-top: 10px;
+      }
+
+
+      .nav-toggle {
 
         display: flex;
 
-        flex-direction: column;
+        position: relative;
 
-        gap: 20px;
-
-        transform:
-          translateY(-130%);
-
-        transition:
-          transform .35s ease;
-      }
-
-
-      .mobile-menu.open {
-
-        transform:
-          translateY(0);
-      }
-
-
-      .mobile-menu a {
-
-        font-size: .85rem;
-
-        color: var(--text-soft);
-
-        padding: 7px 0;
-      }
-
-
-      .hero {
-
-        min-height: 600px;
-      }
-
-
-      .hero h1 {
-
-        font-size:
-          clamp(
-            3rem,
-            15vw,
-            5rem
-          );
-      }
-
-
-      .trust-inner {
-
-        grid-template-columns:
-          repeat(2,1fr);
-
-        padding: 20px 0;
-      }
-
-
-      .trust-item {
-
-        justify-content: flex-start;
-      }
-
-
-      .section {
-
-        padding: 75px 0;
-      }
-
-
-      .section-header {
-
-        align-items: flex-start;
-
-        flex-direction: column;
-      }
-
-
-      .feature-grid {
-
-        grid-template-columns: 1fr;
-      }
-
-
-      .feature {
-
-        border-right: 0;
-
-        border-bottom: 1px solid var(--border);
-      }
-
-
-      .feature:last-child {
-
-        border-bottom: 0;
-      }
-
-
-      .deepbyto-box {
-
-        padding: 35px 25px;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-      }
-
-
-      .promo-content {
-
-        padding: 40px 25px;
-      }
-    }
-
-
-    @media (max-width: 500px) {
-
-      .announcement {
-
-        font-size: .6rem;
-      }
-
-
-      .nav-inner {
-
-        height: 68px;
-      }
-
-
-      .mobile-menu {
-
-        top: 68px;
-      }
-
-
-      .brand {
-
-        font-size: 1.2rem;
-      }
-
-
-      .nav-actions {
-
-        gap: 5px;
-      }
-
-
-      .icon-btn {
-
-        width: 37px;
-
-        height: 37px;
-      }
-
-
-      .hero {
-
-        min-height: 570px;
-      }
-
-
-      .hero-content {
-
-        padding: 70px 0;
-      }
-
-
-      .hero h1 {
-
-        font-size: 3.25rem;
-      }
-
-
-      .hero p {
-
-        font-size: .8rem;
-      }
-
-
-      .hero-buttons {
-
-        flex-direction: column;
-
-        align-items: stretch;
-      }
-
-
-      .btn {
-
-        width: 100%;
-      }
-
-
-      .categories {
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 10px;
-      }
-
-
-      .category {
-
-        min-height: 180px;
-      }
-
-
-      .category-info {
-
-        left: 13px;
-
-        right: 13px;
-
-        bottom: 13px;
-      }
-
-
-      .category-info h3 {
-
-        font-size: .9rem;
-      }
-
-
-      .products {
-
-        grid-template-columns:
-          repeat(2,1fr);
-
-        gap: 12px;
-      }
-
-
-      .product-image {
-
-        border-radius: 12px;
-      }
-
-
-      .product-details {
-
-        padding: 11px 1px;
-      }
-
-
-      .product-name {
-
-        font-size: .74rem;
-      }
-
-
-      .product-category {
-
-        font-size: .55rem;
-      }
-
-
-      .quick-add {
-
-        width: 34px;
-
-        height: 34px;
-
-        opacity: 1;
-
-        transform: none;
-
-        right: 8px;
-
-        bottom: 8px;
-      }
-
-
-      .rating {
-
-        display: none;
-      }
-
-
-      .promo {
-
-        padding: 70px 0;
-      }
-
-
-      .promo-box {
-
-        min-height: 400px;
-      }
-
-
-      .newsletter {
-
-        padding: 75px 0;
-      }
-
-
-      .newsletter-form {
-
-        flex-direction: column;
-
-        border: 0;
-
-        background: transparent;
-
-        gap: 8px;
-      }
-
-
-      .newsletter-form input {
-
-        min-height: 48px;
-
-        border: 1px solid var(--border-hover);
-
-        border-radius: 50px;
-
-        background: var(--card);
-      }
-
-
-      .newsletter-form button {
-
-        min-height: 46px;
+        z-index: 1001;
       }
 
 
       .footer-main {
 
-        grid-template-columns: 1fr;
+        flex-direction: column;
 
-        gap: 30px;
+        text-align: center;
       }
 
 
@@ -2012,20 +1339,89 @@
 
         flex-direction: column;
 
-        align-items: flex-start;
+        text-align: center;
       }
     }
 
 
+    @media (max-width: 480px) {
+
+      .container {
+
+        padding-left: 16px;
+
+        padding-right: 16px;
+      }
+
+
+      .demos-section {
+
+        padding-top: 125px;
+      }
+
+
+      .demo-body {
+
+        padding: 20px;
+      }
+
+
+      .demo-top {
+
+        flex-direction: column;
+
+        gap: 8px;
+      }
+
+
+      .demo-category {
+
+        align-self: flex-start;
+      }
+
+
+      .demo-actions {
+
+        flex-direction: column;
+      }
+
+
+      .demo-button.secondary {
+
+        width: 100%;
+      }
+
+
+      .bottom-cta {
+
+        padding: 40px 20px;
+      }
+    }
+
+
+    /* =========================================
+       REDUCED MOTION
+       ========================================= */
+
     @media (prefers-reduced-motion: reduce) {
 
-      * {
+      html {
 
-        scroll-behavior: auto !important;
+        scroll-behavior: auto;
+      }
 
-        transition-duration: .01ms !important;
 
-        animation-duration: .01ms !important;
+      *,
+
+      *::before,
+
+      *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
       }
     }
 
@@ -2037,528 +1433,539 @@
 <body>
 
 
-  <!-- =========================================
-       ANNOUNCEMENT
-       ========================================= -->
-
-  <div class="announcement">
-
-    Free shipping on orders over $75
-
-  </div>
+  <div class="background-grid"></div>
 
 
   <!-- =========================================
        NAVBAR
        ========================================= -->
 
-  <header class="navbar">
+  <nav class="navbar" id="navbar">
 
-    <div class="container nav-inner">
-
+    <div class="container">
 
       <a
-        href="#home"
-        class="brand"
+        href="https://deepbyto.github.io/"
+        class="nav-brand"
+        aria-label="DEEPBYTO Home"
       >
-        NOVA<span>.</span>
+        DEEPBYTO
       </a>
 
 
-      <nav>
+      <ul class="nav-links" id="navLinks">
 
-        <ul class="nav-links">
+        <li>
+          <a href="https://deepbyto.github.io/">
+            Home
+          </a>
+        </li>
 
-          <li>
-            <a href="#home">
-              Home
-            </a>
-          </li>
+        <li>
+          <a href="https://deepbyto.github.io/#about">
+            About
+          </a>
+        </li>
 
-          <li>
-            <a href="#shop">
-              Shop
-            </a>
-          </li>
+        <li>
+          <a href="https://deepbyto.github.io/#services">
+            Services
+          </a>
+        </li>
 
-          <li>
-            <a href="#categories">
-              Categories
-            </a>
-          </li>
+        <li>
+          <a href="https://deepbyto.github.io/#projects">
+            Projects
+          </a>
+        </li>
 
-          <li>
-            <a href="#new">
-              New Arrivals
-            </a>
-          </li>
-
-          <li>
-            <a href="#contact">
-              Contact
-            </a>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-      <div class="nav-actions">
-
-
-        <button
-          class="icon-btn"
-          onclick="focusSearch()"
-          aria-label="Search"
-        >
-
-          <i class="fas fa-search"></i>
-
-        </button>
-
-
-        <button
-          class="icon-btn"
-          onclick="toggleTheme()"
-          aria-label="Toggle theme"
-        >
-
-          <i
-            class="fas fa-moon"
-            id="themeIcon"
-          ></i>
-
-        </button>
-
-
-        <button
-          class="icon-btn"
-          onclick="openCart()"
-          aria-label="Shopping cart"
-        >
-
-          <i class="fas fa-bag-shopping"></i>
-
-          <span
-            class="cart-count"
-            id="cartCount"
+        <li>
+          <a
+            href="https://deepbyto.github.io/demos/"
+            class="active"
           >
-            0
-          </span>
+            Demos
+          </a>
+        </li>
 
-        </button>
+        <li>
+          <a href="https://deepbyto.github.io/#contact">
+            Contact
+          </a>
+        </li>
+
+        <li>
+
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle theme"
+          >
+
+            <i
+              class="fas fa-moon"
+              id="themeIcon"
+            ></i>
+
+            <span id="themeText">
+              Dark
+            </span>
+
+          </button>
+
+        </li>
+
+      </ul>
 
 
-        <button
-          class="icon-btn menu-btn"
-          onclick="toggleMobileMenu()"
-          aria-label="Menu"
-        >
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
 
-          <i class="fas fa-bars"></i>
+        <span></span>
 
-        </button>
+        <span></span>
 
-      </div>
+        <span></span>
+
+      </button>
 
     </div>
 
-
-    <!-- MOBILE MENU -->
-
-    <div
-      class="mobile-menu"
-      id="mobileMenu"
-    >
-
-      <a href="#home">
-        Home
-      </a>
-
-      <a href="#shop">
-        Shop
-      </a>
-
-      <a href="#categories">
-        Categories
-      </a>
-
-      <a href="#new">
-        New Arrivals
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-
-    </div>
-
-  </header>
+  </nav>
 
 
   <!-- =========================================
-       HERO
+       DEMOS
        ========================================= -->
 
-  <main id="home">
+  <main>
 
-    <section class="hero">
-
-      <div class="container">
-
-        <div class="hero-content">
-
-          <div class="eyebrow">
-            New Collection
-          </div>
-
-
-          <h1>
-
-            Designed
-
-            <span>For Now.</span>
-
-          </h1>
-
-
-          <p>
-
-            Discover a curated collection of modern
-            essentials designed around quality,
-            simplicity, and everyday living.
-
-          </p>
-
-
-          <div class="hero-buttons">
-
-            <a
-              href="#shop"
-              class="btn btn-primary"
-            >
-
-              Shop Collection
-
-              <i class="fas fa-arrow-right"></i>
-
-            </a>
-
-
-            <a
-              href="#categories"
-              class="btn btn-outline"
-            >
-
-              Explore Categories
-
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
-         TRUST
-         ========================================= -->
-
-    <div class="trust-strip">
-
-      <div class="container trust-inner">
-
-        <div class="trust-item">
-
-          <i class="fas fa-truck-fast"></i>
-
-          Fast Delivery
-
-        </div>
-
-
-        <div class="trust-item">
-
-          <i class="fas fa-shield-halved"></i>
-
-          Secure Checkout
-
-        </div>
-
-
-        <div class="trust-item">
-
-          <i class="fas fa-rotate-left"></i>
-
-          Easy Returns
-
-        </div>
-
-
-        <div class="trust-item">
-
-          <i class="fas fa-headset"></i>
-
-          Customer Support
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- =========================================
-         CATEGORIES
-         ========================================= -->
-
-    <section
-      class="section"
-      id="categories"
-    >
+    <section class="demos-section">
 
       <div class="container">
 
 
-        <div class="section-header">
+        <div class="demos-grid">
 
-          <div>
 
-            <div class="section-label">
-              Explore
+          <!-- =================================
+               01 — GYM
+               ================================= -->
+
+          <article class="demo-card">
+
+            <div class="demo-preview">
+
+              <div class="preview-bar">
+
+                <span class="preview-dot"></span>
+
+                <span class="preview-dot"></span>
+
+                <span class="preview-dot"></span>
+
+                <span class="preview-url">
+                  deepbyto.github.io/demo-websites/gym/
+                </span>
+
+              </div>
+
+
+              <iframe
+                src="https://deepbyto.github.io/demo-websites/gym/"
+                title="Gym Website Demo"
+                loading="lazy"
+                scrolling="no"
+              ></iframe>
+
+
+              <div class="preview-overlay"></div>
+
             </div>
 
-            <h2 class="section-title">
-              Shop By Category
-            </h2>
 
-          </div>
+            <div class="demo-body">
 
+              <div class="demo-top">
 
-          <p class="section-description">
+                <div>
 
-            Explore carefully selected categories
-            built around modern style and everyday
-            essentials.
+                  <div class="demo-number">
+                    01 / 06
+                  </div>
 
-          </p>
+                  <h3 class="demo-title">
+                    Gym & Fitness
+                  </h3>
 
-        </div>
-
-
-        <div class="categories">
+                </div>
 
 
-          <a
-            href="#shop"
-            class="category"
-          >
+                <span class="demo-category">
+                  Business
+                </span>
 
-            <img
-              src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=900&q=80"
-              alt="Fashion"
-              loading="lazy"
-            >
+              </div>
 
-            <div class="category-info">
 
-              <h3>
-                Fashion
-              </h3>
+              <p class="demo-description">
 
-              <p>
-                Modern everyday essentials
+                A modern fitness website designed for
+                gyms, fitness centers, personal trainers,
+                and wellness businesses.
+
               </p>
 
+
+              <div class="demo-actions">
+
+                <a
+                  href="https://deepbyto.github.io/demo-websites/gym/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="demo-button primary"
+                >
+
+                  View Live Demo
+
+                  <i
+                    class="fas fa-arrow-up-right-from-square"
+                  ></i>
+
+                </a>
+
+
+                <a
+                  href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20the%20Gym%20Website%20Demo."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="demo-button secondary"
+                >
+
+                  <i class="fab fa-whatsapp"></i>
+
+                  Inquire
+
+                </a>
+
+              </div>
+
             </div>
 
-          </a>
+          </article>
 
 
-          <a
-            href="#shop"
-            class="category"
-          >
+          <!-- =================================
+               02 — RESTAURANT
+               ================================= -->
 
-            <img
-              src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=900&q=80"
-              alt="Accessories"
-              loading="lazy"
-            >
+          <article class="demo-card">
 
-            <div class="category-info">
+            <div class="demo-preview">
 
-              <h3>
-                Accessories
-              </h3>
+              <div class="preview-bar">
 
-              <p>
-                Details that complete the look
+                <span class="preview-dot"></span>
+
+                <span class="preview-dot"></span>
+
+                <span class="preview-dot"></span>
+
+                <span class="preview-url">
+                  deepbyto.github.io/demo-websites/restaurant/
+                </span>
+
+              </div>
+
+
+              <iframe
+                src="https://deepbyto.github.io/demo-websites/restaurant/"
+                title="Restaurant Website Demo"
+                loading="lazy"
+                scrolling="no"
+              ></iframe>
+
+
+              <div class="preview-overlay"></div>
+
+            </div>
+
+
+            <div class="demo-body">
+
+              <div class="demo-top">
+
+                <div>
+
+                  <div class="demo-number">
+                    02 / 06
+                  </div>
+
+                  <h3 class="demo-title">
+                    Restaurant
+                  </h3>
+
+                </div>
+
+
+                <span class="demo-category">
+                  Food & Dining
+                </span>
+
+              </div>
+
+
+              <p class="demo-description">
+
+                A premium restaurant website focused on
+                menu presentation, brand identity,
+                reservations, and customer conversion.
+
               </p>
 
+
+              <div class="demo-actions">
+
+                <a
+                  href="https://deepbyto.github.io/demo-websites/restaurant/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="demo-button primary"
+                >
+
+                  View Live Demo
+
+                  <i
+                    class="fas fa-arrow-up-right-from-square"
+                  ></i>
+
+                </a>
+
+
+                <a
+                  href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20the%20Restaurant%20Website."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="demo-button secondary"
+                >
+
+                  <i class="fab fa-whatsapp"></i>
+
+                  Inquire
+
+                </a>
+
+              </div>
+
             </div>
 
-          </a>
+          </article>
 
 
-          <a
-            href="#shop"
-            class="category"
-          >
+          <!-- =================================
+               03 — ECOMMERCE
+               ================================= -->
 
-            <img
-              src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=900&q=80"
-              alt="Home"
-              loading="lazy"
-            >
+          <article class="demo-card">
 
-            <div class="category-info">
+            <div class="demo-preview">
 
-              <h3>
-                Home
-              </h3>
+              <div class="preview-bar">
 
-              <p>
-                Objects for modern spaces
+                <span class="preview-dot"></span>
+
+                <span class="preview-dot"></span>
+
+                <span class="preview-dot"></span>
+
+                <span class="preview-url">
+                  E-Commerce Website
+                </span>
+
+              </div>
+
+
+              <div class="coming-preview">
+
+                <i class="fas fa-bag-shopping"></i>
+
+                <span>
+                  Coming Soon
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="demo-body">
+
+              <div class="demo-top">
+
+                <div>
+
+                  <div class="demo-number">
+                    03 / 06
+                  </div>
+
+                  <h3 class="demo-title">
+                    E-Commerce
+                  </h3>
+
+                </div>
+
+
+                <span class="demo-category">
+                  Online Store
+                </span>
+
+              </div>
+
+
+              <p class="demo-description">
+
+                A modern online store experience designed
+                for product discovery, mobile shopping,
+                and digital commerce.
+
               </p>
 
+
+              <div class="demo-actions">
+
+                <a
+                  href="#"
+                  class="demo-button primary"
+                  onclick="comingSoon(event)"
+                >
+
+                  Coming Soon
+
+                  <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+
+                <a
+                  href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20the%20E-Commerce%20Website."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="demo-button secondary"
+                >
+
+                  <i class="fab fa-whatsapp"></i>
+
+                  Inquire
+
+                </a>
+
+              </div>
+
             </div>
 
-          </a>
+          </article>
 
 
-          <a
-            href="#shop"
-            class="category"
-          >
+          <!-- =================================
+               04 — PORTFOLIO
+               ================================= -->
 
-            <img
-              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
-              alt="Footwear"
-              loading="lazy"
-            >
+          <article class="demo-card">
 
-            <div class="category-info">
+            <div class="demo-preview">
 
-              <h3>
-                Footwear
-              </h3>
+              <div class="preview-bar">
 
-              <p>
-                Built for everyday movement
+                <span class="preview-dot"></span>
+
+                <span class="preview-dot"></span>
+
+                <span class="preview-dot"></span>
+
+                <span class="preview-url">
+                  Portfolio Website
+                </span>
+
+              </div>
+
+
+              <div class="coming-preview">
+
+                <i class="fas fa-user"></i>
+
+                <span>
+                  Coming Soon
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="demo-body">
+
+              <div class="demo-top">
+
+                <div>
+
+                  <div class="demo-number">
+                    04 / 06
+                  </div>
+
+                  <h3 class="demo-title">
+                    Personal Portfolio
+                  </h3>
+
+                </div>
+
+
+                <span class="demo-category">
+                  Portfolio
+                </span>
+
+              </div>
+
+
+              <p class="demo-description">
+
+                A professional portfolio experience for
+                developers, designers, creators,
+                freelancers, and professionals.
+
               </p>
 
-            </div>
 
-          </a>
+              <div class="demo-actions">
 
+                <a
+                  href="#"
+                  class="demo-button primary"
+                  onclick="comingSoon(event)"
+                >
 
-        </div>
+                  Coming Soon
 
-      </div>
+                  <i class="fas fa-arrow-right"></i>
 
-    </section>
-
-
-    <!-- =========================================
-         PRODUCTS
-         ========================================= -->
-
-    <section
-      class="section"
-      id="shop"
-    >
-
-      <div class="container">
+                </a>
 
 
-        <div class="section-header">
+                <a
+                  href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20the%20Portfolio%20Website."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="demo-button secondary"
+                >
 
-          <div>
+                  <i class="fab fa-whatsapp"></i>
 
-            <div class="section-label">
-              Featured
-            </div>
+                  Inquire
 
-            <h2 class="section-title">
-              Popular Picks
-            </h2>
-
-          </div>
-
-
-          <p class="section-description">
-
-            A selection of products from the
-            NOVA collection.
-
-          </p>
-
-        </div>
-
-
-        <div class="products">
-
-
-          <!-- PRODUCT 1 -->
-
-          <article class="product">
-
-            <div class="product-image">
-
-              <span class="product-badge">
-                New
-              </span>
-
-
-              <img
-                src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80"
-                alt="Essential Cotton Tee"
-                loading="lazy"
-              >
-
-
-              <button
-                class="quick-add"
-                onclick="addToCart('Essential Cotton Tee')"
-                aria-label="Add Essential Cotton Tee to cart"
-              >
-
-                <i class="fas fa-plus"></i>
-
-              </button>
-
-            </div>
-
-
-            <div class="product-details">
-
-              <div class="product-category">
-                Apparel
-              </div>
-
-              <h3 class="product-name">
-                Essential Cotton Tee
-              </h3>
-
-
-              <div class="product-bottom">
-
-                <div class="price">
-                  $34
-                </div>
-
-
-                <div class="rating">
-                  ★★★★★
-                  <span>
-                    4.9
-                  </span>
-                </div>
+                </a>
 
               </div>
 
@@ -2567,124 +1974,102 @@
           </article>
 
 
-          <!-- PRODUCT 2 -->
+          <!-- =================================
+               05 — REAL ESTATE
+               ================================= -->
 
-          <article class="product">
+          <article class="demo-card">
 
-            <div class="product-image">
+            <div class="demo-preview">
 
-              <span class="product-badge">
-                Best Seller
-              </span>
+              <div class="preview-bar">
 
+                <span class="preview-dot"></span>
 
-              <img
-                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80"
-                alt="Minimal Watch"
-                loading="lazy"
-              >
+                <span class="preview-dot"></span>
 
+                <span class="preview-dot"></span>
 
-              <button
-                class="quick-add"
-                onclick="addToCart('Minimal Watch')"
-                aria-label="Add Minimal Watch to cart"
-              >
+                <span class="preview-url">
+                  Real Estate Website
+                </span>
 
-                <i class="fas fa-plus"></i>
-
-              </button>
-
-            </div>
-
-
-            <div class="product-details">
-
-              <div class="product-category">
-                Accessories
               </div>
 
-              <h3 class="product-name">
-                Minimal Watch
-              </h3>
 
+              <div class="coming-preview">
 
-              <div class="product-bottom">
+                <i class="fas fa-building"></i>
 
-                <div class="price">
-                  $89
-                </div>
-
-
-                <div class="rating">
-                  ★★★★★
-                  <span>
-                    4.8
-                  </span>
-                </div>
+                <span>
+                  Coming Soon
+                </span>
 
               </div>
 
             </div>
 
-          </article>
+
+            <div class="demo-body">
+
+              <div class="demo-top">
+
+                <div>
+
+                  <div class="demo-number">
+                    05 / 06
+                  </div>
+
+                  <h3 class="demo-title">
+                    Real Estate
+                  </h3>
+
+                </div>
 
 
-          <!-- PRODUCT 3 -->
+                <span class="demo-category">
+                  Property
+                </span>
 
-          <article class="product">
-
-            <div class="product-image">
-
-              <span class="product-badge">
-                New
-              </span>
-
-
-              <img
-                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
-                alt="Everyday Runner"
-                loading="lazy"
-              >
-
-
-              <button
-                class="quick-add"
-                onclick="addToCart('Everyday Runner')"
-                aria-label="Add Everyday Runner to cart"
-              >
-
-                <i class="fas fa-plus"></i>
-
-              </button>
-
-            </div>
-
-
-            <div class="product-details">
-
-              <div class="product-category">
-                Footwear
               </div>
 
-              <h3 class="product-name">
-                Everyday Runner
-              </h3>
+
+              <p class="demo-description">
+
+                A professional property website concept
+                designed for agencies, property listings,
+                and real estate businesses.
+
+              </p>
 
 
-              <div class="product-bottom">
+              <div class="demo-actions">
 
-                <div class="price">
-                  $119
-                </div>
+                <a
+                  href="#"
+                  class="demo-button primary"
+                  onclick="comingSoon(event)"
+                >
+
+                  Coming Soon
+
+                  <i class="fas fa-arrow-right"></i>
+
+                </a>
 
 
-                <div class="rating">
-                  ★★★★★
-                  <span>
-                    4.9
-                  </span>
-                </div>
+                <a
+                  href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20the%20Real%20Estate%20Website."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="demo-button secondary"
+                >
+
+                  <i class="fab fa-whatsapp"></i>
+
+                  Inquire
+
+                </a>
 
               </div>
 
@@ -2693,313 +2078,102 @@
           </article>
 
 
-          <!-- PRODUCT 4 -->
+          <!-- =================================
+               06 — BUSINESS
+               ================================= -->
 
-          <article class="product">
+          <article class="demo-card">
 
-            <div class="product-image">
+            <div class="demo-preview">
 
+              <div class="preview-bar">
 
-              <img
-                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=80"
-                alt="Urban Backpack"
-                loading="lazy"
-              >
+                <span class="preview-dot"></span>
 
+                <span class="preview-dot"></span>
 
-              <button
-                class="quick-add"
-                onclick="addToCart('Urban Backpack')"
-                aria-label="Add Urban Backpack to cart"
-              >
+                <span class="preview-dot"></span>
 
-                <i class="fas fa-plus"></i>
+                <span class="preview-url">
+                  Business Website
+                </span>
 
-              </button>
-
-            </div>
-
-
-            <div class="product-details">
-
-              <div class="product-category">
-                Bags
               </div>
 
-              <h3 class="product-name">
-                Urban Backpack
-              </h3>
 
+              <div class="coming-preview">
 
-              <div class="product-bottom">
+                <i class="fas fa-building-circle-check"></i>
 
-                <div class="price">
-
-                  $74
-
-                  <span class="old-price">
-                    $95
-                  </span>
-
-                </div>
-
-
-                <div class="rating">
-                  ★★★★★
-                  <span>
-                    4.7
-                  </span>
-                </div>
+                <span>
+                  Coming Soon
+                </span>
 
               </div>
 
             </div>
 
-          </article>
 
+            <div class="demo-body">
 
-          <!-- PRODUCT 5 -->
+              <div class="demo-top">
 
-          <article class="product">
+                <div>
 
-            <div class="product-image">
+                  <div class="demo-number">
+                    06 / 06
+                  </div>
 
-              <span class="product-badge">
-                Sale
-              </span>
-
-
-              <img
-                src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=900&q=80"
-                alt="Classic Jacket"
-                loading="lazy"
-              >
-
-
-              <button
-                class="quick-add"
-                onclick="addToCart('Classic Jacket')"
-                aria-label="Add Classic Jacket to cart"
-              >
-
-                <i class="fas fa-plus"></i>
-
-              </button>
-
-            </div>
-
-
-            <div class="product-details">
-
-              <div class="product-category">
-                Apparel
-              </div>
-
-              <h3 class="product-name">
-                Classic Jacket
-              </h3>
-
-
-              <div class="product-bottom">
-
-                <div class="price">
-
-                  $129
-
-                  <span class="old-price">
-                    $169
-                  </span>
+                  <h3 class="demo-title">
+                    Business Website
+                  </h3>
 
                 </div>
 
 
-                <div class="rating">
-                  ★★★★★
-                  <span>
-                    4.8
-                  </span>
-                </div>
+                <span class="demo-category">
+                  Corporate
+                </span>
 
               </div>
 
-            </div>
 
-          </article>
+              <p class="demo-description">
 
+                A flexible professional website concept
+                for companies, agencies, startups,
+                organizations, and service businesses.
 
-          <!-- PRODUCT 6 -->
+              </p>
 
-          <article class="product">
 
-            <div class="product-image">
+              <div class="demo-actions">
 
+                <a
+                  href="#"
+                  class="demo-button primary"
+                  onclick="comingSoon(event)"
+                >
 
-              <img
-                src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=900&q=80"
-                alt="Form Lounge Chair"
-                loading="lazy"
-              >
+                  Coming Soon
 
+                  <i class="fas fa-arrow-right"></i>
 
-              <button
-                class="quick-add"
-                onclick="addToCart('Form Lounge Chair')"
-                aria-label="Add Form Lounge Chair to cart"
-              >
+                </a>
 
-                <i class="fas fa-plus"></i>
 
-              </button>
+                <a
+                  href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20the%20Business%20Website."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="demo-button secondary"
+                >
 
-            </div>
+                  <i class="fab fa-whatsapp"></i>
 
+                  Inquire
 
-            <div class="product-details">
-
-              <div class="product-category">
-                Home
-              </div>
-
-              <h3 class="product-name">
-                Form Lounge Chair
-              </h3>
-
-
-              <div class="product-bottom">
-
-                <div class="price">
-                  $249
-                </div>
-
-
-                <div class="rating">
-                  ★★★★★
-                  <span>
-                    4.9
-                  </span>
-                </div>
-
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- PRODUCT 7 -->
-
-          <article class="product">
-
-            <div class="product-image">
-
-
-              <img
-                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80"
-                alt="Daily Coffee Set"
-                loading="lazy"
-              >
-
-
-              <button
-                class="quick-add"
-                onclick="addToCart('Daily Coffee Set')"
-                aria-label="Add Daily Coffee Set to cart"
-              >
-
-                <i class="fas fa-plus"></i>
-
-              </button>
-
-            </div>
-
-
-            <div class="product-details">
-
-              <div class="product-category">
-                Lifestyle
-              </div>
-
-              <h3 class="product-name">
-                Daily Coffee Set
-              </h3>
-
-
-              <div class="product-bottom">
-
-                <div class="price">
-                  $54
-                </div>
-
-
-                <div class="rating">
-                  ★★★★★
-                  <span>
-                    4.8
-                  </span>
-                </div>
-
-              </div>
-
-            </div>
-
-          </article>
-
-
-          <!-- PRODUCT 8 -->
-
-          <article class="product">
-
-            <div class="product-image">
-
-              <span class="product-badge">
-                New
-              </span>
-
-
-              <img
-                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80"
-                alt="Studio Headphones"
-                loading="lazy"
-              >
-
-
-              <button
-                class="quick-add"
-                onclick="addToCart('Studio Headphones')"
-                aria-label="Add Studio Headphones to cart"
-              >
-
-                <i class="fas fa-plus"></i>
-
-              </button>
-
-            </div>
-
-
-            <div class="product-details">
-
-              <div class="product-category">
-                Technology
-              </div>
-
-              <h3 class="product-name">
-                Studio Headphones
-              </h3>
-
-
-              <div class="product-bottom">
-
-                <div class="price">
-                  $149
-                </div>
-
-
-                <div class="rating">
-                  ★★★★★
-                  <span>
-                    4.9
-                  </span>
-                </div>
+                </a>
 
               </div>
 
@@ -3010,227 +2184,32 @@
 
         </div>
 
-      </div>
 
-    </section>
+        <!-- =================================
+             CTA
+             ================================= -->
 
-
-    <!-- =========================================
-         PROMO
-         ========================================= -->
-
-    <section
-      class="promo"
-      id="new"
-    >
-
-      <div class="container">
-
-        <div class="promo-box">
-
-          <div class="promo-content">
-
-            <div class="eyebrow">
-              The New Standard
-            </div>
-
-
-            <h2>
-              Less Noise.<br>
-              More Style.
-            </h2>
-
-
-            <p>
-
-              Discover products selected for their
-              design, functionality, and ability to
-              fit effortlessly into everyday life.
-
-            </p>
-
-
-            <a
-              href="#shop"
-              class="btn btn-primary"
-            >
-
-              Explore New Arrivals
-
-              <i class="fas fa-arrow-right"></i>
-
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
-         FEATURES
-         ========================================= -->
-
-    <section class="section">
-
-      <div class="container">
-
-        <div class="feature-grid">
-
-
-          <div class="feature">
-
-            <i class="fas fa-box-open"></i>
-
-            <h3>
-              Carefully Selected
-            </h3>
-
-            <p>
-              Products chosen with quality,
-              design, and everyday use in mind.
-            </p>
-
-          </div>
-
-
-          <div class="feature">
-
-            <i class="fas fa-lock"></i>
-
-            <h3>
-              Secure Shopping
-            </h3>
-
-            <p>
-              A clean and secure shopping
-              experience designed for customers.
-            </p>
-
-          </div>
-
-
-          <div class="feature">
-
-            <i class="fas fa-comments"></i>
-
-            <h3>
-              Human Support
-            </h3>
-
-            <p>
-              Get help from a real support team
-              whenever you need assistance.
-            </p>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
-         NEWSLETTER
-         ========================================= -->
-
-    <section class="newsletter">
-
-      <div class="container">
-
-        <div class="newsletter-box">
-
-          <div class="section-label">
-            Stay Updated
-          </div>
-
+        <div class="bottom-cta">
 
           <h2>
-            Be First To Know.
+            Need a Website Like These?
           </h2>
 
 
           <p>
 
-            Receive updates about new products,
-            collections, and special offers.
+            DEEPBYTO builds modern, responsive,
+            professional websites for businesses,
+            startups, individuals, and organizations.
 
           </p>
 
 
-          <form
-            class="newsletter-form"
-            onsubmit="subscribe(event)"
-          >
-
-            <input
-              type="email"
-              id="emailInput"
-              placeholder="Enter your email address"
-              required
-            >
-
-
-            <button type="submit">
-              Subscribe
-            </button>
-
-          </form>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================================
-         DEEPBYTO CTA
-         ========================================= -->
-
-    <section
-      class="deepbyto-cta"
-      id="contact"
-    >
-
-      <div class="container">
-
-        <div class="deepbyto-box">
-
-          <div>
-
-            <div class="section-label">
-              Need A Store Like This?
-            </div>
-
-
-            <h2>
-              Turn Your Business Into A Digital Storefront.
-            </h2>
-
-
-            <p>
-
-              DEEPBYTO builds modern e-commerce
-              websites for brands, businesses,
-              startups, and online stores.
-
-            </p>
-
-          </div>
-
-
           <a
-            href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20an%20E-Commerce%20website."
+            href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20a%20professional%20website."
             target="_blank"
             rel="noopener noreferrer"
-            class="btn btn-primary"
+            class="cta-button"
           >
 
             <i class="fab fa-whatsapp"></i>
@@ -3252,110 +2231,49 @@
        FOOTER
        ========================================= -->
 
-  <footer>
+  <footer class="footer">
 
     <div class="container">
 
 
       <div class="footer-main">
 
-
         <div>
 
           <div class="footer-brand">
-            NOVA.
+            DEEPBYTO
           </div>
 
-
-          <p class="footer-about">
-
-            A modern e-commerce website concept
-            developed by DEEPBYTO to demonstrate
-            professional digital commerce experiences.
-
-          </p>
+          <div class="footer-tagline">
+            AI & Software Innovation
+          </div>
 
         </div>
 
 
-        <div class="footer-column">
+        <div class="footer-links">
 
-          <h4>
-            Shop
-          </h4>
-
-          <a href="#shop">
-            New Arrivals
+          <a href="https://deepbyto.github.io/">
+            Home
           </a>
 
-          <a href="#shop">
-            Best Sellers
+          <a href="https://deepbyto.github.io/#services">
+            Services
           </a>
 
-          <a href="#categories">
-            Categories
+          <a href="https://deepbyto.github.io/#projects">
+            Projects
           </a>
 
-          <a href="#shop">
-            All Products
+          <a href="https://deepbyto.github.io/demos/">
+            Demos
           </a>
 
-        </div>
-
-
-        <div class="footer-column">
-
-          <h4>
-            Support
-          </h4>
-
-          <a href="#contact">
+          <a href="https://deepbyto.github.io/#contact">
             Contact
           </a>
 
-          <a href="#contact">
-            Shipping
-          </a>
-
-          <a href="#contact">
-            Returns
-          </a>
-
-          <a href="#contact">
-            Help Center
-          </a>
-
         </div>
-
-
-        <div class="footer-column">
-
-          <h4>
-            Company
-          </h4>
-
-          <a href="#home">
-            About
-          </a>
-
-          <a href="#new">
-            Journal
-          </a>
-
-          <a href="#contact">
-            Careers
-          </a>
-
-          <a
-            href="https://deepbyto.github.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            DEEPBYTO
-          </a>
-
-        </div>
-
 
       </div>
 
@@ -3363,14 +2281,11 @@
       <div class="footer-bottom">
 
         <p>
-          © 2026 NOVA. All rights reserved.
+          © 2026 DEEPBYTO. All rights reserved.
         </p>
 
-
-        <p class="footer-credit">
-
-          E-Commerce Website Demo · Developed by DEEPBYTO
-
+        <p>
+          Developed by DEEPBYTO
         </p>
 
       </div>
@@ -3378,60 +2293,6 @@
     </div>
 
   </footer>
-
-
-  <!-- =========================================
-       CART
-       ========================================= -->
-
-  <div
-    class="cart-overlay"
-    id="cartOverlay"
-    onclick="closeCart()"
-  ></div>
-
-
-  <aside
-    class="cart-drawer"
-    id="cartDrawer"
-    aria-label="Shopping cart"
-  >
-
-    <div class="cart-header">
-
-      <h3>
-        Your Cart
-      </h3>
-
-
-      <button
-        class="cart-close"
-        onclick="closeCart()"
-        aria-label="Close cart"
-      >
-
-        <i class="fas fa-xmark"></i>
-
-      </button>
-
-    </div>
-
-
-    <div class="cart-content">
-
-      <div class="empty-cart">
-
-        <i class="fas fa-bag-shopping"></i>
-
-        <p id="cartMessage">
-          Your cart is currently empty.
-        </p>
-
-      </div>
-
-    </div>
-
-  </aside>
 
 
   <!-- =========================================
@@ -3444,193 +2305,24 @@
 
 
     /* =========================================
-       THEME
+       NAVBAR
        ========================================= */
 
-    function toggleTheme() {
+    const navbar =
+      document.getElementById('navbar');
 
-      const current =
-        document.documentElement
-          .getAttribute('data-theme');
 
+    window.addEventListener(
+      'scroll',
+      () => {
 
-      const next =
-        current === 'light'
-          ? 'dark'
-          : 'light';
+        if (window.scrollY > 20) {
 
+          navbar.classList.add('scrolled');
 
-      document.documentElement
-        .setAttribute(
-          'data-theme',
-          next
-        );
+        } else {
 
-
-      localStorage.setItem(
-        'nova-theme',
-        next
-      );
-
-
-      updateThemeIcon(next);
-
-    }
-
-
-    function updateThemeIcon(theme) {
-
-      const icon =
-        document.getElementById(
-          'themeIcon'
-        );
-
-
-      if (!icon) return;
-
-
-      icon.className =
-        theme === 'light'
-          ? 'fas fa-sun'
-          : 'fas fa-moon';
-
-    }
-
-
-    const savedTheme =
-      localStorage.getItem(
-        'nova-theme'
-      ) || 'dark';
-
-
-    document.documentElement
-      .setAttribute(
-        'data-theme',
-        savedTheme
-      );
-
-
-    updateThemeIcon(savedTheme);
-
-
-    /* =========================================
-       MOBILE MENU
-       ========================================= */
-
-    function toggleMobileMenu() {
-
-      const menu =
-        document.getElementById(
-          'mobileMenu'
-        );
-
-
-      menu.classList.toggle('open');
-
-    }
-
-
-    document
-      .querySelectorAll(
-        '.mobile-menu a'
-      )
-      .forEach(
-        link => {
-
-          link.addEventListener(
-            'click',
-            () => {
-
-              document
-                .getElementById(
-                  'mobileMenu'
-                )
-                .classList
-                .remove('open');
-
-            }
-          );
-
-        }
-      );
-
-
-    /* =========================================
-       CART
-       ========================================= */
-
-    let cartCount = 0;
-
-
-    function addToCart(productName) {
-
-      cartCount++;
-
-
-      document
-        .getElementById('cartCount')
-        .textContent = cartCount;
-
-
-      document
-        .getElementById('cartMessage')
-        .textContent =
-          productName +
-          ' added to your cart.';
-
-
-      openCart();
-
-    }
-
-
-    function openCart() {
-
-      document
-        .getElementById('cartDrawer')
-        .classList
-        .add('open');
-
-
-      document
-        .getElementById('cartOverlay')
-        .classList
-        .add('open');
-
-
-      document.body.style.overflow =
-        'hidden';
-
-    }
-
-
-    function closeCart() {
-
-      document
-        .getElementById('cartDrawer')
-        .classList
-        .remove('open');
-
-
-      document
-        .getElementById('cartOverlay')
-        .classList
-        .remove('open');
-
-
-      document.body.style.overflow =
-        '';
-
-    }
-
-
-    document.addEventListener(
-      'keydown',
-      event => {
-
-        if (event.key === 'Escape') {
-
-          closeCart();
+          navbar.classList.remove('scrolled');
 
         }
 
@@ -3639,67 +2331,59 @@
 
 
     /* =========================================
-       SEARCH
+       MOBILE NAVIGATION
        ========================================= */
 
-    function focusSearch() {
+    const navToggle =
+      document.getElementById('navToggle');
 
-      const shop =
-        document.getElementById(
-          'shop'
+    const navLinks =
+      document.getElementById('navLinks');
+
+
+    navToggle.addEventListener(
+      'click',
+      () => {
+
+        const open =
+          navLinks.classList.toggle('open');
+
+
+        navToggle.classList.toggle(
+          'active'
         );
 
 
-      shop.scrollIntoView({
-        behavior: 'smooth'
-      });
-
-    }
-
-
-    /* =========================================
-       NEWSLETTER
-       ========================================= */
-
-    function subscribe(event) {
-
-      event.preventDefault();
-
-
-      const input =
-        document.getElementById(
-          'emailInput'
+        navToggle.setAttribute(
+          'aria-expanded',
+          open
         );
 
-
-      if (!input.value) return;
-
-
-      alert(
-        'Thank you for subscribing.'
-      );
+      }
+    );
 
 
-      input.value = '';
-
-    }
-
-
-    /* =========================================
-       IMAGE ERROR HANDLING
-       ========================================= */
-
-    document
-      .querySelectorAll('img')
+    navLinks
+      .querySelectorAll('a')
       .forEach(
-        image => {
+        link => {
 
-          image.addEventListener(
-            'error',
+          link.addEventListener(
+            'click',
             () => {
 
-              image.style.opacity =
-                '0';
+              navLinks.classList.remove(
+                'open'
+              );
+
+              navToggle.classList.remove(
+                'active'
+              );
+
+              navToggle.setAttribute(
+                'aria-expanded',
+                'false'
+              );
 
             }
           );
@@ -3707,9 +2391,147 @@
         }
       );
 
+
+    document.addEventListener(
+      'keydown',
+      event => {
+
+        if (
+          event.key === 'Escape' &&
+          navLinks.classList.contains('open')
+        ) {
+
+          navLinks.classList.remove(
+            'open'
+          );
+
+          navToggle.classList.remove(
+            'active'
+          );
+
+          navToggle.setAttribute(
+            'aria-expanded',
+            'false'
+          );
+
+        }
+
+      }
+    );
+
+
+    /* =========================================
+       THEME
+       ========================================= */
+
+    const themeToggle =
+      document.getElementById('themeToggle');
+
+    const themeIcon =
+      document.getElementById('themeIcon');
+
+    const themeText =
+      document.getElementById('themeText');
+
+
+    function setTheme(theme) {
+
+      document.documentElement
+        .setAttribute(
+          'data-theme',
+          theme
+        );
+
+
+      localStorage.setItem(
+        'deepbyto-theme',
+        theme
+      );
+
+
+      if (theme === 'light') {
+
+        themeIcon.className =
+          'fas fa-sun';
+
+        themeText.textContent =
+          'Light';
+
+      } else {
+
+        themeIcon.className =
+          'fas fa-moon';
+
+        themeText.textContent =
+          'Dark';
+
+      }
+
+
+      const meta =
+        document.querySelector(
+          'meta[name="theme-color"]'
+        );
+
+
+      if (meta) {
+
+        meta.content =
+          theme === 'light'
+            ? '#f5f5f5'
+            : '#000000';
+
+      }
+
+    }
+
+
+    const savedTheme =
+      localStorage.getItem(
+        'deepbyto-theme'
+      ) || 'dark';
+
+
+    setTheme(savedTheme);
+
+
+    themeToggle.addEventListener(
+      'click',
+      () => {
+
+        const current =
+          document.documentElement
+            .getAttribute(
+              'data-theme'
+            );
+
+
+        setTheme(
+          current === 'light'
+            ? 'dark'
+            : 'light'
+        );
+
+      }
+    );
+
+
+    /* =========================================
+       COMING SOON
+       ========================================= */
+
+    function comingSoon(event) {
+
+      event.preventDefault();
+
+      alert(
+        'This demo is currently being developed by DEEPBYTO.'
+      );
+
+    }
+
   </script>
 
 
 </body>
 </html>
-```
