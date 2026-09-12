@@ -1,0 +1,2123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MEDICARE | Modern Healthcare</title>
+
+<meta name="description" content="MEDICARE — a modern professional hospital and healthcare website demo developed by DEEPBYTO.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#172033;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:min(1150px,90%);
+    margin:auto;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    background:rgba(255,255,255,.94);
+
+    border-bottom:1px solid #e8edf3;
+
+    backdrop-filter:blur(12px);
+}
+
+.nav{
+    height:76px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:900;
+    letter-spacing:1px;
+    color:#10233f;
+}
+
+.logo span{
+    color:#087ea4;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.nav-links a{
+    color:#40506a;
+    font-size:14px;
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#087ea4;
+}
+
+.nav-cta{
+    background:#087ea4;
+    color:#fff !important;
+
+    padding:11px 18px;
+    border-radius:5px;
+}
+
+.nav-cta:hover{
+    background:#05647f;
+}
+
+.menu-btn{
+    display:none;
+    font-size:27px;
+    cursor:pointer;
+    color:#10233f;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(8,28,48,.94),
+        rgba(8,28,48,.72),
+        rgba(8,28,48,.40)
+    ),
+
+    url("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=2000&q=85")
+    center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:760px;
+    padding-top:80px;
+}
+
+.hero-label{
+    color:#57d3ef;
+
+    font-size:14px;
+    font-weight:900;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+}
+
+.hero h1{
+    color:#fff;
+
+    font-size:clamp(48px,8vw,88px);
+
+    line-height:.96;
+
+    text-transform:uppercase;
+
+    font-weight:900;
+
+    letter-spacing:-4px;
+}
+
+.hero h1 span{
+    color:#57d3ef;
+}
+
+.hero p{
+    max-width:650px;
+
+    color:#dce7ef;
+
+    font-size:18px;
+
+    margin:28px 0;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+
+    padding:15px 25px;
+
+    border-radius:5px;
+
+    font-size:14px;
+    font-weight:900;
+
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#087ea4;
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:#05647f;
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    border:1px solid #fff;
+    color:#fff;
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:#10233f;
+}
+
+
+/* =========================
+   EMERGENCY BAR
+========================= */
+
+.emergency{
+    background:#087ea4;
+    color:#fff;
+}
+
+.emergency-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.emergency-box{
+    text-align:center;
+
+    padding:30px 15px;
+
+    border-right:1px solid rgba(255,255,255,.20);
+}
+
+.emergency-box:last-child{
+    border-right:none;
+}
+
+.emergency-box h3{
+    font-size:30px;
+    font-weight:900;
+}
+
+.emergency-box p{
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section{
+    padding:100px 0;
+}
+
+.section-label{
+    color:#087ea4;
+
+    font-size:13px;
+
+    font-weight:900;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:12px;
+}
+
+.section-title{
+    font-size:clamp(35px,5vw,54px);
+
+    line-height:1.05;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+
+    margin-bottom:45px;
+
+    color:#10233f;
+}
+
+
+/* =========================
+   DEPARTMENTS
+========================= */
+
+.departments{
+    background:#fff;
+}
+
+.department-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+}
+
+.department{
+    background:#f7f9fc;
+
+    border:1px solid #e2e9f0;
+
+    padding:30px;
+
+    transition:.3s;
+}
+
+.department:hover{
+    transform:translateY(-6px);
+
+    border-color:#087ea4;
+
+    box-shadow:0 15px 35px rgba(8,126,164,.10);
+}
+
+.department-icon{
+    width:58px;
+    height:58px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#e4f5fa;
+
+    color:#087ea4;
+
+    border-radius:8px;
+
+    font-size:25px;
+
+    font-weight:900;
+
+    margin-bottom:20px;
+}
+
+.department h3{
+    font-size:21px;
+
+    text-transform:uppercase;
+
+    margin-bottom:10px;
+
+    color:#172033;
+}
+
+.department p{
+    color:#68758a;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    background:#f7f9fc;
+}
+
+.about-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.about-image{
+    position:relative;
+}
+
+.about-image img{
+    width:100%;
+
+    height:520px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+}
+
+.about-badge{
+    position:absolute;
+
+    bottom:25px;
+    left:25px;
+
+    background:#087ea4;
+
+    color:#fff;
+
+    padding:18px 22px;
+
+    border-radius:6px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.20);
+}
+
+.about-badge strong{
+    display:block;
+
+    font-size:25px;
+
+    line-height:1;
+}
+
+.about-badge span{
+    font-size:12px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+}
+
+.about-text p{
+    color:#68758a;
+
+    margin-bottom:18px;
+}
+
+.features{
+    display:grid;
+
+    gap:15px;
+
+    margin-top:25px;
+}
+
+.feature{
+    border-left:3px solid #087ea4;
+
+    padding-left:15px;
+}
+
+.feature strong{
+    display:block;
+
+    text-transform:uppercase;
+
+    color:#172033;
+}
+
+.feature span{
+    color:#7b8798;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   DOCTORS
+========================= */
+
+.doctors{
+    background:#fff;
+}
+
+.doctor-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+}
+
+.doctor{
+    background:#f7f9fc;
+
+    border:1px solid #e2e9f0;
+
+    border-radius:7px;
+
+    overflow:hidden;
+}
+
+.doctor img{
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+}
+
+.doctor-info{
+    padding:22px;
+}
+
+.doctor-info h3{
+    font-size:21px;
+
+    text-transform:uppercase;
+
+    color:#172033;
+}
+
+.doctor-info p{
+    color:#087ea4;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    background:#f7f9fc;
+}
+
+.service-grid{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+}
+
+.service{
+    background:#fff;
+
+    border:1px solid #e2e9f0;
+
+    padding:25px;
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:flex-start;
+
+    transition:.3s;
+}
+
+.service:hover{
+    border-color:#087ea4;
+
+    transform:translateY(-3px);
+}
+
+.service-number{
+    min-width:45px;
+    height:45px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#087ea4;
+
+    color:#fff;
+
+    border-radius:50%;
+
+    font-weight:900;
+}
+
+.service h3{
+    font-size:18px;
+
+    text-transform:uppercase;
+
+    margin-bottom:7px;
+}
+
+.service p{
+    color:#748095;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   APPOINTMENT
+========================= */
+
+.appointment{
+    background:#10233f;
+
+    color:#fff;
+}
+
+.appointment-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.appointment .section-label{
+    color:#57d3ef;
+}
+
+.appointment .section-title{
+    color:#fff;
+
+    margin-bottom:20px;
+}
+
+.appointment-text p{
+    color:#bdcad7;
+
+    max-width:550px;
+}
+
+.appointment-info{
+    display:grid;
+
+    gap:15px;
+
+    margin-top:25px;
+}
+
+.appointment-item{
+    border-left:3px solid #57d3ef;
+
+    padding-left:15px;
+}
+
+.appointment-item strong{
+    display:block;
+
+    text-transform:uppercase;
+}
+
+.appointment-item span{
+    color:#9daebe;
+
+    font-size:14px;
+}
+
+.appointment-form{
+    background:#fff;
+
+    padding:32px;
+
+    border-radius:8px;
+
+    color:#172033;
+}
+
+.appointment-form h3{
+    font-size:24px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+
+    border:1px solid #dbe2ea;
+
+    background:#f7f9fc;
+
+    padding:13px 14px;
+
+    border-radius:4px;
+
+    font-family:inherit;
+
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-color:#087ea4;
+}
+
+.form-group textarea{
+    height:100px;
+
+    resize:vertical;
+}
+
+.appointment-form button{
+    width:100%;
+
+    border:none;
+
+    cursor:pointer;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:
+
+    linear-gradient(
+        rgba(8,28,48,.80),
+        rgba(8,28,48,.88)
+    ),
+
+    url("https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=2000&q=85")
+    center/cover no-repeat;
+
+    text-align:center;
+}
+
+.cta h2{
+    max-width:850px;
+
+    margin:auto;
+
+    color:#fff;
+
+    font-size:clamp(40px,6vw,68px);
+
+    line-height:1;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+}
+
+.cta p{
+    max-width:620px;
+
+    margin:20px auto 30px;
+
+    color:#d7e2eb;
+}
+
+
+/* =========================
+   DEEPBYTO CTA
+========================= */
+
+.demo-cta{
+    background:#087ea4;
+
+    text-align:center;
+
+    padding:80px 20px;
+}
+
+.demo-cta h2{
+    color:#fff;
+
+    font-size:clamp(34px,5vw,55px);
+
+    line-height:1;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+}
+
+.demo-cta p{
+    max-width:680px;
+
+    margin:17px auto 28px;
+
+    color:#e7f8fc;
+}
+
+.demo-cta .btn{
+    background:#10233f;
+
+    color:#fff;
+}
+
+.demo-cta .btn:hover{
+    background:#fff;
+
+    color:#10233f;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#091321;
+
+    color:#fff;
+
+    border-top:1px solid #1b2b40;
+
+    padding:50px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    gap:40px;
+
+    margin-bottom:35px;
+}
+
+.footer-brand p{
+    color:#8291a3;
+
+    max-width:390px;
+
+    margin-top:12px;
+
+    font-size:14px;
+}
+
+footer h4{
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin:8px 0;
+
+    color:#8291a3;
+
+    font-size:14px;
+}
+
+footer li a:hover{
+    color:#57d3ef;
+}
+
+.footer-bottom{
+    border-top:1px solid #1b2b40;
+
+    padding-top:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    color:#68788c;
+
+    font-size:13px;
+}
+
+.developed{
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+}
+
+.deepbyto-wordmark{
+    height:22px;
+
+    width:auto;
+
+    transition:.3s;
+}
+
+.deepbyto-wordmark:hover{
+    opacity:.7;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:850px){
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+
+        top:76px;
+
+        left:0;
+
+        width:100%;
+
+        display:none;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        padding:25px;
+
+        gap:20px;
+
+        background:#fff;
+
+        border-bottom:1px solid #e2e9f0;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .emergency-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .emergency-box:nth-child(2){
+        border-right:none;
+    }
+
+    .department-grid,
+    .doctor-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+
+        gap:35px;
+    }
+
+    .about-image img{
+        height:400px;
+    }
+
+    .appointment-grid{
+        grid-template-columns:1fr;
+
+        gap:35px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+
+        gap:30px;
+    }
+}
+
+
+@media(max-width:500px){
+
+    section{
+        padding:75px 0;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+
+        text-align:center;
+    }
+
+    .emergency-box{
+        padding:22px 8px;
+    }
+
+    .emergency-box h3{
+        font-size:24px;
+    }
+
+    .btn{
+        text-align:center;
+    }
+
+    .appointment-form{
+        padding:25px 20px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+```
+<div class="container nav">
+
+    <a href="#" class="logo">
+        MEDI<span>CARE</span>
+    </a>
+
+    <div class="menu-btn" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <nav class="nav-links" id="navLinks">
+
+        <a href="#departments">
+            Departments
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+        <a href="#doctors">
+            Doctors
+        </a>
+
+        <a href="#services">
+            Services
+        </a>
+
+        <a href="#appointment" class="nav-cta">
+            Appointment
+        </a>
+
+    </nav>
+
+</div>
+```
+
+</header>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+```
+<div class="container">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            QUALITY CARE. BETTER HEALTH.
+        </div>
+
+        <h1>
+            Advanced<br>
+            <span>Healthcare.</span>
+        </h1>
+
+        <p>
+            A modern healthcare website concept designed to
+            showcase hospital departments, medical specialists,
+            healthcare services and appointment information.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#appointment" class="btn btn-primary">
+                Book Appointment
+            </a>
+
+            <a href="#departments" class="btn btn-outline">
+                Explore Departments
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="emergency">
+
+```
+<div class="container emergency-grid">
+
+    <div class="emergency-box">
+
+        <h3>24/7</h3>
+
+        <p>
+            Emergency Care
+        </p>
+
+    </div>
+
+
+    <div class="emergency-box">
+
+        <h3>50+</h3>
+
+        <p>
+            Medical Specialists
+        </p>
+
+    </div>
+
+
+    <div class="emergency-box">
+
+        <h3>15+</h3>
+
+        <p>
+            Departments
+        </p>
+
+    </div>
+
+
+    <div class="emergency-box">
+
+        <h3>100%</h3>
+
+        <p>
+            Patient Focus
+        </p>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     DEPARTMENTS
+========================= -->
+
+<section class="departments" id="departments">
+
+```
+<div class="container">
+
+    <div class="section-label">
+        Medical Departments
+    </div>
+
+    <h2 class="section-title">
+        Specialized Care
+    </h2>
+
+
+    <div class="department-grid">
+
+
+        <article class="department">
+
+            <div class="department-icon">
+                +
+            </div>
+
+            <h3>
+                Cardiology
+            </h3>
+
+            <p>
+                Specialized cardiovascular care and
+                comprehensive heart health services.
+            </p>
+
+        </article>
+
+
+        <article class="department">
+
+            <div class="department-icon">
+                N
+            </div>
+
+            <h3>
+                Neurology
+            </h3>
+
+            <p>
+                Advanced neurological evaluation,
+                diagnosis and treatment services.
+            </p>
+
+        </article>
+
+
+        <article class="department">
+
+            <div class="department-icon">
+                O
+            </div>
+
+            <h3>
+                Orthopedics
+            </h3>
+
+            <p>
+                Comprehensive care for bones, joints,
+                muscles and movement-related conditions.
+            </p>
+
+        </article>
+
+
+        <article class="department">
+
+            <div class="department-icon">
+                P
+            </div>
+
+            <h3>
+                Pediatrics
+            </h3>
+
+            <p>
+                Dedicated healthcare services designed
+                around children and families.
+            </p>
+
+        </article>
+
+
+        <article class="department">
+
+            <div class="department-icon">
+                D
+            </div>
+
+            <h3>
+                Dermatology
+            </h3>
+
+            <p>
+                Professional skin health evaluation,
+                treatment and preventive care.
+            </p>
+
+        </article>
+
+
+        <article class="department">
+
+            <div class="department-icon">
+                E
+            </div>
+
+            <h3>
+                Emergency
+            </h3>
+
+            <p>
+                Rapid-response emergency care available
+                around the clock in this demo concept.
+            </p>
+
+        </article>
+
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+```
+<div class="container about-grid">
+
+
+    <div class="about-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1516841273335-e39b37888115?auto=format&fit=crop&w=1200&q=85"
+            alt="Modern hospital interior"
+        >
+
+        <div class="about-badge">
+
+            <strong>24/7</strong>
+
+            <span>
+                Healthcare Support
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="about-text">
+
+        <div class="section-label">
+            About Medicare
+        </div>
+
+        <h2 class="section-title">
+            Care Built Around People
+        </h2>
+
+        <p>
+            MEDICARE is a fictional hospital brand created to
+            demonstrate a modern professional healthcare website.
+        </p>
+
+        <p>
+            This website concept can be customized for hospitals,
+            clinics, medical centers, doctors and healthcare
+            organizations.
+        </p>
+
+
+        <div class="features">
+
+
+            <div class="feature">
+
+                <strong>
+                    Modern Facilities
+                </strong>
+
+                <span>
+                    Designed for a professional healthcare experience.
+                </span>
+
+            </div>
+
+
+            <div class="feature">
+
+                <strong>
+                    Specialist Care
+                </strong>
+
+                <span>
+                    Multiple medical departments and specialties.
+                </span>
+
+            </div>
+
+
+            <div class="feature">
+
+                <strong>
+                    Patient Focused
+                </strong>
+
+                <span>
+                    Clear information and convenient appointment access.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     DOCTORS
+========================= -->
+
+<section class="doctors" id="doctors">
+
+```
+<div class="container">
+
+    <div class="section-label">
+        Medical Team
+    </div>
+
+    <h2 class="section-title">
+        Meet Our Specialists
+    </h2>
+
+
+    <div class="doctor-grid">
+
+
+        <article class="doctor">
+
+            <img
+                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1000&q=85"
+                alt="Doctor"
+            >
+
+            <div class="doctor-info">
+
+                <h3>
+                    Dr. Sarah Mitchell
+                </h3>
+
+                <p>
+                    Cardiology Specialist
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="doctor">
+
+            <img
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1000&q=85"
+                alt="Doctor"
+            >
+
+            <div class="doctor-info">
+
+                <h3>
+                    Dr. Emily Carter
+                </h3>
+
+                <p>
+                    Neurology Specialist
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="doctor">
+
+            <img
+                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1000&q=85"
+                alt="Doctor"
+            >
+
+            <div class="doctor-info">
+
+                <h3>
+                    Dr. Daniel Brooks
+                </h3>
+
+                <p>
+                    Orthopedic Specialist
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="services" id="services">
+
+```
+<div class="container">
+
+    <div class="section-label">
+        Healthcare Services
+    </div>
+
+    <h2 class="section-title">
+        What We Provide
+    </h2>
+
+
+    <div class="service-grid">
+
+
+        <div class="service">
+
+            <div class="service-number">
+                01
+            </div>
+
+            <div>
+
+                <h3>
+                    General Consultation
+                </h3>
+
+                <p>
+                    Professional consultation and
+                    healthcare guidance for patients.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-number">
+                02
+            </div>
+
+            <div>
+
+                <h3>
+                    Diagnostic Services
+                </h3>
+
+                <p>
+                    A demo section for diagnostic and
+                    medical testing services.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-number">
+                03
+            </div>
+
+            <div>
+
+                <h3>
+                    Surgical Care
+                </h3>
+
+                <p>
+                    Information about surgical departments
+                    and specialized procedures.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-number">
+                04
+            </div>
+
+            <div>
+
+                <h3>
+                    Pharmacy Services
+                </h3>
+
+                <p>
+                    A dedicated section for hospital
+                    pharmacy and medication information.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-number">
+                05
+            </div>
+
+            <div>
+
+                <h3>
+                    Laboratory
+                </h3>
+
+                <p>
+                    Showcase laboratory facilities,
+                    testing and diagnostic support.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="service">
+
+            <div class="service-number">
+                06
+            </div>
+
+            <div>
+
+                <h3>
+                    Emergency Care
+                </h3>
+
+                <p>
+                    Dedicated emergency information and
+                    contact options for patients.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     APPOINTMENT
+========================= -->
+
+<section class="appointment" id="appointment">
+
+```
+<div class="container appointment-grid">
+
+
+    <div class="appointment-text">
+
+        <div class="section-label">
+            Appointments
+        </div>
+
+        <h2 class="section-title">
+            Schedule Your Visit
+        </h2>
+
+        <p>
+            Use this demo appointment form to showcase
+            appointment booking functionality for a real
+            hospital or clinic website.
+        </p>
+
+
+        <div class="appointment-info">
+
+
+            <div class="appointment-item">
+
+                <strong>
+                    Emergency
+                </strong>
+
+                <span>
+                    Available 24/7 in this demo concept.
+                </span>
+
+            </div>
+
+
+            <div class="appointment-item">
+
+                <strong>
+                    Specialist Consultation
+                </strong>
+
+                <span>
+                    Choose a department and preferred date.
+                </span>
+
+            </div>
+
+
+            <div class="appointment-item">
+
+                <strong>
+                    Patient Support
+                </strong>
+
+                <span>
+                    Clear contact information for patients.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="appointment-form">
+
+        <h3>
+            Book Appointment
+        </h3>
+
+
+        <form onsubmit="submitAppointment(event)">
+
+
+            <div class="form-group">
+
+                <input
+                    type="text"
+                    placeholder="Full Name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <input
+                    type="email"
+                    placeholder="Email Address"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <select required>
+
+                    <option value="">
+                        Select Department
+                    </option>
+
+                    <option>
+                        Cardiology
+                    </option>
+
+                    <option>
+                        Neurology
+                    </option>
+
+                    <option>
+                        Orthopedics
+                    </option>
+
+                    <option>
+                        Pediatrics
+                    </option>
+
+                    <option>
+                        Dermatology
+                    </option>
+
+                    <option>
+                        General Consultation
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <input
+                    type="date"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <textarea
+                    placeholder="Additional Message"
+                ></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+            >
+                Request Appointment
+            </button>
+
+
+        </form>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+```
+<div class="container">
+
+    <h2>
+        Your Health Deserves Better Care
+    </h2>
+
+    <p>
+        A modern healthcare website can make it easier for
+        patients to discover services, doctors and appointment
+        information.
+    </p>
+
+    <a
+        href="#appointment"
+        class="btn btn-primary"
+    >
+        Book Appointment
+    </a>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     DEEPBYTO CTA
+========================= -->
+
+<section class="demo-cta" id="contact">
+
+```
+<div class="container">
+
+    <h2>
+        Want A Website Like This?
+    </h2>
+
+    <p>
+        Get a professional website for your hospital,
+        clinic, doctor, medical center or healthcare business.
+    </p>
+
+    <a
+        href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I%27m%20interested%20in%20the%20Hospital%20Website."
+        target="_blank"
+        rel="noopener"
+        class="btn"
+    >
+        Contact DEEPBYTO
+    </a>
+
+</div>
+```
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+```
+<div class="container">
+
+
+    <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+            <div class="logo">
+                MEDI<span>CARE</span>
+            </div>
+
+            <p>
+                A professional hospital website concept
+                designed to demonstrate a modern digital
+                healthcare experience.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Navigation
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a href="#departments">
+                        Departments
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#doctors">
+                        Doctors
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#services">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#appointment">
+                        Appointment
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Contact
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a
+                        href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I%27m%20interested%20in%20the%20Hospital%20Website."
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        WhatsApp DEEPBYTO
+                    </a>
+                </li>
+
+                <li>
+                    Website Development
+                </li>
+
+                <li>
+                    Digital Solutions
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+
+        <div>
+            © 2026 DEEPBYTO. All rights reserved.
+        </div>
+
+
+        <div class="developed">
+
+            <span>
+                Developed by
+            </span>
+
+            <a
+                href="https://deepbyto.github.io/"
+                target="_blank"
+                rel="noopener"
+                aria-label="DEEPBYTO website"
+            >
+
+                <img
+                    src="https://raw.githubusercontent.com/DEEPBYTO/deepbyto.github.io/main/wordmark.png"
+                    alt="DEEPBYTO"
+                    class="deepbyto-wordmark"
+                >
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+```
+
+</footer>
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+function toggleMenu(){
+
+    const nav = document.getElementById("navLinks");
+
+    nav.classList.toggle("active");
+
+}
+
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        document
+        .getElementById("navLinks")
+        .classList.remove("active");
+
+    });
+
+});
+
+
+function submitAppointment(event){
+
+    event.preventDefault();
+
+    alert(
+        "Thank you. Your appointment request has been submitted in this demo."
+    );
+
+}
+
+</script>
+
+</body>
+</html>
