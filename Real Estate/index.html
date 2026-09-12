@@ -1,1745 +1,2107 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>ARCADIA — Luxury Real Estate</title>
-  <meta name="description" content="ARCADIA is a fictional luxury real estate website demo designed by DEEPBYTO.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NOVAESTATE | Premium Real Estate</title>
+
+<meta name="description"
+content="NOVAESTATE — a modern premium real estate website concept developed by DEEPBYTO.">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0b0c0d;
+    color:#fff;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+.container{
+    width:min(1180px,90%);
+    margin:auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    background:rgba(8,9,10,.82);
+    backdrop-filter:blur(16px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav{
+    height:78px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#c7a45b;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
 
-    body {
-      font-family: "DM Sans", sans-serif;
-      background: #f5f1e8;
-      color: #181714;
-      line-height: 1.6;
-    }
+.nav-links a{
+    color:#d6d6d6;
+    font-size:14px;
+    font-weight:700;
+    transition:.3s;
+}
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+.nav-links a:hover{
+    color:#c7a45b;
+}
 
-    img {
-      width: 100%;
-      display: block;
-    }
+.nav-cta{
+    padding:11px 19px;
+    background:#c7a45b;
+    color:#101010 !important;
+    border-radius:3px;
+}
 
-    button,
-    input,
-    select {
-      font: inherit;
-    }
+.nav-cta:hover{
+    background:#e1c47d;
+}
 
-    :root {
-      --cream: #f5f1e8;
-      --paper: #fffdf8;
-      --dark: #181714;
-      --muted: #77736a;
-      --gold: #b28a4a;
-      --line: #dcd5c8;
-      --white: #ffffff;
-    }
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
 
-    /* =========================
-       NAVIGATION
-    ========================= */
-
-    .navbar {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      padding: 25px 6%;
-      color: white;
-    }
 
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid rgba(255,255,255,.3);
-      padding-bottom: 20px;
-    }
+/* =========================
+   HERO
+========================= */
 
-    .logo {
-      font-size: 25px;
-      font-weight: 700;
-      letter-spacing: 4px;
-    }
+.hero{
+    min-height:100vh;
 
-    .logo span {
-      color: #d4b477;
-    }
+    display:flex;
+    align-items:center;
 
-    .nav-links {
-      display: flex;
-      gap: 34px;
-      list-style: none;
-      font-size: 14px;
-      font-weight: 500;
-    }
+    position:relative;
+    overflow:hidden;
 
-    .nav-links a {
-      position: relative;
-      transition: .3s;
-    }
+    background:
+    linear-gradient(
+        90deg,
+        rgba(5,6,7,.94),
+        rgba(5,6,7,.70),
+        rgba(5,6,7,.38)
+    ),
+    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=90")
+    center/cover no-repeat;
+}
 
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -7px;
-      width: 0;
-      height: 1px;
-      background: white;
-      transition: .3s;
-    }
+.hero-content{
+    max-width:780px;
+    padding-top:80px;
+}
 
-    .nav-links a:hover::after {
-      width: 100%;
-    }
+.hero-label{
+    color:#c7a45b;
 
-    .nav-contact {
-      border: 1px solid rgba(255,255,255,.6);
-      padding: 10px 19px;
-      font-size: 13px;
-      transition: .3s;
-    }
+    font-size:13px;
+    font-weight:900;
+    letter-spacing:4px;
 
-    .nav-contact:hover {
-      background: white;
-      color: var(--dark);
-    }
+    text-transform:uppercase;
 
-    .menu-btn {
-      display: none;
-      border: 0;
-      background: transparent;
-      color: white;
-      font-size: 27px;
-      cursor: pointer;
-    }
+    margin-bottom:20px;
+}
 
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      min-height: 92vh;
-      position: relative;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      color: white;
-      background:
-        linear-gradient(90deg, rgba(10,10,9,.78), rgba(10,10,9,.25)),
-        url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=85")
-        center/cover no-repeat;
-    }
+.hero h1{
+    font-size:clamp(48px,7vw,88px);
 
-    .hero-content {
-      width: 90%;
-      max-width: 1300px;
-      margin: auto;
-      padding-top: 80px;
-    }
+    line-height:.94;
 
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-size: 12px;
-      color: #d9c18f;
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
+    text-transform:uppercase;
 
-    .hero h1 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(55px, 8vw, 115px);
-      line-height: .94;
-      font-weight: 500;
-      max-width: 850px;
-      letter-spacing: -3px;
-    }
+    font-weight:900;
 
-    .hero h1 em {
-      font-style: italic;
-      color: #d6bd88;
-    }
+    letter-spacing:-4px;
+}
 
-    .hero-description {
-      max-width: 510px;
-      margin-top: 30px;
-      color: rgba(255,255,255,.82);
-      font-size: 16px;
-    }
+.hero h1 span{
+    color:#c7a45b;
+}
 
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      margin-top: 34px;
-    }
+.hero p{
+    max-width:620px;
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 25px;
-      border: 1px solid transparent;
-      font-size: 13px;
-      font-weight: 600;
-      transition: .3s;
-      cursor: pointer;
-    }
+    color:#d0d0d0;
 
-    .btn-gold {
-      background: var(--gold);
-      color: white;
-    }
+    font-size:17px;
 
-    .btn-gold:hover {
-      background: #987337;
-    }
+    margin:27px 0 30px;
+}
 
-    .btn-outline {
-      border-color: rgba(255,255,255,.65);
-      color: white;
-    }
+.hero-buttons{
+    display:flex;
+    gap:13px;
+    flex-wrap:wrap;
+}
 
-    .btn-outline:hover {
-      background: white;
-      color: var(--dark);
-    }
 
-    .hero-number {
-      position: absolute;
-      right: 6%;
-      bottom: 75px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      font-size: 12px;
-      letter-spacing: 2px;
-    }
+/* =========================
+   BUTTONS
+========================= */
 
-    .hero-number::before {
-      content: "";
-      width: 55px;
-      height: 1px;
-      background: white;
-    }
+.btn{
+    display:inline-block;
 
-    /* =========================
-       SEARCH
-    ========================= */
-
-    .search-wrap {
-      position: relative;
-      z-index: 5;
-      margin-top: -45px;
-    }
+    padding:14px 24px;
 
-    .search-box {
-      width: 88%;
-      max-width: 1200px;
-      margin: auto;
-      background: var(--paper);
-      box-shadow: 0 18px 55px rgba(0,0,0,.13);
-      padding: 28px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr auto;
-      gap: 15px;
-      align-items: end;
-    }
+    border-radius:3px;
 
-    .field label {
-      display: block;
-      text-transform: uppercase;
-      font-size: 10px;
-      letter-spacing: 2px;
-      font-weight: 700;
-      margin-bottom: 9px;
-      color: var(--muted);
-    }
+    font-size:13px;
+    font-weight:900;
 
-    .field select {
-      width: 100%;
-      border: 1px solid var(--line);
-      background: transparent;
-      padding: 13px;
-      color: var(--dark);
-      outline: none;
-    }
+    transition:.3s;
 
-    .search-button {
-      height: 46px;
-      min-width: 125px;
-      background: var(--dark);
-      border: none;
-      color: white;
-      cursor: pointer;
-      transition: .3s;
-    }
+    text-transform:uppercase;
+    letter-spacing:.5px;
+}
 
-    .search-button:hover {
-      background: var(--gold);
-    }
+.btn-primary{
+    background:#c7a45b;
+    color:#111;
+}
 
-    /* =========================
-       SECTION
-    ========================= */
+.btn-primary:hover{
+    background:#e1c47d;
+    transform:translateY(-2px);
+}
 
-    section {
-      padding: 115px 6%;
-    }
+.btn-outline{
+    border:1px solid rgba(255,255,255,.7);
+    color:#fff;
+}
 
-    .section-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 40px;
-      margin-bottom: 55px;
-    }
+.btn-outline:hover{
+    background:#fff;
+    color:#111;
+}
 
-    .section-label {
-      color: var(--gold);
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      font-weight: 700;
-      margin-bottom: 13px;
-    }
 
-    .section-title {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(40px, 5vw, 70px);
-      font-weight: 500;
-      line-height: 1;
-    }
+/* =========================
+   HERO SEARCH
+========================= */
 
-    .section-description {
-      max-width: 430px;
-      color: var(--muted);
-      font-size: 15px;
-    }
+.hero-search{
+    position:absolute;
 
-    /* =========================
-       FEATURED PROPERTIES
-    ========================= */
+    left:50%;
+    bottom:0;
 
-    .properties {
-      max-width: 1400px;
-      margin: auto;
-    }
+    transform:translateX(-50%);
 
-    .property-layout {
-      display: grid;
-      grid-template-columns: 1.35fr .8fr;
-      gap: 25px;
-    }
+    width:min(1100px,90%);
 
-    .property-main {
-      min-height: 650px;
-      position: relative;
-      overflow: hidden;
-      background: #ddd;
-    }
+    background:rgba(16,17,18,.94);
 
-    .property-main img {
-      height: 100%;
-      object-fit: cover;
-      transition: transform .7s;
-    }
+    border:1px solid rgba(255,255,255,.12);
 
-    .property-main:hover img,
-    .property-small:hover img {
-      transform: scale(1.04);
-    }
+    padding:22px;
 
-    .property-small-wrap {
-      display: grid;
-      grid-template-rows: 1fr 1fr;
-      gap: 25px;
-    }
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr auto;
 
-    .property-small {
-      position: relative;
-      min-height: 312px;
-      overflow: hidden;
-    }
+    gap:12px;
 
-    .property-small img {
-      height: 100%;
-      object-fit: cover;
-      transition: transform .7s;
-    }
+    backdrop-filter:blur(15px);
+}
 
-    .property-overlay {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 30px;
-      color: white;
-      background: linear-gradient(transparent 35%, rgba(0,0,0,.78));
-    }
+.search-field{
+    background:#202122;
 
-    .property-tag {
-      position: absolute;
-      top: 22px;
-      left: 22px;
-      background: rgba(255,255,255,.92);
-      color: var(--dark);
-      padding: 7px 12px;
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      font-weight: 700;
-    }
+    border:1px solid #303133;
 
-    .property-overlay h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 32px;
-      font-weight: 500;
-      line-height: 1.1;
-    }
+    padding:13px 15px;
+}
 
-    .property-small .property-overlay h3 {
-      font-size: 25px;
-    }
+.search-field small{
+    display:block;
 
-    .property-location {
-      margin-top: 7px;
-      font-size: 12px;
-      opacity: .82;
-    }
+    color:#8f8f8f;
 
-    .property-meta {
-      display: flex;
-      gap: 20px;
-      margin-top: 16px;
-      font-size: 12px;
-      border-top: 1px solid rgba(255,255,255,.35);
-      padding-top: 13px;
-    }
+    font-size:10px;
 
-    /* =========================
-       INTRO
-    ========================= */
+    text-transform:uppercase;
 
-    .intro {
-      background: var(--paper);
-    }
+    letter-spacing:1px;
 
-    .intro-grid {
-      max-width: 1250px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 100px;
-      align-items: center;
-    }
+    margin-bottom:3px;
+}
 
-    .intro-image {
-      position: relative;
-    }
+.search-field strong{
+    font-size:14px;
+}
 
-    .intro-image img {
-      height: 650px;
-      object-fit: cover;
-    }
+.search-button{
+    border:none;
 
-    .image-caption {
-      position: absolute;
-      right: -30px;
-      bottom: 35px;
-      background: var(--dark);
-      color: white;
-      padding: 18px 23px;
-      font-size: 11px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
+    background:#c7a45b;
 
-    .intro-content h2 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(45px, 5vw, 72px);
-      font-weight: 500;
-      line-height: 1.02;
-      margin-bottom: 25px;
-    }
+    padding:0 28px;
 
-    .intro-content h2 em {
-      color: var(--gold);
-      font-style: italic;
-    }
+    font-weight:900;
 
-    .intro-content p {
-      color: var(--muted);
-      max-width: 560px;
-      margin-bottom: 18px;
-      font-size: 15px;
-    }
+    cursor:pointer;
 
-    .signature {
-      margin-top: 35px;
-      font-family: "Playfair Display", serif;
-      font-size: 25px;
-      font-style: italic;
-    }
+    text-transform:uppercase;
+}
 
-    /* =========================
-       STATS
-    ========================= */
-
-    .stats {
-      background: var(--dark);
-      color: white;
-      padding: 65px 6%;
-    }
 
-    .stats-grid {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-    }
+/* =========================
+   SECTION
+========================= */
 
-    .stat {
-      text-align: center;
-      border-right: 1px solid rgba(255,255,255,.15);
-    }
+section{
+    padding:105px 0;
+}
 
-    .stat:last-child {
-      border-right: none;
-    }
+.section-label{
+    color:#c7a45b;
 
-    .stat-number {
-      font-family: "Playfair Display", serif;
-      font-size: 52px;
-      color: #d0ae70;
-    }
+    font-size:12px;
 
-    .stat-text {
-      color: #aaa69d;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
+    font-weight:900;
 
-    /* =========================
-       SERVICES
-    ========================= */
+    letter-spacing:3px;
 
-    .services {
-      max-width: 1250px;
-      margin: auto;
-    }
+    text-transform:uppercase;
 
-    .service-list {
-      border-top: 1px solid var(--line);
-    }
+    margin-bottom:12px;
+}
 
-    .service {
-      display: grid;
-      grid-template-columns: 90px 1fr 2fr 50px;
-      gap: 30px;
-      align-items: center;
-      padding: 32px 0;
-      border-bottom: 1px solid var(--line);
-      transition: .3s;
-    }
+.section-title{
+    font-size:clamp(36px,5vw,58px);
 
-    .service:hover {
-      padding-left: 15px;
-      background: rgba(255,255,255,.35);
-    }
+    line-height:1;
 
-    .service-number {
-      color: var(--gold);
-      font-size: 12px;
-      letter-spacing: 2px;
-    }
+    font-weight:900;
 
-    .service h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 30px;
-      font-weight: 500;
-    }
+    text-transform:uppercase;
 
-    .service p {
-      color: var(--muted);
-      font-size: 14px;
-    }
+    letter-spacing:-2px;
 
-    .service-arrow {
-      font-size: 24px;
-      color: var(--gold);
-    }
+    margin-bottom:45px;
+}
+
+.section-intro{
+    max-width:650px;
+
+    color:#999;
+
+    margin-top:-28px;
+
+    margin-bottom:42px;
+
+    font-size:15px;
+}
+
+
+/* =========================
+   FEATURED PROPERTIES
+========================= */
+
+.properties{
+    background:#111213;
+}
+
+.property-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+}
+
+.property-card{
+    background:#18191a;
+
+    border:1px solid #292a2b;
+
+    overflow:hidden;
+
+    transition:.35s;
+}
+
+.property-card:hover{
+    transform:translateY(-7px);
+
+    border-color:#c7a45b;
+}
+
+.property-image{
+    position:relative;
+}
+
+.property-image img{
+    height:255px;
+
+    object-fit:cover;
+}
+
+.property-tag{
+    position:absolute;
+
+    top:15px;
+    left:15px;
+
+    background:#c7a45b;
+
+    color:#111;
+
+    padding:6px 10px;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+}
+
+.property-type{
+    position:absolute;
+
+    bottom:15px;
+    right:15px;
+
+    background:rgba(0,0,0,.75);
+
+    padding:6px 10px;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+}
+
+.property-content{
+    padding:24px;
+}
+
+.property-content h3{
+    font-size:21px;
+
+    text-transform:uppercase;
+
+    margin-bottom:5px;
+}
+
+.location{
+    color:#888;
+
+    font-size:13px;
+
+    margin-bottom:17px;
+}
+
+.property-details{
+    display:flex;
+
+    gap:18px;
+
+    color:#aaa;
+
+    font-size:12px;
+
+    border-top:1px solid #292929;
+
+    border-bottom:1px solid #292929;
+
+    padding:12px 0;
+
+    margin-bottom:18px;
+}
+
+.property-bottom{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+}
+
+.price{
+    color:#c7a45b;
+
+    font-size:21px;
+
+    font-weight:900;
+}
+
+.view-link{
+    font-size:11px;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    background:#0b0c0d;
+}
+
+.about-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.about-image{
+    position:relative;
+}
+
+.about-image img{
+    height:560px;
+
+    object-fit:cover;
+}
+
+.about-image::after{
+    content:"";
+
+    position:absolute;
+
+    width:130px;
+    height:130px;
+
+    right:-18px;
+    bottom:-18px;
+
+    border-right:2px solid #c7a45b;
+    border-bottom:2px solid #c7a45b;
+}
+
+.about-text p{
+    color:#999;
+
+    font-size:15px;
+
+    margin-bottom:18px;
+
+    max-width:570px;
+}
+
+.about-features{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
+    margin-top:30px;
+}
+
+.about-feature{
+    border-top:1px solid #2c2c2c;
+
+    padding-top:17px;
+}
+
+.about-feature strong{
+    display:block;
+
+    color:#fff;
+
+    text-transform:uppercase;
+
+    font-size:13px;
+
+    margin-bottom:5px;
+}
 
-    /* =========================
-       AGENTS
-    ========================= */
+.about-feature span{
+    color:#777;
 
-    .agents-section {
-      background: #e9e3d7;
+    font-size:12px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    background:#111213;
+}
+
+.services-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:1px;
+
+    background:#292929;
+
+    border:1px solid #292929;
+}
+
+.service{
+    background:#151617;
+
+    padding:38px 30px;
+
+    min-height:220px;
+
+    transition:.3s;
+}
+
+.service:hover{
+    background:#1c1d1e;
+}
+
+.service-number{
+    color:#c7a45b;
+
+    font-size:12px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    margin-bottom:35px;
+}
+
+.service h3{
+    font-size:20px;
+
+    text-transform:uppercase;
+
+    margin-bottom:12px;
+}
+
+.service p{
+    color:#888;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   AGENTS
+========================= */
+
+.agents{
+    background:#0b0c0d;
+}
+
+.agent-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+}
+
+.agent{
+    background:#151617;
+
+    border:1px solid #252627;
+}
+
+.agent img{
+    height:370px;
+
+    object-fit:cover;
+
+    filter:grayscale(15%);
+}
+
+.agent-info{
+    padding:20px;
+}
+
+.agent-info h3{
+    font-size:20px;
+
+    text-transform:uppercase;
+}
+
+.agent-info p{
+    color:#c7a45b;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================
+   NUMBERS
+========================= */
+
+.numbers{
+    background:#c7a45b;
+
+    color:#111;
+}
+
+.numbers-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+}
+
+.number{
+    text-align:center;
+
+    padding:25px 15px;
+
+    border-right:1px solid rgba(0,0,0,.2);
+}
+
+.number:last-child{
+    border-right:none;
+}
+
+.number h3{
+    font-size:34px;
+
+    font-weight:900;
+}
+
+.number p{
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================
+   TESTIMONIAL
+========================= */
+
+.testimonial{
+    background:
+    linear-gradient(
+        rgba(0,0,0,.76),
+        rgba(0,0,0,.88)
+    ),
+    url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=2200&q=85")
+    center/cover no-repeat;
+
+    text-align:center;
+}
+
+.quote{
+    max-width:850px;
+
+    margin:auto;
+}
+
+.quote-mark{
+    color:#c7a45b;
+
+    font-size:65px;
+
+    line-height:.7;
+}
+
+.quote p{
+    font-size:clamp(22px,3vw,35px);
+
+    line-height:1.3;
+
+    font-weight:700;
+
+    margin:25px 0;
+}
+
+.quote span{
+    color:#c7a45b;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:#c7a45b;
+
+    color:#111;
+
+    text-align:center;
+
+    padding:85px 20px;
+}
+
+.cta h2{
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:clamp(38px,6vw,65px);
+
+    line-height:1;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+
+    letter-spacing:-2px;
+}
+
+.cta p{
+    max-width:650px;
+
+    margin:18px auto 28px;
+
+    font-size:15px;
+}
+
+.cta .btn{
+    background:#111;
+
+    color:#fff;
+}
+
+.cta .btn:hover{
+    background:#fff;
+
+    color:#111;
+}
+
+
+/* =========================
+   DEEPBYTO CTA
+========================= */
+
+.demo-cta{
+    background:#151617;
+
+    text-align:center;
+
+    padding:75px 20px;
+
+    border-bottom:1px solid #28292a;
+}
+
+.demo-cta h2{
+    font-size:clamp(32px,5vw,52px);
+
+    line-height:1;
+
+    font-weight:900;
+
+    text-transform:uppercase;
+}
+
+.demo-cta p{
+    max-width:680px;
+
+    margin:16px auto 27px;
+
+    color:#999;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#070808;
+
+    padding:55px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    gap:45px;
+
+    margin-bottom:38px;
+}
+
+.footer-brand p{
+    color:#707070;
+
+    max-width:400px;
+
+    margin-top:13px;
+
+    font-size:13px;
+}
+
+footer h4{
+    text-transform:uppercase;
+
+    font-size:12px;
+
+    letter-spacing:1px;
+
+    margin-bottom:16px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin:9px 0;
+
+    color:#707070;
+
+    font-size:13px;
+}
+
+footer li a:hover{
+    color:#c7a45b;
+}
+
+.footer-bottom{
+    border-top:1px solid #202122;
+
+    padding-top:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    color:#5e5e5e;
+
+    font-size:12px;
+}
+
+.developed{
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+}
+
+.deepbyto-wordmark{
+    height:22px;
+
+    width:auto;
+
+    transition:.3s;
+}
+
+.deepbyto-wordmark:hover{
+    opacity:.65;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    .menu-btn{
+        display:block;
     }
+
+    .nav-links{
+        position:absolute;
+
+        top:78px;
+        left:0;
+
+        width:100%;
+
+        display:none;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        padding:25px;
 
-    .agents {
-      max-width: 1250px;
-      margin: auto;
+        gap:20px;
+
+        background:#0b0c0d;
+
+        border-bottom:1px solid #252627;
     }
 
-    .agents-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+    .nav-links.active{
+        display:flex;
     }
+
+    .hero-search{
+        grid-template-columns:1fr 1fr;
+
+        position:relative;
+
+        left:auto;
+        bottom:auto;
 
-    .agent {
-      background: var(--paper);
+        transform:none;
+
+        margin:40px auto 0;
     }
 
-    .agent-image {
-      height: 390px;
-      overflow: hidden;
+    .hero{
+        padding:120px 0 50px;
+        min-height:auto;
     }
 
-    .agent-image img {
-      height: 100%;
-      object-fit: cover;
-      filter: grayscale(100%);
-      transition: .5s;
+    .property-grid,
+    .agent-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .agent:hover img {
-      filter: grayscale(0%);
-      transform: scale(1.03);
+    .about-grid{
+        grid-template-columns:1fr;
+
+        gap:45px;
     }
 
-    .agent-info {
-      padding: 23px;
+    .services-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .agent-info h3 {
-      font-family: "Playfair Display", serif;
-      font-size: 27px;
-      font-weight: 500;
+    .numbers-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .agent-info span {
-      display: block;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 10px;
-      margin-top: 5px;
+    .number:nth-child(2){
+        border-right:none;
     }
 
-    .agent-info p {
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 12px;
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    /* =========================
-       CTA
-    ========================= */
-
-    .cta {
-      background:
-        linear-gradient(rgba(15,14,12,.88), rgba(15,14,12,.88)),
-        url("https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=2000&q=80")
-        center/cover;
-      color: white;
-      text-align: center;
-      padding: 135px 6%;
+    .footer-brand{
+        grid-column:1/-1;
     }
+}
+
 
-    .cta .section-label {
-      color: #d0ae70;
+@media(max-width:600px){
+
+    section{
+        padding:75px 0;
     }
 
-    .cta h2 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(48px, 7vw, 90px);
-      font-weight: 500;
-      line-height: 1;
-      max-width: 900px;
-      margin: auto;
+    .hero h1{
+        letter-spacing:-2px;
     }
 
-    .cta h2 em {
-      color: #d0ae70;
+    .hero p{
+        font-size:15px;
     }
 
-    .cta p {
-      color: #b9b5ad;
-      max-width: 520px;
-      margin: 25px auto 35px;
-      font-size: 15px;
+    .hero-buttons{
+        flex-direction:column;
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: #11110f;
-      color: white;
-      padding: 70px 6% 30px;
+    .hero-buttons .btn{
+        width:100%;
+        text-align:center;
     }
 
-    .footer-grid {
-      max-width: 1250px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
-      gap: 50px;
-      padding-bottom: 55px;
-      border-bottom: 1px solid rgba(255,255,255,.12);
+    .hero-search{
+        grid-template-columns:1fr;
     }
 
-    .footer-logo {
-      font-size: 26px;
-      letter-spacing: 4px;
-      font-weight: 700;
+    .search-button{
+        padding:15px;
     }
 
-    .footer-logo span {
-      color: #c5a361;
+    .property-grid,
+    .agent-grid,
+    .services-grid{
+        grid-template-columns:1fr;
     }
 
-    .footer-about {
-      color: #88857d;
-      max-width: 350px;
-      margin-top: 18px;
-      font-size: 13px;
+    .about-image img{
+        height:400px;
     }
 
-    footer h4 {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #c5a361;
-      margin-bottom: 18px;
+    .about-features{
+        grid-template-columns:1fr;
     }
 
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 9px;
-      color: #99968f;
-      font-size: 13px;
+    .numbers-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .footer-links a:hover {
-      color: white;
+    .number{
+        padding:20px 8px;
     }
 
-    .footer-bottom {
-      max-width: 1250px;
-      margin: 25px auto 0;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      color: #66645e;
-      font-size: 11px;
+    .number h3{
+        font-size:27px;
     }
 
-    .deepbyto {
-      color: #c5a361;
+    .footer-grid{
+        grid-template-columns:1fr;
     }
 
-    /* =========================
-       RESPONSIVE
-    ========================= */
-
-    @media (max-width: 1000px) {
-
-      .nav-links {
-        position: absolute;
-        top: 80px;
-        left: 6%;
-        right: 6%;
-        background: rgba(20,20,18,.98);
-        flex-direction: column;
-        padding: 25px;
-        gap: 20px;
-        display: none;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .nav-contact {
-        display: none;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-
-      .search-box {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .search-button {
-        width: 100%;
-      }
-
-      .property-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .property-small-wrap {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: none;
-      }
-
-      .property-small {
-        min-height: 300px;
-      }
-
-      .intro-grid {
-        gap: 55px;
-      }
-
-      .service {
-        grid-template-columns: 60px 1fr;
-      }
-
-      .service p {
-        grid-column: 2;
-      }
-
-      .service-arrow {
-        display: none;
-      }
-
-      .agents-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+    .footer-brand{
+        grid-column:auto;
     }
 
-    @media (max-width: 700px) {
-
-      .hero {
-        min-height: 850px;
-      }
-
-      .hero-content {
-        padding-top: 100px;
-      }
-
-      .hero h1 {
-        font-size: 58px;
-        letter-spacing: -2px;
-      }
-
-      .hero-description {
-        font-size: 14px;
-      }
-
-      .hero-buttons {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .hero-number {
-        display: none;
-      }
-
-      .search-wrap {
-        margin-top: -20px;
-      }
-
-      .search-box {
-        grid-template-columns: 1fr;
-        padding: 22px;
-      }
-
-      section {
-        padding: 80px 6%;
-      }
-
-      .section-top {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .property-main {
-        min-height: 470px;
-      }
-
-      .property-small-wrap {
-        grid-template-columns: 1fr;
-      }
-
-      .property-small {
-        min-height: 350px;
-      }
-
-      .intro-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .intro-image img {
-        height: 480px;
-      }
-
-      .image-caption {
-        right: 15px;
-      }
-
-      .stats-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 35px 10px;
-      }
-
-      .stat {
-        border-right: none;
-      }
-
-      .stat-number {
-        font-size: 42px;
-      }
-
-      .agents-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .agent-image {
-        height: 430px;
-      }
-
-      .service {
-        grid-template-columns: 45px 1fr;
-        gap: 15px;
-      }
-
-      .service h3 {
-        font-size: 25px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-      }
+    .footer-bottom{
+        flex-direction:column;
+
+        align-items:flex-start;
     }
-  </style>
+}
+
+</style>
 </head>
+
 
 <body>
 
-  <!-- =========================
-       NAVIGATION
-  ========================= -->
 
-  <header class="navbar">
-    <div class="nav-inner">
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-      <a href="#" class="logo">
-        ARCAD<span>IA</span>
-      </a>
+<header>
 
-      <nav>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#properties">Properties</a></li>
-          <li><a href="#story">Our Story</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#agents">Advisors</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <div class="container nav">
 
-      <a href="#contact" class="nav-contact">Book a Consultation</a>
-
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
-        ☰
-      </button>
-
-    </div>
-  </header>
-
-
-  <!-- =========================
-       HERO
-  ========================= -->
-
-  <section class="hero">
-
-    <div class="hero-content">
-
-      <div class="eyebrow">
-        Private Real Estate Collection
-      </div>
-
-      <h1>
-        Spaces<br>
-        with <em>character.</em>
-      </h1>
-
-      <p class="hero-description">
-        Discover distinctive residences selected for architecture,
-        location and enduring quality. A more considered approach
-        to finding your next address.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#properties" class="btn btn-gold">
-          Explore Properties
+        <a href="#" class="logo">
+            NOVA<span>ESTATE</span>
         </a>
 
-        <a href="#contact" class="btn btn-outline">
-          Speak With An Advisor
-        </a>
-      </div>
-
-    </div>
-
-    <div class="hero-number">
-      COLLECTION 01 / 2026
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       SEARCH
-  ========================= -->
-
-  <div class="search-wrap">
-
-    <div class="search-box">
-
-      <div class="field">
-        <label>Looking For</label>
-        <select id="purpose">
-          <option>Buy</option>
-          <option>Rent</option>
-          <option>Investment</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label>Property</label>
-        <select id="type">
-          <option>Any Property</option>
-          <option>Villa</option>
-          <option>Apartment</option>
-          <option>House</option>
-          <option>Penthouse</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label>Location</label>
-        <select id="location">
-          <option>Any Location</option>
-          <option>City Centre</option>
-          <option>Lake District</option>
-          <option>North Hills</option>
-          <option>Coastal Area</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label>Price Range</label>
-        <select id="price">
-          <option>Any Price</option>
-          <option>Under $250K</option>
-          <option>$250K — $500K</option>
-          <option>$500K — $1M</option>
-          <option>$1M+</option>
-        </select>
-      </div>
-
-      <button class="search-button" onclick="searchProperties()">
-        Search
-      </button>
-
-    </div>
-
-  </div>
-
-
-  <!-- =========================
-       FEATURED PROPERTIES
-  ========================= -->
-
-  <section id="properties">
-
-    <div class="properties">
-
-      <div class="section-top">
-
-        <div>
-          <div class="section-label">
-            Selected Collection
-          </div>
-
-          <h2 class="section-title">
-            Featured<br>Residences
-          </h2>
+        <div class="menu-btn" onclick="toggleMenu()">
+            ☰
         </div>
 
-        <p class="section-description">
-          A curated selection of fictional properties for this
-          website demonstration. Each residence represents a
-          different architectural and lifestyle direction.
-        </p>
+        <nav class="nav-links" id="navLinks">
 
-      </div>
+            <a href="#properties">
+                Properties
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#services">
+                Services
+            </a>
+
+            <a href="#agents">
+                Agents
+            </a>
+
+            <a href="#contact" class="nav-cta">
+                Contact Us
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
 
 
-      <div class="property-layout">
+<!-- =========================
+     HERO
+========================= -->
 
-        <!-- Large property -->
+<section class="hero">
 
-        <article class="property-main">
+    <div class="container">
 
-          <img
-            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85"
-            alt="Modern luxury residence"
-          >
+        <div class="hero-content">
 
-          <div class="property-tag">
-            Featured Residence
-          </div>
-
-          <div class="property-overlay">
-
-            <h3>
-              The Glass House
-            </h3>
-
-            <div class="property-location">
-              North Hills · Private Residence
+            <div class="hero-label">
+                Premium Real Estate
             </div>
 
-            <div class="property-meta">
-              <span>4 Beds</span>
-              <span>4 Baths</span>
-              <span>3,850 sq ft</span>
-            </div>
+            <h1>
+                Find A Place<br>
+                <span>Worth Living.</span>
+            </h1>
 
-          </div>
+            <p>
+                Discover exceptional homes, modern apartments and
+                premium properties designed around the way you live.
+            </p>
 
-        </article>
+            <div class="hero-buttons">
 
+                <a href="#properties" class="btn btn-primary">
+                    Explore Properties
+                </a>
 
-        <div class="property-small-wrap">
-
-          <!-- Small property 1 -->
-
-          <article class="property-small">
-
-            <img
-              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85"
-              alt="Luxury interior"
-            >
-
-            <div class="property-tag">
-              New
-            </div>
-
-            <div class="property-overlay">
-
-              <h3>
-                Maison No. 08
-              </h3>
-
-              <div class="property-location">
-                City Centre · Apartment
-              </div>
-
-              <div class="property-meta">
-                <span>3 Beds</span>
-                <span>2 Baths</span>
-                <span>1,920 sq ft</span>
-              </div>
+                <a href="#contact" class="btn btn-outline">
+                    Talk To An Agent
+                </a>
 
             </div>
-
-          </article>
-
-
-          <!-- Small property 2 -->
-
-          <article class="property-small">
-
-            <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
-              alt="Contemporary home"
-            >
-
-            <div class="property-tag">
-              Private Listing
-            </div>
-
-            <div class="property-overlay">
-
-              <h3>
-                Casa Verde
-              </h3>
-
-              <div class="property-location">
-                Lake District · Villa
-              </div>
-
-              <div class="property-meta">
-                <span>5 Beds</span>
-                <span>5 Baths</span>
-                <span>4,700 sq ft</span>
-              </div>
-
-            </div>
-
-          </article>
 
         </div>
 
-      </div>
-
     </div>
 
-  </section>
 
+    <!-- SEARCH PANEL -->
 
-  <!-- =========================
-       STORY
-  ========================= -->
+    <div class="hero-search">
 
-  <section class="intro" id="story">
+        <div class="search-field">
 
-    <div class="intro-grid">
+            <small>
+                Location
+            </small>
 
-      <div class="intro-image">
+            <strong>
+                Any Location
+            </strong>
 
-        <img
-          src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=85"
-          alt="Elegant modern interior"
+        </div>
+
+        <div class="search-field">
+
+            <small>
+                Property Type
+            </small>
+
+            <strong>
+                Residential
+            </strong>
+
+        </div>
+
+        <div class="search-field">
+
+            <small>
+                Budget
+            </small>
+
+            <strong>
+                Any Budget
+            </strong>
+
+        </div>
+
+        <button
+            class="search-button"
+            onclick="alert('Property search demo — connect this form to your real estate system.')"
         >
+            Search
+        </button>
 
-        <div class="image-caption">
-          The Art of Living
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NUMBERS
+========================= -->
+
+<section class="numbers">
+
+    <div class="container numbers-grid">
+
+        <div class="number">
+            <h3>250+</h3>
+            <p>Properties</p>
         </div>
 
-      </div>
+        <div class="number">
+            <h3>18</h3>
+            <p>Locations</p>
+        </div>
+
+        <div class="number">
+            <h3>42+</h3>
+            <p>Agents</p>
+        </div>
+
+        <div class="number">
+            <h3>10+</h3>
+            <p>Years Experience</p>
+        </div>
+
+    </div>
+
+</section>
 
 
-      <div class="intro-content">
+<!-- =========================
+     PROPERTIES
+========================= -->
+
+<section class="properties" id="properties">
+
+    <div class="container">
 
         <div class="section-label">
-          Our Philosophy
+            Featured Collection
         </div>
 
+        <h2 class="section-title">
+            Exceptional Properties
+        </h2>
+
+        <p class="section-intro">
+            Explore a curated selection of modern residences,
+            luxury apartments and contemporary homes.
+        </p>
+
+
+        <div class="property-grid">
+
+
+            <!-- PROPERTY 1 -->
+
+            <article class="property-card">
+
+                <div class="property-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
+                        alt="Modern luxury house"
+                    >
+
+                    <div class="property-tag">
+                        Featured
+                    </div>
+
+                    <div class="property-type">
+                        For Sale
+                    </div>
+
+                </div>
+
+                <div class="property-content">
+
+                    <h3>
+                        The Oak Residence
+                    </h3>
+
+                    <div class="location">
+                        Beverly Hills, California
+                    </div>
+
+                    <div class="property-details">
+                        <span>4 Beds</span>
+                        <span>3 Baths</span>
+                        <span>3,200 Sq Ft</span>
+                    </div>
+
+                    <div class="property-bottom">
+
+                        <div class="price">
+                            $1.85M
+                        </div>
+
+                        <a href="#contact" class="view-link">
+                            View Property →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROPERTY 2 -->
+
+            <article class="property-card">
+
+                <div class="property-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85"
+                        alt="Luxury modern interior"
+                    >
+
+                    <div class="property-tag">
+                        New
+                    </div>
+
+                    <div class="property-type">
+                        For Sale
+                    </div>
+
+                </div>
+
+                <div class="property-content">
+
+                    <h3>
+                        Skyline Residence
+                    </h3>
+
+                    <div class="location">
+                        Manhattan, New York
+                    </div>
+
+                    <div class="property-details">
+                        <span>3 Beds</span>
+                        <span>2 Baths</span>
+                        <span>2,100 Sq Ft</span>
+                    </div>
+
+                    <div class="property-bottom">
+
+                        <div class="price">
+                            $1.25M
+                        </div>
+
+                        <a href="#contact" class="view-link">
+                            View Property →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROPERTY 3 -->
+
+            <article class="property-card">
+
+                <div class="property-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=85"
+                        alt="Contemporary house"
+                    >
+
+                    <div class="property-tag">
+                        Premium
+                    </div>
+
+                    <div class="property-type">
+                        For Rent
+                    </div>
+
+                </div>
+
+                <div class="property-content">
+
+                    <h3>
+                        Modern Hillside
+                    </h3>
+
+                    <div class="location">
+                        Austin, Texas
+                    </div>
+
+                    <div class="property-details">
+                        <span>5 Beds</span>
+                        <span>4 Baths</span>
+                        <span>4,100 Sq Ft</span>
+                    </div>
+
+                    <div class="property-bottom">
+
+                        <div class="price">
+                            $8,500
+                        </div>
+
+                        <a href="#contact" class="view-link">
+                            View Property →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+    <div class="container about-grid">
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=85"
+                alt="Luxury property interior"
+            >
+
+        </div>
+
+
+        <div class="about-text">
+
+            <div class="section-label">
+                About Novaestate
+            </div>
+
+            <h2 class="section-title">
+                Property. People. Possibility.
+            </h2>
+
+            <p>
+                NOVAESTATE is a fictional premium real estate brand
+                created to demonstrate a modern digital experience
+                for property businesses.
+            </p>
+
+            <p>
+                This website concept can be customized for real estate
+                agencies, property developers, agents, brokers and
+                property management businesses.
+            </p>
+
+
+            <div class="about-features">
+
+                <div class="about-feature">
+
+                    <strong>
+                        Curated Properties
+                    </strong>
+
+                    <span>
+                        Carefully presented property listings.
+                    </span>
+
+                </div>
+
+
+                <div class="about-feature">
+
+                    <strong>
+                        Expert Guidance
+                    </strong>
+
+                    <span>
+                        Support throughout your property journey.
+                    </span>
+
+                </div>
+
+
+                <div class="about-feature">
+
+                    <strong>
+                        Market Knowledge
+                    </strong>
+
+                    <span>
+                        Designed for modern property businesses.
+                    </span>
+
+                </div>
+
+
+                <div class="about-feature">
+
+                    <strong>
+                        Client Focused
+                    </strong>
+
+                    <span>
+                        A digital experience built around customers.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-label">
+            What We Offer
+        </div>
+
+        <h2 class="section-title">
+            Real Estate Services
+        </h2>
+
+
+        <div class="services-grid">
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    01
+                </div>
+
+                <h3>
+                    Property Sales
+                </h3>
+
+                <p>
+                    Present residential and commercial properties
+                    through a professional digital platform.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    02
+                </div>
+
+                <h3>
+                    Property Rental
+                </h3>
+
+                <p>
+                    Showcase rental properties and connect potential
+                    tenants with suitable listings.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    03
+                </div>
+
+                <h3>
+                    Property Management
+                </h3>
+
+                <p>
+                    Build a strong online presence for property
+                    management and real estate operations.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    04
+                </div>
+
+                <h3>
+                    Commercial
+                </h3>
+
+                <p>
+                    Present offices, retail spaces, land and other
+                    commercial opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    05
+                </div>
+
+                <h3>
+                    Investment
+                </h3>
+
+                <p>
+                    Create a professional platform for showcasing
+                    investment opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    06
+                </div>
+
+                <h3>
+                    Consultation
+                </h3>
+
+                <p>
+                    Make it simple for potential clients to contact
+                    your team and request information.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     AGENTS
+========================= -->
+
+<section class="agents" id="agents">
+
+    <div class="container">
+
+        <div class="section-label">
+            Our Professionals
+        </div>
+
+        <h2 class="section-title">
+            Meet The Team
+        </h2>
+
+
+        <div class="agent-grid">
+
+
+            <article class="agent">
+
+                <img
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=85"
+                    alt="Real estate agent"
+                >
+
+                <div class="agent-info">
+
+                    <h3>
+                        Daniel Morgan
+                    </h3>
+
+                    <p>
+                        Senior Property Advisor
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="agent">
+
+                <img
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=85"
+                    alt="Real estate consultant"
+                >
+
+                <div class="agent-info">
+
+                    <h3>
+                        Olivia Reed
+                    </h3>
+
+                    <p>
+                        Luxury Property Consultant
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="agent">
+
+                <img
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1000&q=85"
+                    alt="Property advisor"
+                >
+
+                <div class="agent-info">
+
+                    <h3>
+                        Ethan Brooks
+                    </h3>
+
+                    <p>
+                        Commercial Property Advisor
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TESTIMONIAL
+========================= -->
+
+<section class="testimonial">
+
+    <div class="container">
+
+        <div class="quote">
+
+            <div class="quote-mark">
+                “
+            </div>
+
+            <p>
+                Great properties deserve a great presentation.
+                Build an online experience that makes people want
+                to take the next step.
+            </p>
+
+            <span>
+                NOVAESTATE EXPERIENCE
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MAIN CTA
+========================= -->
+
+<section class="cta" id="contact">
+
+    <div class="container">
+
         <h2>
-          Real estate,<br>
-          made <em>personal.</em>
+            Your Next Property Starts Here.
         </h2>
 
         <p>
-          Finding a home should be about more than square footage
-          and specifications. It should be about discovering a place
-          that feels right.
+            Looking for a new home, investment opportunity or
+            commercial property? Start a conversation with our team.
         </p>
+
+        <a
+            href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20the%20Real%20Estate%20Website."
+            target="_blank"
+            rel="noopener"
+            class="btn"
+        >
+            Contact Us
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DEEPBYTO CTA
+========================= -->
+
+<section class="demo-cta">
+
+    <div class="container">
+
+        <h2>
+            Want A Website Like This?
+        </h2>
 
         <p>
-          ARCADIA is a fictional luxury real-estate concept created
-          as a demonstration website. Its visual identity combines
-          editorial design with a refined property-search experience.
+            Get a professional website for your real estate agency,
+            property business, developer, broker or other business.
         </p>
 
-        <p>
-          From the first conversation to the final decision, our
-          fictional advisory model is built around clarity,
-          discretion and thoughtful guidance.
-        </p>
-
-        <div class="signature">
-          — The ARCADIA Approach
-        </div>
-
-      </div>
+        <a
+            href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20the%20Real%20Estate%20Website."
+            target="_blank"
+            rel="noopener"
+            class="btn btn-primary"
+        >
+            Contact DEEPBYTO
+        </a>
 
     </div>
 
-  </section>
+</section>
 
 
-  <!-- =========================
-       STATS
-  ========================= -->
+<!-- =========================
+     FOOTER
+========================= -->
 
-  <section class="stats">
+<footer>
 
-    <div class="stats-grid">
+    <div class="container">
 
-      <div class="stat">
-        <div class="stat-number">18</div>
-        <div class="stat-text">Curated Listings</div>
-      </div>
+        <div class="footer-grid">
 
-      <div class="stat">
-        <div class="stat-number">06</div>
-        <div class="stat-text">Design Categories</div>
-      </div>
 
-      <div class="stat">
-        <div class="stat-number">12</div>
-        <div class="stat-text">Fictional Locations</div>
-      </div>
+            <!-- BRAND -->
 
-      <div class="stat">
-        <div class="stat-number">01</div>
-        <div class="stat-text">Distinctive Experience</div>
-      </div>
+            <div class="footer-brand">
+
+                <div class="logo">
+                    NOVA<span>ESTATE</span>
+                </div>
+
+                <p>
+                    A premium real estate website concept designed
+                    to demonstrate a modern digital experience for
+                    property businesses.
+                </p>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <div>
+
+                <h4>
+                    Navigation
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a href="#properties">
+                            Properties
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#agents">
+                            Agents
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div>
+
+                <h4>
+                    Contact
+                </h4>
+
+                <ul>
+
+                    <li>
+                        <a
+                            href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20the%20Real%20Estate%20Website."
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            WhatsApp DEEPBYTO
+                        </a>
+                    </li>
+
+                    <li>
+                        Website Development
+                    </li>
+
+                    <li>
+                        Digital Solutions
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <div>
+                © 2026 NOVAESTATE. All rights reserved.
+            </div>
+
+
+            <div class="developed">
+
+                <span>
+                    Developed by
+                </span>
+
+                <a
+                    href="https://deepbyto.github.io/"
+                    target="_blank"
+                    rel="noopener"
+                    aria-label="DEEPBYTO website"
+                >
+
+                    <img
+                        src="https://raw.githubusercontent.com/DEEPBYTO/deepbyto.github.io/main/wordmark.png"
+                        alt="DEEPBYTO"
+                        class="deepbyto-wordmark"
+                    >
+
+                </a>
+
+            </div>
+
+        </div>
 
     </div>
 
-  </section>
+</footer>
 
 
-  <!-- =========================
-       SERVICES
-  ========================= -->
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 
-  <section id="services">
+<script>
 
-    <div class="services">
+function toggleMenu(){
 
-      <div class="section-top">
+    const nav =
+        document.getElementById("navLinks");
 
-        <div>
-          <div class="section-label">
-            What We Do
-          </div>
+    nav.classList.toggle("active");
 
-          <h2 class="section-title">
-            A better<br>way to move.
-          </h2>
-        </div>
+}
 
-        <p class="section-description">
-          Designed around a simple idea: property decisions
-          should feel informed, clear and personal.
-        </p>
 
-      </div>
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
 
+    link.addEventListener("click",function(){
 
-      <div class="service-list">
-
-        <div class="service">
-
-          <div class="service-number">
-            01
-          </div>
-
-          <h3>
-            Property Advisory
-          </h3>
-
-          <p>
-            Understand opportunities, compare options and
-            approach property decisions with greater clarity.
-          </p>
-
-          <div class="service-arrow">
-            →
-          </div>
-
-        </div>
-
-
-        <div class="service">
-
-          <div class="service-number">
-            02
-          </div>
-
-          <h3>
-            Private Listings
-          </h3>
-
-          <p>
-            Explore a curated collection of distinctive homes,
-            apartments and architectural residences.
-          </p>
-
-          <div class="service-arrow">
-            →
-          </div>
-
-        </div>
-
-
-        <div class="service">
-
-          <div class="service-number">
-            03
-          </div>
-
-          <h3>
-            Market Guidance
-          </h3>
-
-          <p>
-            Receive structured information designed to make
-            property research easier and more transparent.
-          </p>
-
-          <div class="service-arrow">
-            →
-          </div>
-
-        </div>
-
-
-        <div class="service">
-
-          <div class="service-number">
-            04
-          </div>
-
-          <h3>
-            Investment Strategy
-          </h3>
-
-          <p>
-            Evaluate fictional investment opportunities through
-            a practical and design-focused property lens.
-          </p>
-
-          <div class="service-arrow">
-            →
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       AGENTS
-  ========================= -->
-
-  <section class="agents-section" id="agents">
-
-    <div class="agents">
-
-      <div class="section-top">
-
-        <div>
-
-          <div class="section-label">
-            The Advisory Team
-          </div>
-
-          <h2 class="section-title">
-            People behind<br>the property.
-          </h2>
-
-        </div>
-
-        <p class="section-description">
-          Fictional advisor profiles included for demonstration.
-          A real business can replace these with its own team.
-        </p>
-
-      </div>
-
-
-      <div class="agents-grid">
-
-        <article class="agent">
-
-          <div class="agent-image">
-
-            <img
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=85"
-              alt="Fictional real estate advisor"
-            >
-
-          </div>
-
-          <div class="agent-info">
-
-            <h3>
-              Daniel Morgan
-            </h3>
-
-            <span>
-              Senior Property Advisor
-            </span>
-
-            <p>
-              Residential strategy and private property advisory.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <article class="agent">
-
-          <div class="agent-image">
-
-            <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=85"
-              alt="Fictional property advisor"
-            >
-
-          </div>
-
-          <div class="agent-info">
-
-            <h3>
-              Amelia Reed
-            </h3>
-
-            <span>
-              Design & Property Advisor
-            </span>
-
-            <p>
-              Architecture, interiors and lifestyle-led property.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <article class="agent">
-
-          <div class="agent-image">
-
-            <img
-              src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=85"
-              alt="Fictional property consultant"
-            >
-
-          </div>
-
-          <div class="agent-info">
-
-            <h3>
-              Oliver Hayes
-            </h3>
-
-            <span>
-              Investment Consultant
-            </span>
-
-            <p>
-              Property research and fictional investment planning.
-            </p>
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       CTA
-  ========================= -->
-
-  <section class="cta" id="contact">
-
-    <div class="section-label">
-      Begin Your Search
-    </div>
-
-    <h2>
-      Your next address<br>
-      could be <em>different.</em>
-    </h2>
-
-    <p>
-      Tell us what you are looking for and start a conversation
-      with the ARCADIA advisory team.
-    </p>
-
-    <a
-      href="https://wa.me/923047467957?text=Hello%20DEEPBYTO%2C%20I%27m%20interested%20in%20a%20real%20estate%20website."
-      class="btn btn-gold"
-      target="_blank"
-    >
-      Start A Conversation
-    </a>
-
-  </section>
-
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
-
-  <footer>
-
-    <div class="footer-grid">
-
-      <div>
-
-        <div class="footer-logo">
-          ARCAD<span>IA</span>
-        </div>
-
-        <p class="footer-about">
-          A fictional luxury real estate website concept
-          created as a digital demonstration by DEEPBYTO.
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <h4>
-          Explore
-        </h4>
-
-        <div class="footer-links">
-          <a href="#properties">Properties</a>
-          <a href="#story">Our Story</a>
-          <a href="#services">Services</a>
-          <a href="#agents">Advisors</a>
-        </div>
-
-      </div>
-
-
-      <div>
-
-        <h4>
-          Services
-        </h4>
-
-        <div class="footer-links">
-          <a href="#services">Property Advisory</a>
-          <a href="#services">Private Listings</a>
-          <a href="#services">Market Guidance</a>
-          <a href="#services">Investment Strategy</a>
-        </div>
-
-      </div>
-
-
-      <div>
-
-        <h4>
-          Contact
-        </h4>
-
-        <div class="footer-links">
-          <a href="#contact">Consultation</a>
-          <a href="mailto:deepbyto@gmail.com">Email</a>
-          <a href="https://wa.me/923047467957" target="_blank">WhatsApp</a>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-      <div>
-        © 2026 ARCADIA Demo. All rights reserved.
-      </div>
-
-      <div>
-        Website designed & developed by
-        <span class="deepbyto">DEEPBYTO</span>
-      </div>
-
-    </div>
-
-  </footer>
-
-
-  <!-- =========================
-       JAVASCRIPT
-  ========================= -->
-
-  <script>
-
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
-
-    menuBtn.addEventListener("click", function () {
-      navLinks.classList.toggle("active");
-    });
-
-
-    document.querySelectorAll(".nav-links a").forEach(link => {
-
-      link.addEventListener("click", function () {
-        navLinks.classList.remove("active");
-      });
+        document
+        .getElementById("navLinks")
+        .classList.remove("active");
 
     });
 
+});
 
-    function searchProperties() {
-
-      const purpose = document.getElementById("purpose").value;
-      const type = document.getElementById("type").value;
-      const location = document.getElementById("location").value;
-      const price = document.getElementById("price").value;
-
-      alert(
-        "Property Search\n\n" +
-        "Purpose: " + purpose + "\n" +
-        "Property: " + type + "\n" +
-        "Location: " + location + "\n" +
-        "Price: " + price +
-        "\n\nThis is a demonstration website."
-      );
-
-    }
-
-  </script>
+</script>
 
 </body>
 </html>
+```
