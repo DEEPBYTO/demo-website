@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LUMIÈRE — Modern Dining</title>
+
+  <meta
+    name="description"
+    content="LUMIÈRE — a premium modern dining experience website developed by DEEPBYTO."
+  >
+
+  <meta name="theme-color" content="#11100e">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --bg: #11100e;
+      --bg-soft: #181613;
+      --card: #1d1a16;
+      --gold: #c7a76c;
+      --gold-light: #e1c792;
+      --cream: #f5efe4;
+      --text: #f4eee4;
+      --muted: #aaa398;
+      --border: rgba(255,255,255,0.09);
+      --max: 1180px;
+      --radius: 18px;
+      --shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: auto;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: .3s ease;
+    }
+
+    .navbar.scrolled {
+      background: rgba(17,16,14,.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 27px;
+      letter-spacing: 4px;
+      font-weight: 600;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      color: #ddd6ca;
+      transition: .25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .nav-cta {
+      border: 1px solid var(--gold);
+      padding: 11px 19px;
+      color: var(--gold-light) !important;
+    }
+
+    .nav-toggle {
+      display: none;
+      border: 0;
+      background: none;
+      color: white;
+      font-size: 27px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(10,9,8,.90) 0%,
+          rgba(10,9,8,.66) 48%,
+          rgba(10,9,8,.35) 100%
+        ),
+        url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=2000&q=85")
+        center/cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 720px;
+      padding-top: 70px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--gold-light);
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 35px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(58px, 8vw, 104px);
+      line-height: .98;
+      font-weight: 500;
+      letter-spacing: -3px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+      font-style: italic;
+    }
+
+    .hero p {
+      max-width: 560px;
+      color: #d0c9be;
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: 36px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 52px;
+      padding: 0 26px;
+      border: 1px solid var(--gold);
+      transition: .3s ease;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: .3px;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #17130d;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      color: var(--cream);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,.08);
+      transform: translateY(-2px);
+    }
+
+    .hero-bottom {
+      position: absolute;
+      bottom: 34px;
+      left: 0;
+      width: 100%;
+    }
+
+    .hero-bottom-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #c2bbaf;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
+    section {
+      padding: 110px 0;
+    }
+
+    .section-heading {
+      max-width: 650px;
+      margin-bottom: 55px;
+    }
+
+    .section-heading.center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 5vw, 60px);
+      line-height: 1.1;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .gold {
+      color: var(--gold-light);
+    }
+
+    /* =========================
+       INTRO
+    ========================= */
+
+    .intro {
+      background: var(--bg-soft);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .intro-image {
+      height: 590px;
+      overflow: hidden;
+    }
+
+    .intro-image img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform .8s ease;
+    }
+
+    .intro-image:hover img {
+      transform: scale(1.04);
+    }
+
+    .intro-copy .eyebrow {
+      margin-bottom: 18px;
+    }
+
+    .intro-copy h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 5vw, 60px);
+      line-height: 1.1;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    .intro-copy p {
+      color: var(--muted);
+      margin-bottom: 20px;
+      line-height: 1.9;
+    }
+
+    .signature {
+      margin-top: 30px;
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    /* =========================
+       FEATURED MENU
+    ========================= */
+
+    .menu {
+      background: var(--bg);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .dish-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: .35s ease;
+    }
+
+    .dish-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(199,167,108,.35);
+      box-shadow: var(--shadow);
+    }
+
+    .dish-image {
+      height: 285px;
+      overflow: hidden;
+    }
+
+    .dish-image img {
+      height: 100%;
+      object-fit: cover;
+      transition: .7s ease;
+    }
+
+    .dish-card:hover .dish-image img {
+      transform: scale(1.06);
+    }
+
+    .dish-info {
+      padding: 25px;
+    }
+
+    .dish-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 10px;
+    }
+
+    .dish-info h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+      font-weight: 500;
+    }
+
+    .price {
+      color: var(--gold-light);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .dish-info p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .menu-button {
+      margin-top: 42px;
+      text-align: center;
+    }
+
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    .experience {
+      background: #0d0c0a;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .experience-visual {
+      position: relative;
+      min-height: 570px;
+    }
+
+    .experience-main {
+      width: 82%;
+      height: 570px;
+      object-fit: cover;
+    }
+
+    .experience-small {
+      position: absolute;
+      width: 43%;
+      height: 245px;
+      object-fit: cover;
+      right: 0;
+      bottom: -25px;
+      border: 10px solid #0d0c0a;
+    }
+
+    .experience-copy h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 5vw, 59px);
+      line-height: 1.1;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .experience-copy p {
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 22px;
+    }
+
+    .features {
+      margin: 32px 0;
+      display: grid;
+      gap: 17px;
+    }
+
+    .feature {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+
+    .feature-line {
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+      margin-top: 11px;
+      flex-shrink: 0;
+    }
+
+    .feature strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    .feature span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       MENU LIST
+    ========================= */
+
+    .menu-list-section {
+      background: var(--bg-soft);
+    }
+
+    .menu-list {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .menu-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 25px;
+      padding: 25px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .menu-row h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .menu-row p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    .menu-price {
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+
+    /* =========================
+       GALLERY
+    ========================= */
+
+    .gallery {
+      background: var(--bg);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .gallery-item {
+      height: 280px;
+      overflow: hidden;
+    }
+
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(4) {
+      margin-top: 45px;
+    }
+
+    .gallery-item img {
+      height: 100%;
+      object-fit: cover;
+      transition: .7s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    /* =========================
+       RESERVATION
+    ========================= */
+
+    .reservation {
+      padding: 120px 0;
+      background:
+        linear-gradient(rgba(10,9,7,.78), rgba(10,9,7,.88)),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=85")
+        center/cover no-repeat;
+    }
+
+    .reservation-box {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .reservation-box h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(42px, 6vw, 68px);
+      font-weight: 500;
+      line-height: 1.08;
+      margin-bottom: 20px;
+    }
+
+    .reservation-box p {
+      max-width: 600px;
+      margin: 0 auto 35px;
+      color: #d0c8bb;
+      line-height: 1.8;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background: var(--bg-soft);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+    }
+
+    .contact-copy h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1.1;
+      font-weight: 500;
+      margin-bottom: 22px;
+    }
+
+    .contact-copy p {
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 22px;
+    }
+
+    .contact-item {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+    }
+
+    .contact-item small {
+      display: block;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 10px;
+      margin-bottom: 6px;
+    }
+
+    .contact-item span {
+      color: #ddd5c9;
+      font-size: 15px;
+    }
+
+    .hours {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 38px;
+    }
+
+    .hours h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 27px;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .hours-row strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      background: var(--gold);
+      color: #17130d;
+      padding: 75px 0;
+    }
+
+    .cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .cta h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(36px, 5vw, 55px);
+      line-height: 1.1;
+      font-weight: 500;
+    }
+
+    .cta p {
+      max-width: 570px;
+      margin-top: 10px;
+      color: #4b3b24;
+    }
+
+    .cta .btn {
+      border-color: #17130d;
+      color: #17130d;
+      flex-shrink: 0;
+    }
+
+    .cta .btn:hover {
+      background: #17130d;
+      color: white;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #0a0908;
+      padding: 65px 0 25px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr .7fr;
+      gap: 50px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .footer-brand .logo {
+      display: inline-block;
+      margin-bottom: 18px;
+    }
+
+    .footer-brand p {
+      color: var(--muted);
+      max-width: 390px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .footer-column h4 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--gold-light);
+      margin-bottom: 18px;
+    }
+
+    .footer-column a {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 11px;
+      transition: .2s;
+    }
+
+    .footer-column a:hover {
+      color: var(--text);
+    }
+
+    .footer-bottom {
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      color: #777269;
+      font-size: 12px;
+    }
+
+    .deepbyto-credit {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .deepbyto-credit img {
+      width: 90px;
+      height: auto;
+      opacity: .8;
+    }
+
+    /* =========================
+       REVEAL ANIMATION
+    ========================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        position: absolute;
+        top: 82px;
+        left: 0;
+        width: 100%;
+        background: rgba(17,16,14,.98);
+        border-bottom: 1px solid var(--border);
+        padding: 25px 6%;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .intro-grid,
+      .experience-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .intro-image {
+        height: 480px;
+      }
+
+      .experience-visual {
+        min-height: 500px;
+      }
+
+      .experience-main {
+        height: 500px;
+      }
+
+      .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cta-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      section {
+        padding: 80px 0;
+      }
+
+      .nav-inner {
+        height: 72px;
+      }
+
+      .nav-links {
+        top: 72px;
+      }
+
+      .logo {
+        font-size: 23px;
+      }
+
+      .hero {
+        min-height: 780px;
+        background-position: 62% center;
+      }
+
+      .hero-content {
+        padding-top: 90px;
+      }
+
+      .hero h1 {
+        font-size: 58px;
+        letter-spacing: -2px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .hero-bottom {
+        display: none;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .dish-image {
+        height: 260px;
+      }
+
+      .intro-image {
+        height: 390px;
+      }
+
+      .experience-visual {
+        min-height: 400px;
+      }
+
+      .experience-main {
+        width: 86%;
+        height: 400px;
+      }
+
+      .experience-small {
+        width: 48%;
+        height: 180px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      .gallery-item {
+        height: 200px;
+      }
+
+      .gallery-item:nth-child(2),
+      .gallery-item:nth-child(4) {
+        margin-top: 20px;
+      }
+
+      .reservation {
+        padding: 90px 0;
+      }
+
+      .hours {
+        padding: 25px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================= -->
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+
+      <a href="#home" class="logo">
+        LUMI<span>È</span>RE
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="#reservation" class="nav-cta">Reserve a Table</a>
+        </li>
+      </ul>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="container">
+        <div class="hero-content reveal">
+
+          <div class="eyebrow">
+            Modern Dining
+          </div>
+
+          <h1>
+            Taste the art<br>
+            of <span>gathering.</span>
+          </h1>
+
+          <p>
+            A refined dining experience where thoughtful ingredients,
+            modern technique and timeless hospitality come together.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#reservation" class="btn btn-primary">
+              Reserve a Table
+            </a>
+
+            <a href="#menu" class="btn btn-outline">
+              Explore Our Menu
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="hero-bottom">
+        <div class="container hero-bottom-inner">
+          <span>CRAFTED WITH INTENTION</span>
+          <span>EST. 2026</span>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         STORY
+    ========================= -->
+
+    <section class="intro" id="story">
+
+      <div class="container intro-grid">
+
+        <div class="intro-image reveal">
+          <img
+            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85"
+            alt="Restaurant interior"
+          >
+        </div>
+
+        <div class="intro-copy reveal">
+
+          <div class="eyebrow">
+            Our Story
+          </div>
+
+          <h2>
+            Where every detail
+            has a <span class="gold">purpose.</span>
+          </h2>
+
+          <p>
+            LUMIÈRE is a fictional restaurant concept created to
+            demonstrate a premium modern dining website experience.
+          </p>
+
+          <p>
+            From carefully selected ingredients to warm interiors,
+            every element is designed around one simple idea:
+            creating memorable moments around the table.
+          </p>
+
+          <div class="signature">
+            Good food. Great company.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FEATURED MENU
+    ========================= -->
+
+    <section class="menu" id="menu">
+
+      <div class="container">
+
+        <div class="section-heading center reveal">
+
+          <div class="eyebrow">
+            Signature Selection
+          </div>
+
+          <h2>
+            A menu worth
+            <span class="gold">remembering.</span>
+          </h2>
+
+          <p>
+            A curated selection inspired by seasonal ingredients,
+            modern European technique and contemporary presentation.
+          </p>
+
+        </div>
+
+
+        <div class="menu-grid">
+
+          <article class="dish-card reveal">
+
+            <div class="dish-image">
+              <img
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=85"
+                alt="Grilled steak"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="dish-info">
+
+              <div class="dish-top">
+                <h3>Charcoal Ribeye</h3>
+                <span class="price">$42</span>
+              </div>
+
+              <p>
+                Charcoal-grilled ribeye, roasted garlic,
+                seasonal vegetables and house jus.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="dish-card reveal">
+
+            <div class="dish-image">
+              <img
+                src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=1000&q=85"
+                alt="Fresh pasta"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="dish-info">
+
+              <div class="dish-top">
+                <h3>Truffle Tagliatelle</h3>
+                <span class="price">$28</span>
+              </div>
+
+              <p>
+                Fresh handmade pasta, wild mushrooms,
+                parmesan and black truffle.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="dish-card reveal">
+
+            <div class="dish-image">
+              <img
+                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1000&q=85"
+                alt="Fine dining dish"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="dish-info">
+
+              <div class="dish-top">
+                <h3>Seared Sea Bass</h3>
+                <span class="price">$34</span>
+              </div>
+
+              <p>
+                Pan-seared sea bass, lemon beurre blanc,
+                herbs and seasonal greens.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="dish-card reveal">
+
+            <div class="dish-image">
+              <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85"
+                alt="Fresh salad"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="dish-info">
+
+              <div class="dish-top">
+                <h3>Garden Harvest</h3>
+                <span class="price">$18</span>
+              </div>
+
+              <p>
+                Seasonal vegetables, herbs, toasted seeds
+                and citrus dressing.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="dish-card reveal">
+
+            <div class="dish-image">
+              <img
+                src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1000&q=85"
+                alt="Dessert"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="dish-info">
+
+              <div class="dish-top">
+                <h3>Chocolate Fondant</h3>
+                <span class="price">$14</span>
+              </div>
+
+              <p>
+                Dark chocolate fondant, vanilla cream
+                and seasonal berries.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="dish-card reveal">
+
+            <div class="dish-image">
+              <img
+                src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1000&q=85"
+                alt="Dessert plate"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="dish-info">
+
+              <div class="dish-top">
+                <h3>Vanilla Panna Cotta</h3>
+                <span class="price">$12</span>
+              </div>
+
+              <p>
+                Classic vanilla panna cotta,
+                berry compote and almond crumble.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <div class="menu-button reveal">
+
+          <a href="#full-menu" class="btn btn-outline">
+            View Full Menu
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPERIENCE
+    ========================= -->
+
+    <section class="experience" id="experience">
+
+      <div class="container experience-grid">
+
+        <div class="experience-visual reveal">
+
+          <img
+            class="experience-main"
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85"
+            alt="Fine dining table"
+            loading="lazy"
+          >
+
+          <img
+            class="experience-small"
+            src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=85"
+            alt="Restaurant atmosphere"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="experience-copy reveal">
+
+          <div class="eyebrow">
+            The Experience
+          </div>
+
+          <h2>
+            More than a meal.
+            <span class="gold">A moment.</span>
+          </h2>
+
+          <p>
+            We believe the best dining experiences stay with you
+            long after the final course. That's why we focus on
+            atmosphere, hospitality and the little details.
+          </p>
+
+          <div class="features">
+
+            <div class="feature">
+              <div class="feature-line"></div>
+              <div>
+                <strong>Seasonal Ingredients</strong>
+                <span>Thoughtfully selected produce and ingredients.</span>
+              </div>
+            </div>
+
+            <div class="feature">
+              <div class="feature-line"></div>
+              <div>
+                <strong>Thoughtful Hospitality</strong>
+                <span>Warm, attentive service without the formality.</span>
+              </div>
+            </div>
+
+            <div class="feature">
+              <div class="feature-line"></div>
+              <div>
+                <strong>Curated Atmosphere</strong>
+                <span>A space designed for conversations and celebrations.</span>
+              </div>
+            </div>
+
+          </div>
+
+          <a href="#reservation" class="btn btn-primary">
+            Plan Your Visit
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FULL MENU PREVIEW
+    ========================= -->
+
+    <section class="menu-list-section" id="full-menu">
+
+      <div class="container">
+
+        <div class="section-heading center reveal">
+
+          <div class="eyebrow">
+            From Our Kitchen
+          </div>
+
+          <h2>
+            The <span class="gold">menu.</span>
+          </h2>
+
+          <p>
+            A selection of dishes created to move naturally
+            from first bite to final course.
+          </p>
+
+        </div>
+
+
+        <div class="menu-list reveal">
+
+          <div class="menu-row">
+            <div>
+              <h3>Roasted Tomato Tart</h3>
+              <p>Whipped ricotta, basil oil and aged balsamic.</p>
+            </div>
+            <span class="menu-price">$15</span>
+          </div>
+
+          <div class="menu-row">
+            <div>
+              <h3>Wild Mushroom Risotto</h3>
+              <p>Arborio rice, parmesan, herbs and forest mushrooms.</p>
+            </div>
+            <span class="menu-price">$24</span>
+          </div>
+
+          <div class="menu-row">
+            <div>
+              <h3>Herb-Crusted Chicken</h3>
+              <p>Roasted chicken, potatoes, greens and pan jus.</p>
+            </div>
+            <span class="menu-price">$27</span>
+          </div>
+
+          <div class="menu-row">
+            <div>
+              <h3>Pan-Seared Salmon</h3>
+              <p>Lemon butter, asparagus and roasted potatoes.</p>
+            </div>
+            <span class="menu-price">$31</span>
+          </div>
+
+          <div class="menu-row">
+            <div>
+              <h3>Slow-Cooked Beef</h3>
+              <p>Root vegetables, herbs and red wine reduction.</p>
+            </div>
+            <span class="menu-price">$36</span>
+          </div>
+
+          <div class="menu-row">
+            <div>
+              <h3>Classic Tiramisu</h3>
+              <p>Espresso, mascarpone and cocoa.</p>
+            </div>
+            <span class="menu-price">$13</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         GALLERY
+    ========================= -->
+
+    <section class="gallery">
+
+      <div class="container">
+
+        <div class="section-heading center reveal">
+
+          <div class="eyebrow">
+            Inside LUMIÈRE
+          </div>
+
+          <h2>
+            Designed for
+            <span class="gold">connection.</span>
+          </h2>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+          <div class="gallery-item reveal">
+            <img
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85"
+              alt="Restaurant interior"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="gallery-item reveal">
+            <img
+              src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=900&q=85"
+              alt="Dining room"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="gallery-item reveal">
+            <img
+              src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=85"
+              alt="Restaurant food"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="gallery-item reveal">
+            <img
+              src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=85"
+              alt="Fine dining plate"
+              loading="lazy"
+            >
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         RESERVATION
+    ========================= -->
+
+    <section class="reservation" id="reservation">
+
+      <div class="container">
+
+        <div class="reservation-box reveal">
+
+          <div class="eyebrow">
+            Reservations
+          </div>
+
+          <h2>
+            Your table is
+            <span class="gold">waiting.</span>
+          </h2>
+
+          <p>
+            Planning a dinner, celebration or simply an evening
+            worth remembering? Reserve your table and let us
+            take care of the rest.
+          </p>
+
+          <a
+            href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I%27m%20interested%20in%20the%20restaurant%20website."
+            target="_blank"
+            class="btn btn-primary"
+          >
+            Make a Reservation
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section class="contact" id="contact">
+
+      <div class="container contact-grid">
+
+        <div class="contact-copy reveal">
+
+          <div class="eyebrow">
+            Visit Us
+          </div>
+
+          <h2>
+            Come for the food.
+            <span class="gold">Stay for the moment.</span>
+          </h2>
+
+          <p>
+            This is a fictional restaurant concept created by
+            DEEPBYTO as a professional website demonstration.
+          </p>
+
+
+          <div class="contact-details">
+
+            <div class="contact-item">
+              <small>Location</small>
+              <span>123 Market Street, Downtown</span>
+            </div>
+
+            <div class="contact-item">
+              <small>Phone</small>
+              <span>+1 000 000 0000</span>
+            </div>
+
+            <div class="contact-item">
+              <small>Email</small>
+              <span>hello@lumiere.example</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="hours reveal">
+
+          <h3>Opening Hours</h3>
+
+          <div class="hours-row">
+            <span>Monday</span>
+            <strong>Closed</strong>
+          </div>
+
+          <div class="hours-row">
+            <span>Tuesday — Thursday</span>
+            <strong>5:00 PM — 10:30 PM</strong>
+          </div>
+
+          <div class="hours-row">
+            <span>Friday</span>
+            <strong>5:00 PM — 11:30 PM</strong>
+          </div>
+
+          <div class="hours-row">
+            <span>Saturday</span>
+            <strong>12:00 PM — 11:30 PM</strong>
+          </div>
+
+          <div class="hours-row">
+            <span>Sunday</span>
+            <strong>12:00 PM — 9:30 PM</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         DEEPBYTO CTA
+    ========================= -->
+
+    <section class="cta">
+
+      <div class="container cta-inner">
+
+        <div>
+          <h2>Want a website like this?</h2>
+
+          <p>
+            DEEPBYTO creates professional websites for restaurants,
+            cafés, food businesses and growing brands.
+          </p>
+        </div>
+
+        <a
+          href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I%27m%20interested%20in%20a%20restaurant%20website."
+          target="_blank"
+          class="btn"
+        >
+          Contact DEEPBYTO
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+
+          <a href="#home" class="logo">
+            LUMI<span>È</span>RE
+          </a>
+
+          <p>
+            A fictional premium restaurant concept created
+            to demonstrate a modern digital dining experience.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>Explore</h4>
+
+          <a href="#story">Our Story</a>
+          <a href="#menu">Menu</a>
+          <a href="#experience">Experience</a>
+          <a href="#reservation">Reservations</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>Connect</h4>
+
+          <a href="#contact">Contact</a>
+          <a href="#reservation">Book a Table</a>
+          <a
+            href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I%27m%20interested%20in%20the%20restaurant%20website."
+            target="_blank"
+          >
+            DEEPBYTO
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 DEEPBYTO. All rights reserved.
+        </span>
+
+        <a
+          href="https://deepbyto.github.io/"
+          target="_blank"
+          class="deepbyto-credit"
+        >
+          <span>Developed by</span>
+
+          <img
+            src="https://raw.githubusercontent.com/DEEPBYTO/deepbyto.github.io/main/wordmark.png"
+            alt="DEEPBYTO"
+          >
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    /* Navbar background */
+
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 40) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+
+    });
+
+
+    /* Mobile menu */
+
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+
+      if (navLinks.classList.contains("active")) {
+        navToggle.textContent = "×";
+      } else {
+        navToggle.textContent = "☰";
+      }
+    });
+
+
+    /* Close mobile menu after clicking */
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+        navToggle.textContent = "☰";
+
+      });
+
+    });
+
+
+    /* Scroll reveal */
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+
+    revealElements.forEach(element => {
+      revealObserver.observe(element);
+    });
+
+  </script>
+
+</body>
+</html>
