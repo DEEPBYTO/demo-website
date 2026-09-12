@@ -1,818 +1,948 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>IRONCORE — Gym Demo | Developed by DEEPBYTO</title>
-
-    <meta name="description" content="Professional gym website demo developed by DEEPBYTO.">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #080808;
-            color: #fff;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        /* =========================
-           NAVBAR
-        ========================= */
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(8, 8, 8, 0.92);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #181818;
-        }
-
-        nav {
-            height: 75px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            font-size: 25px;
-            font-weight: 900;
-            letter-spacing: -1px;
-        }
-
-        .logo span {
-            color: #e10600;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #ccc;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #e10600;
-        }
-
-        .nav-btn {
-            background: #e10600;
-            color: #fff !important;
-            padding: 11px 20px;
-            border-radius: 4px;
-        }
-
-        .nav-btn:hover {
-            background: #b80500;
-        }
-
-        .menu-btn {
-            display: none;
-            font-size: 27px;
-            cursor: pointer;
-        }
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(0,0,0,0.92),
-                    rgba(0,0,0,0.55),
-                    rgba(0,0,0,0.82)
-                ),
-                url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2000&q=85")
-                center/cover no-repeat;
-        }
-
-        .hero-content {
-            max-width: 750px;
-            padding-top: 70px;
-        }
-
-        .hero-label {
-            color: #e10600;
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: 3px;
-            margin-bottom: 18px;
-            text-transform: uppercase;
-        }
-
-        .hero h1 {
-            font-size: clamp(48px, 8vw, 92px);
-            line-height: 0.95;
-            font-weight: 900;
-            letter-spacing: -4px;
-            margin-bottom: 28px;
-        }
-
-        .hero h1 span {
-            color: #e10600;
-        }
-
-        .hero p {
-            color: #ccc;
-            font-size: 18px;
-            max-width: 600px;
-            margin-bottom: 35px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 25px;
-            border-radius: 4px;
-            font-weight: 700;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-
-        .btn-primary {
-            background: #e10600;
-            color: #fff;
-        }
-
-        .btn-primary:hover {
-            background: #b80500;
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            border: 1px solid #555;
-            color: #fff;
-        }
-
-        .btn-outline:hover {
-            border-color: #e10600;
-            color: #e10600;
-        }
-
-        /* =========================
-           STATS
-        ========================= */
-
-        .stats {
-            background: #101010;
-            border-top: 1px solid #1b1b1b;
-            border-bottom: 1px solid #1b1b1b;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-        .stat {
-            text-align: center;
-            padding: 35px 15px;
-            border-right: 1px solid #222;
-        }
-
-        .stat:last-child {
-            border-right: none;
-        }
-
-        .stat h3 {
-            font-size: 32px;
-            color: #e10600;
-            margin-bottom: 4px;
-        }
-
-        .stat p {
-            color: #888;
-            font-size: 13px;
-        }
-
-        /* =========================
-           GENERAL SECTION
-        ========================= */
-
-        section {
-            padding: 100px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 55px;
-        }
-
-        .section-label {
-            color: #e10600;
-            font-size: 12px;
-            font-weight: 800;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        .section-header h2 {
-            font-size: clamp(32px, 5vw, 52px);
-            line-height: 1.05;
-            margin-bottom: 15px;
-        }
-
-        .section-header p {
-            color: #888;
-            max-width: 650px;
-            margin: auto;
-        }
-
-        /* =========================
-           PROGRAMS
-        ========================= */
-
-        .programs {
-            background: #080808;
-        }
-
-        .program-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .program-card {
-            position: relative;
-            height: 400px;
-            overflow: hidden;
-            background: #111;
-        }
-
-        .program-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.5s;
-        }
-
-        .program-card:hover img {
-            transform: scale(1.06);
-        }
-
-        .program-overlay {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 30px;
-            background: linear-gradient(
-                transparent 30%,
-                rgba(0,0,0,0.9)
-            );
-        }
-
-        .program-overlay h3 {
-            font-size: 26px;
-            margin-bottom: 7px;
-        }
-
-        .program-overlay p {
-            color: #aaa;
-            font-size: 14px;
-        }
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about {
-            background: #101010;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 70px;
-            align-items: center;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 520px;
-            object-fit: cover;
-        }
-
-        .about-content h2 {
-            font-size: clamp(35px, 5vw, 58px);
-            line-height: 1;
-            margin-bottom: 25px;
-        }
-
-        .about-content h2 span {
-            color: #e10600;
-        }
-
-        .about-content p {
-            color: #999;
-            margin-bottom: 20px;
-        }
-
-        .check-list {
-            list-style: none;
-            margin: 25px 0 30px;
-        }
-
-        .check-list li {
-            padding: 8px 0;
-            color: #ddd;
-        }
-
-        .check-list li::before {
-            content: "✓";
-            color: #e10600;
-            font-weight: bold;
-            margin-right: 12px;
-        }
-
-        /* =========================
-           TRAINERS
-        ========================= */
-
-        .trainer-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .trainer-card {
-            background: #111;
-            overflow: hidden;
-        }
-
-        .trainer-card img {
-            width: 100%;
-            height: 390px;
-            object-fit: cover;
-            transition: 0.4s;
-        }
-
-        .trainer-card:hover img {
-            transform: scale(1.03);
-        }
-
-        .trainer-info {
-            padding: 22px;
-        }
-
-        .trainer-info h3 {
-            font-size: 21px;
-            margin-bottom: 3px;
-        }
-
-        .trainer-info p {
-            color: #e10600;
-            font-size: 13px;
-            font-weight: 700;
-        }
-
-        /* =========================
-           PRICING
-        ========================= */
-
-        .pricing {
-            background: #101010;
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            align-items: stretch;
-        }
-
-        .price-card {
-            background: #080808;
-            border: 1px solid #222;
-            padding: 35px;
-            position: relative;
-        }
-
-        .price-card.featured {
-            border: 1px solid #e10600;
-        }
-
-        .popular {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background: #e10600;
-            padding: 7px 15px;
-            font-size: 10px;
-            font-weight: 800;
-            letter-spacing: 1px;
-        }
-
-        .price-card h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-
-        .price {
-            font-size: 48px;
-            font-weight: 900;
-            margin-bottom: 5px;
-        }
-
-        .price small {
-            color: #777;
-            font-size: 13px;
-            font-weight: normal;
-        }
-
-        .price-description {
-            color: #777;
-            font-size: 13px;
-            margin-bottom: 25px;
-        }
-
-        .price-list {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-
-        .price-list li {
-            padding: 9px 0;
-            border-bottom: 1px solid #181818;
-            color: #bbb;
-            font-size: 14px;
-        }
-
-        .price-list li::before {
-            content: "✓";
-            color: #e10600;
-            margin-right: 9px;
-        }
-
-        .price-btn {
-            display: block;
-            text-align: center;
-            border: 1px solid #333;
-            padding: 12px;
-            font-weight: 700;
-            font-size: 13px;
-            transition: 0.3s;
-        }
-
-        .price-btn:hover,
-        .featured .price-btn {
-            background: #e10600;
-            border-color: #e10600;
-        }
-
-        /* =========================
-           CTA
-        ========================= */
-
-        .cta {
-            padding: 110px 0;
-            text-align: center;
-            background:
-                linear-gradient(
-                    rgba(0,0,0,0.78),
-                    rgba(0,0,0,0.88)
-                ),
-                url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=2000&q=85")
-                center/cover no-repeat;
-        }
-
-        .cta h2 {
-            font-size: clamp(40px, 6vw, 70px);
-            line-height: 1;
-            margin-bottom: 20px;
-        }
-
-        .cta p {
-            color: #aaa;
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #050505;
-            padding: 55px 0 30px;
-            text-align: center;
-            border-top: 1px solid #181818;
-        }
-
-        .footer-logo {
-            font-size: 27px;
-            font-weight: 900;
-            margin-bottom: 10px;
-        }
-
-        .footer-logo span {
-            color: #e10600;
-        }
-
-        footer p {
-            color: #666;
-            font-size: 13px;
-        }
-
-        .developed {
-            margin-top: 25px;
-            padding-top: 20px;
-            border-top: 1px solid #181818;
-            font-size: 12px;
-            color: #666;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-            flex-wrap: wrap;
-        }
-
-        .deepbyto-link {
-            display: inline-flex;
-            align-items: center;
-            transition: 0.3s;
-        }
-
-        .deepbyto-link:hover {
-            opacity: 0.7;
-        }
-
-        .deepbyto-wordmark {
-            height: 22px;
-            width: auto;
-            max-width: 150px;
-            object-fit: contain;
-            vertical-align: middle;
-        }
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            .nav-links {
-                position: absolute;
-                top: 75px;
-                left: 0;
-                width: 100%;
-                background: #090909;
-                flex-direction: column;
-                gap: 0;
-                display: none;
-                border-bottom: 1px solid #222;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links li {
-                border-top: 1px solid #181818;
-            }
-
-            .nav-links a {
-                display: block;
-                padding: 17px 5%;
-            }
-
-            .menu-btn {
-                display: block;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .stat:nth-child(2) {
-                border-right: none;
-            }
-
-            .stat:nth-child(3),
-            .stat:nth-child(4) {
-                border-top: 1px solid #222;
-            }
-
-            .program-grid,
-            .trainer-grid,
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .about-image img {
-                height: 400px;
-            }
-        }
-
-        @media (max-width: 600px) {
-
-            .container {
-                width: 92%;
-            }
-
-            section {
-                padding: 75px 0;
-            }
-
-            .hero h1 {
-                letter-spacing: -2px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .btn {
-                width: 100%;
-                text-align: center;
-            }
-
-            .program-card {
-                height: 350px;
-            }
-
-            .trainer-card img {
-                height: 350px;
-            }
-
-            .price-card {
-                padding: 28px;
-            }
-
-            .deepbyto-wordmark {
-                height: 20px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gym & Fitness</title>
+<meta name="description" content="IRONCORE — a modern professional gym and fitness website developed by DEEPBYTO.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#090909;
+    color:#fff;
+    line-height:1.6;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.container{
+    width:min(1150px,90%);
+    margin:auto;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(0,0,0,.88);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+}
+
+.nav{
+    height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#e10600;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+.nav-links a{
+    color:#ddd;
+    font-size:14px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#e10600;
+}
+
+.nav-cta{
+    background:#e10600;
+    color:#fff !important;
+    padding:11px 18px;
+    border-radius:4px;
+}
+
+.nav-cta:hover{
+    background:#b80400;
+}
+
+.menu-btn{
+    display:none;
+    font-size:27px;
+    cursor:pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.92),
+        rgba(0,0,0,.62),
+        rgba(0,0,0,.75)
+    ),
+    url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2000&q=85")
+    center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:760px;
+    padding-top:80px;
+}
+
+.hero-label{
+    color:#e10600;
+    font-size:14px;
+    font-weight:900;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(50px,8vw,94px);
+    line-height:.94;
+    text-transform:uppercase;
+    font-weight:900;
+    letter-spacing:-4px;
+}
+
+.hero h1 span{
+    color:#e10600;
+}
+
+.hero p{
+    max-width:620px;
+    color:#ccc;
+    font-size:18px;
+    margin:28px 0;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 25px;
+    border-radius:4px;
+    font-size:14px;
+    font-weight:900;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#e10600;
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:#b80400;
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    border:1px solid #fff;
+    color:#fff;
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:#000;
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+    background:#e10600;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+    text-align:center;
+    padding:30px 15px;
+    border-right:1px solid rgba(255,255,255,.22);
+}
+
+.stat:last-child{
+    border-right:none;
+}
+
+.stat h3{
+    font-size:32px;
+    font-weight:900;
+}
+
+.stat p{
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section{
+    padding:100px 0;
+}
+
+.section-label{
+    color:#e10600;
+    font-size:13px;
+    font-weight:900;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.section-title{
+    font-size:clamp(35px,5vw,54px);
+    line-height:1.05;
+    font-weight:900;
+    text-transform:uppercase;
+    margin-bottom:45px;
+}
+
+/* =========================
+   PROGRAMS
+========================= */
+
+.programs{
+    background:#101010;
+}
+
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.program{
+    background:#171717;
+    border:1px solid #252525;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.program:hover{
+    transform:translateY(-6px);
+    border-color:#e10600;
+}
+
+.program img{
+    width:100%;
+    height:235px;
+    object-fit:cover;
+}
+
+.program-content{
+    padding:25px;
+}
+
+.program-content h3{
+    font-size:22px;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+.program-content p{
+    color:#999;
+    font-size:14px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-image img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+}
+
+.about-text p{
+    color:#aaa;
+    margin-bottom:18px;
+}
+
+.features{
+    display:grid;
+    gap:15px;
+    margin-top:25px;
+}
+
+.feature{
+    border-left:3px solid #e10600;
+    padding-left:15px;
+}
+
+.feature strong{
+    display:block;
+    text-transform:uppercase;
+}
+
+.feature span{
+    color:#777;
+    font-size:14px;
+}
+
+/* =========================
+   TRAINERS
+========================= */
+
+.trainers{
+    background:#101010;
+}
+
+.trainer-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.trainer{
+    background:#171717;
+    border:1px solid #222;
+}
+
+.trainer img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.trainer-info{
+    padding:20px;
+}
+
+.trainer-info h3{
+    font-size:21px;
+    text-transform:uppercase;
+}
+
+.trainer-info p{
+    color:#e10600;
+    font-size:13px;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+/* =========================
+   PRICING
+========================= */
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.price-card{
+    background:#151515;
+    border:1px solid #292929;
+    padding:35px 28px;
+}
+
+.price-card.featured{
+    border:2px solid #e10600;
+}
+
+.price-card h3{
+    font-size:22px;
+    text-transform:uppercase;
+}
+
+.price{
+    font-size:44px;
+    font-weight:900;
+    margin:15px 0 5px;
+}
+
+.price small{
+    color:#777;
+    font-size:14px;
+    font-weight:400;
+}
+
+.price-card ul{
+    list-style:none;
+    margin:25px 0;
+}
+
+.price-card li{
+    padding:9px 0;
+    border-bottom:1px solid #252525;
+    color:#aaa;
+    font-size:14px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    background:
+    linear-gradient(
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.82)
+    ),
+    url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=2000&q=85")
+    center/cover no-repeat;
+
+    text-align:center;
+}
+
+.cta h2{
+    max-width:850px;
+    margin:auto;
+    font-size:clamp(40px,6vw,68px);
+    line-height:1;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+.cta p{
+    max-width:620px;
+    margin:20px auto 30px;
+    color:#ccc;
+}
+
+/* =========================
+   DEEPBYTO CTA
+========================= */
+
+.demo-cta{
+    background:#e10600;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.demo-cta h2{
+    font-size:clamp(34px,5vw,55px);
+    line-height:1;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+.demo-cta p{
+    max-width:680px;
+    margin:17px auto 28px;
+    color:#fff;
+}
+
+.demo-cta .btn{
+    background:#000;
+    color:#fff;
+}
+
+.demo-cta .btn:hover{
+    background:#fff;
+    color:#000;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#060606;
+    border-top:1px solid #1c1c1c;
+    padding:50px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+    margin-bottom:35px;
+}
+
+.footer-brand p{
+    color:#777;
+    max-width:390px;
+    margin-top:12px;
+    font-size:14px;
+}
+
+footer h4{
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin:8px 0;
+    color:#777;
+    font-size:14px;
+}
+
+footer li a:hover{
+    color:#e10600;
+}
+
+.footer-bottom{
+    border-top:1px solid #1c1c1c;
+    padding-top:20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+
+    color:#666;
+    font-size:13px;
+}
+
+.developed{
+    display:flex;
+    align-items:center;
+    gap:7px;
+}
+
+.deepbyto-wordmark{
+    height:22px;
+    width:auto;
+    transition:.3s;
+}
+
+.deepbyto-wordmark:hover{
+    opacity:.7;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:850px){
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:76px;
+        left:0;
+        width:100%;
+
+        display:none;
+        flex-direction:column;
+        align-items:flex-start;
+
+        padding:25px;
+        gap:20px;
+
+        background:#090909;
+        border-bottom:1px solid #222;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat:nth-child(2){
+        border-right:none;
+    }
+
+    .program-grid,
+    .trainer-grid,
+    .pricing-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .about-image img{
+        height:400px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+}
+
+@media(max-width:500px){
+
+    section{
+        padding:75px 0;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .stat{
+        padding:22px 8px;
+    }
+
+    .stat h3{
+        font-size:25px;
+    }
+
+    .btn{
+        text-align:center;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-    <header>
-        <div class="container">
-            <nav>
+<header>
 
-                <a href="#home" class="logo">
-                    IRON<span>CORE</span>
+    <div class="container nav">
+
+        <a href="#" class="logo">
+            IRON<span>CORE</span>
+        </a>
+
+        <div class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="#programs">Programs</a>
+
+            <a href="#about">About</a>
+
+            <a href="#trainers">Trainers</a>
+
+            <a href="#pricing">Membership</a>
+
+            <a href="#contact" class="nav-cta">
+                Get Started
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                TRAIN HARD. STAY STRONG.
+            </div>
+
+            <h1>
+                Build Your<br>
+                <span>Best Self.</span>
+            </h1>
+
+            <p>
+                A modern gym and fitness website experience designed
+                to showcase training programs, memberships, trainers
+                and your business online.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#pricing" class="btn btn-primary">
+                    Explore Membership
                 </a>
 
-                <div class="menu-btn" id="menuBtn">
-                    ☰
-                </div>
-
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#programs">Programs</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#trainers">Trainers</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li>
-                        <a href="#contact" class="nav-btn">
-                            Join Now
-                        </a>
-                    </li>
-                </ul>
-
-            </nav>
-        </div>
-    </header>
-
-
-    <!-- =========================
-         HERO
-    ========================== -->
-
-    <section class="hero" id="home">
-
-        <div class="container">
-
-            <div class="hero-content">
-
-                <div class="hero-label">
-                    Professional Gym Website Demo
-                </div>
-
-                <h1>
-                    NO EXCUSES.<br>
-                    JUST <span>RESULTS.</span>
-                </h1>
-
-                <p>
-                    Train harder. Get stronger. Become the best version
-                    of yourself with professional training, modern
-                    equipment and a community built for results.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#pricing" class="btn btn-primary">
-                        View Memberships
-                    </a>
-
-                    <a href="#programs" class="btn btn-outline">
-                        Explore Programs
-                    </a>
-                </div>
+                <a href="#programs" class="btn btn-outline">
+                    View Programs
+                </a>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         STATS
-    ========================== -->
+<!-- =========================
+     STATS
+========================= -->
 
-    <div class="stats">
+<section class="stats">
 
-        <div class="container">
+    <div class="container stats-grid">
 
-            <div class="stats-grid">
+        <div class="stat">
+            <h3>24/7</h3>
+            <p>Access</p>
+        </div>
 
-                <div class="stat">
-                    <h3>10+</h3>
-                    <p>Years Experience</p>
+        <div class="stat">
+            <h3>50+</h3>
+            <p>Equipment</p>
+        </div>
+
+        <div class="stat">
+            <h3>15+</h3>
+            <p>Programs</p>
+        </div>
+
+        <div class="stat">
+            <h3>100%</h3>
+            <p>Commitment</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROGRAMS
+========================= -->
+
+<section class="programs" id="programs">
+
+    <div class="container">
+
+        <div class="section-label">
+            Training
+        </div>
+
+        <h2 class="section-title">
+            Train With Purpose
+        </h2>
+
+        <div class="program-grid">
+
+            <article class="program">
+
+                <img
+                    src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1000&q=85"
+                    alt="Strength training"
+                >
+
+                <div class="program-content">
+
+                    <h3>Strength</h3>
+
+                    <p>
+                        Build power, improve performance and develop
+                        strength through structured training.
+                    </p>
+
                 </div>
 
-                <div class="stat">
-                    <h3>2K+</h3>
-                    <p>Active Members</p>
+            </article>
+
+
+            <article class="program">
+
+                <img
+                    src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=1000&q=85"
+                    alt="Cardio training"
+                >
+
+                <div class="program-content">
+
+                    <h3>Cardio</h3>
+
+                    <p>
+                        Improve endurance, stamina and overall fitness
+                        through effective cardio sessions.
+                    </p>
+
                 </div>
 
-                <div class="stat">
-                    <h3>15+</h3>
-                    <p>Expert Trainers</p>
+            </article>
+
+
+            <article class="program">
+
+                <img
+                    src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=1000&q=85"
+                    alt="Personal training"
+                >
+
+                <div class="program-content">
+
+                    <h3>Personal Training</h3>
+
+                    <p>
+                        Get focused guidance and structured workouts
+                        designed around individual goals.
+                    </p>
+
                 </div>
 
-                <div class="stat">
-                    <h3>24/7</h3>
-                    <p>Gym Access</p>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <div class="container about-grid">
+
+        <div class="about-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1200&q=85"
+                alt="Modern gym interior"
+            >
+
+        </div>
+
+
+        <div class="about-text">
+
+            <div class="section-label">
+                About Ironcore
+            </div>
+
+            <h2 class="section-title">
+                More Than A Gym
+            </h2>
+
+            <p>
+                IRONCORE is a fictional gym brand created to demonstrate
+                a professional modern fitness website experience.
+            </p>
+
+            <p>
+                This website concept can be customized for real gyms,
+                fitness centers, personal trainers and sports businesses.
+            </p>
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <strong>Modern Equipment</strong>
+
+                    <span>
+                        Designed for serious training.
+                    </span>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <strong>Expert Guidance</strong>
+
+                    <span>
+                        Training experiences built around your goals.
+                    </span>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <strong>Flexible Programs</strong>
+
+                    <span>
+                        Multiple training options for different needs.
+                    </span>
+
                 </div>
 
             </div>
@@ -821,424 +951,348 @@
 
     </div>
 
-
-    <!-- =========================
-         PROGRAMS
-    ========================== -->
-
-    <section class="programs" id="programs">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <div class="section-label">
-                    Training Programs
-                </div>
-
-                <h2>
-                    TRAIN WITH PURPOSE
-                </h2>
-
-                <p>
-                    Structured programs designed to help you build
-                    strength, improve performance and achieve your goals.
-                </p>
-
-            </div>
+</section>
 
 
-            <div class="program-grid">
+<!-- =========================
+     TRAINERS
+========================= -->
 
-                <div class="program-card">
+<section class="trainers" id="trainers">
 
-                    <img
-                        src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=85"
-                        alt="Strength Training"
-                    >
+    <div class="container">
 
-                    <div class="program-overlay">
-
-                        <h3>Strength Training</h3>
-
-                        <p>
-                            Build power, strength and lean muscle.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="program-card">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=85"
-                        alt="Functional Fitness"
-                    >
-
-                    <div class="program-overlay">
-
-                        <h3>Functional Fitness</h3>
-
-                        <p>
-                            Improve movement, endurance and performance.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="program-card">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=85"
-                        alt="Personal Training"
-                    >
-
-                    <div class="program-overlay">
-
-                        <h3>Personal Training</h3>
-
-                        <p>
-                            One-on-one coaching built around your goals.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+        <div class="section-label">
+            Our Team
         </div>
 
-    </section>
+        <h2 class="section-title">
+            Meet The Trainers
+        </h2>
 
+        <div class="trainer-grid">
 
-    <!-- =========================
-         ABOUT
-    ========================== -->
+            <article class="trainer">
 
-    <section class="about" id="about">
+                <img
+                    src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=1000&q=85"
+                    alt="Fitness trainer"
+                >
 
-        <div class="container">
+                <div class="trainer-info">
 
-            <div class="about-grid">
-
-                <div class="about-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=85"
-                        alt="Gym training"
-                    >
-
-                </div>
-
-
-                <div class="about-content">
-
-                    <div class="section-label">
-                        About Ironcore
-                    </div>
-
-                    <h2>
-                        BUILT FOR PEOPLE WHO
-                        <span>WANT MORE.</span>
-                    </h2>
+                    <h3>Alex Carter</h3>
 
                     <p>
-                        IRONCORE is a modern gym concept focused on
-                        serious training, professional coaching and
-                        long-term results.
+                        Strength Coach
                     </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="trainer">
+
+                <img
+                    src="https://images.unsplash.com/photo-1549476464-37392f717541?auto=format&fit=crop&w=1000&q=85"
+                    alt="Personal trainer"
+                >
+
+                <div class="trainer-info">
+
+                    <h3>Jordan Lee</h3>
 
                     <p>
-                        Whether you're just starting your fitness journey
-                        or preparing for your next challenge, our facility
-                        is designed to help you perform at your best.
+                        Personal Trainer
                     </p>
 
-                    <ul class="check-list">
-                        <li>Premium training equipment</li>
-                        <li>Professional certified trainers</li>
-                        <li>Personalized workout programs</li>
-                        <li>Supportive training community</li>
-                    </ul>
+                </div>
 
-                    <a href="#contact" class="btn btn-primary">
-                        Start Your Journey
-                    </a>
+            </article>
+
+
+            <article class="trainer">
+
+                <img
+                    src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1000&q=85"
+                    alt="Fitness coach"
+                >
+
+                <div class="trainer-info">
+
+                    <h3>Ryan Brooks</h3>
+
+                    <p>
+                        Conditioning Coach
+                    </p>
 
                 </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PRICING
+========================= -->
+
+<section id="pricing">
+
+    <div class="container">
+
+        <div class="section-label">
+            Membership
+        </div>
+
+        <h2 class="section-title">
+            Choose Your Plan
+        </h2>
+
+        <div class="pricing-grid">
+
+            <div class="price-card">
+
+                <h3>Basic</h3>
+
+                <div class="price">
+                    $29 <small>/month</small>
+                </div>
+
+                <ul>
+                    <li>Gym Access</li>
+                    <li>Basic Equipment</li>
+                    <li>Locker Access</li>
+                    <li>Fitness Area</li>
+                </ul>
+
+                <a href="#contact" class="btn btn-outline">
+                    Get Started
+                </a>
+
+            </div>
+
+
+            <div class="price-card featured">
+
+                <h3>Pro</h3>
+
+                <div class="price">
+                    $49 <small>/month</small>
+                </div>
+
+                <ul>
+                    <li>Everything in Basic</li>
+                    <li>Group Classes</li>
+                    <li>Training Programs</li>
+                    <li>Fitness Assessment</li>
+                </ul>
+
+                <a href="#contact" class="btn btn-primary">
+                    Get Started
+                </a>
+
+            </div>
+
+
+            <div class="price-card">
+
+                <h3>Elite</h3>
+
+                <div class="price">
+                    $79 <small>/month</small>
+                </div>
+
+                <ul>
+                    <li>Everything in Pro</li>
+                    <li>Personal Training</li>
+                    <li>Custom Programs</li>
+                    <li>Priority Support</li>
+                </ul>
+
+                <a href="#contact" class="btn btn-outline">
+                    Get Started
+                </a>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- =========================
-         TRAINERS
-    ========================== -->
+<!-- =========================
+     CTA
+========================= -->
 
-    <section id="trainers">
+<section class="cta">
 
-        <div class="container">
+    <div class="container">
 
-            <div class="section-header">
+        <h2>
+            Ready To Get Stronger?
+        </h2>
 
-                <div class="section-label">
-                    Our Team
+        <p>
+            Start your fitness journey with a training experience
+            built around consistency, strength and progress.
+        </p>
+
+        <a href="#demo-contact" class="btn btn-primary">
+            Get Started
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DEEPBYTO CONTACT CTA
+========================= -->
+
+<section class="demo-cta" id="demo-contact">
+
+    <div class="container">
+
+        <h2>
+            Want A Website Like This?
+        </h2>
+
+        <p>
+            Get a professional website for your gym, fitness center,
+            personal training business or other business.
+        </p>
+
+        <a
+            href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I%27m%20interested%20in%20the%20Gym%20Website."
+            target="_blank"
+            rel="noopener"
+            class="btn"
+        >
+            Contact DEEPBYTO
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+                    IRON<span>CORE</span>
                 </div>
 
-                <h2>
-                    EXPERT COACHES
-                </h2>
-
                 <p>
-                    Experienced professionals who are focused on helping
-                    you train smarter and reach your goals.
+                    A professional gym website concept designed
+                    to demonstrate a modern digital experience.
                 </p>
 
             </div>
 
 
-            <div class="trainer-grid">
+            <div>
 
-                <div class="trainer-card">
+                <h4>Navigation</h4>
 
-                    <img
-                        src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=85"
-                        alt="Marcus trainer"
-                    >
+                <ul>
 
-                    <div class="trainer-info">
-                        <h3>Marcus Reed</h3>
-                        <p>Strength Coach</p>
-                    </div>
+                    <li>
+                        <a href="#programs">
+                            Programs
+                        </a>
+                    </li>
 
-                </div>
+                    <li>
+                        <a href="#about">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#trainers">
+                            Trainers
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#pricing">
+                            Membership
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
 
 
-                <div class="trainer-card">
+            <div>
 
-                    <img
-                        src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=900&q=85"
-                        alt="Daniel trainer"
-                    >
+                <h4>Contact</h4>
 
-                    <div class="trainer-info">
-                        <h3>Daniel Carter</h3>
-                        <p>Performance Coach</p>
-                    </div>
+                <ul>
 
-                </div>
+                    <li>
+                        <a
+                            href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I%27m%20interested%20in%20the%20Gym%20Website."
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            WhatsApp DEEPBYTO
+                        </a>
+                    </li>
 
+                    <li>
+                        Website Development
+                    </li>
 
-                <div class="trainer-card">
+                    <li>
+                        Digital Solutions
+                    </li>
 
-                    <img
-                        src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=900&q=85"
-                        alt="Sarah trainer"
-                    >
-
-                    <div class="trainer-info">
-                        <h3>Sarah Morgan</h3>
-                        <p>Fitness Coach</p>
-                    </div>
-
-                </div>
+                </ul>
 
             </div>
 
         </div>
 
-    </section>
 
+        <div class="footer-bottom">
 
-    <!-- =========================
-         PRICING
-    ========================== -->
-
-    <section class="pricing" id="pricing">
-
-        <div class="container">
-
-            <div class="section-header">
-
-                <div class="section-label">
-                    Memberships
-                </div>
-
-                <h2>
-                    CHOOSE YOUR PLAN
-                </h2>
-
-                <p>
-                    Simple membership options for different training goals.
-                </p>
-
+            <div>
+                © 2026 DEEPBYTO. All rights reserved.
             </div>
 
-
-            <div class="pricing-grid">
-
-                <!-- Basic -->
-
-                <div class="price-card">
-
-                    <h3>Basic</h3>
-
-                    <div class="price">
-                        $29
-                        <small>/month</small>
-                    </div>
-
-                    <p class="price-description">
-                        Great for independent training.
-                    </p>
-
-                    <ul class="price-list">
-                        <li>Gym access</li>
-                        <li>Locker access</li>
-                        <li>Free Wi-Fi</li>
-                        <li>Basic equipment access</li>
-                    </ul>
-
-                    <a href="#contact" class="price-btn">
-                        Choose Plan
-                    </a>
-
-                </div>
-
-
-                <!-- Pro -->
-
-                <div class="price-card featured">
-
-                    <div class="popular">
-                        MOST POPULAR
-                    </div>
-
-                    <h3>Pro</h3>
-
-                    <div class="price">
-                        $59
-                        <small>/month</small>
-                    </div>
-
-                    <p class="price-description">
-                        For members who want more guidance.
-                    </p>
-
-                    <ul class="price-list">
-                        <li>Everything in Basic</li>
-                        <li>Group training</li>
-                        <li>Workout plan</li>
-                        <li>Progress tracking</li>
-                        <li>Trainer consultation</li>
-                    </ul>
-
-                    <a href="#contact" class="price-btn">
-                        Choose Plan
-                    </a>
-
-                </div>
-
-
-                <!-- Elite -->
-
-                <div class="price-card">
-
-                    <h3>Elite</h3>
-
-                    <div class="price">
-                        $99
-                        <small>/month</small>
-                    </div>
-
-                    <p class="price-description">
-                        Complete personal coaching experience.
-                    </p>
-
-                    <ul class="price-list">
-                        <li>Everything in Pro</li>
-                        <li>Personal trainer</li>
-                        <li>Custom nutrition guidance</li>
-                        <li>Priority booking</li>
-                        <li>Monthly assessment</li>
-                    </ul>
-
-                    <a href="#contact" class="price-btn">
-                        Choose Plan
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         CTA
-    ========================== -->
-
-    <section class="cta" id="contact">
-
-        <div class="container">
-
-            <h2>
-                READY TO GET
-                <span style="color:#e10600;">STRONGER?</span>
-            </h2>
-
-            <p>
-                Stop waiting for the perfect time. Start training,
-                stay consistent and build the strongest version of yourself.
-            </p>
-
-            <a href="#" class="btn btn-primary">
-                Join IRONCORE
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer>
-
-        <div class="container">
-
-            <div class="footer-logo">
-                IRON<span>CORE</span>
-            </div>
-
-            <p>
-                Professional Gym Website Demo
-            </p>
 
             <div class="developed">
 
                 <span>
-                    Demo website developed by
+                    Developed by
                 </span>
 
                 <a
                     href="https://deepbyto.github.io/"
                     target="_blank"
-                    rel="noopener noreferrer"
-                    class="deepbyto-link"
-                    aria-label="Visit DEEPBYTO website"
+                    rel="noopener"
+                    aria-label="DEEPBYTO website"
                 >
 
                     <img
@@ -1253,32 +1307,34 @@
 
         </div>
 
-    </footer>
+    </div>
+
+</footer>
 
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
+<script>
 
-    <script>
+function toggleMenu(){
 
-        const menuBtn = document.getElementById("menuBtn");
-        const navLinks = document.getElementById("navLinks");
+    const nav = document.getElementById("navLinks");
 
-        menuBtn.addEventListener("click", function () {
-            navLinks.classList.toggle("active");
-        });
+    nav.classList.toggle("active");
 
+}
 
-        document.querySelectorAll(".nav-links a").forEach(function(link) {
+document.querySelectorAll(".nav-links a").forEach(function(link){
 
-            link.addEventListener("click", function() {
-                navLinks.classList.remove("active");
-            });
+    link.addEventListener("click",function(){
 
-        });
+        document
+        .getElementById("navLinks")
+        .classList.remove("active");
 
-    </script>
+    });
+
+});
+
+</script>
 
 </body>
 </html>
