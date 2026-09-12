@@ -1,0 +1,2053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ACADEMY</title>
+
+  <meta name="description" content="ACADEMY — A modern education website demo developed by DEEPBYTO.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root{
+      --primary:#174ea6;
+      --primary-dark:#123d82;
+      --blue-light:#edf4ff;
+      --dark:#172033;
+      --text:#606b7d;
+      --white:#ffffff;
+      --bg:#f7f9fc;
+      --border:#e4e8ef;
+      --green:#16845b;
+      --shadow:0 12px 35px rgba(24,42,72,.09);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:"Inter",sans-serif;
+      background:var(--bg);
+      color:var(--dark);
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+    .container{
+      width:min(1140px,92%);
+      margin:auto;
+    }
+
+    /* ================= HEADER ================= */
+
+    header{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      z-index:1000;
+      background:rgba(255,255,255,.97);
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav{
+      height:74px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-family:"Poppins",sans-serif;
+      font-size:20px;
+      font-weight:700;
+      color:var(--dark);
+    }
+
+    .logo-icon{
+      width:39px;
+      height:39px;
+      border-radius:8px;
+      background:var(--primary);
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:"Poppins",sans-serif;
+      font-size:21px;
+      font-weight:700;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:28px;
+    }
+
+    .nav-links a{
+      color:#5b6678;
+      font-size:14px;
+      font-weight:600;
+      transition:.2s;
+    }
+
+    .nav-links a:hover{
+      color:var(--primary);
+    }
+
+    .nav-admission{
+      color:white!important;
+      background:var(--primary);
+      padding:11px 18px;
+      border-radius:7px;
+    }
+
+    .nav-admission:hover{
+      background:var(--primary-dark);
+    }
+
+    .menu{
+      display:none;
+      background:none;
+      border:0;
+      font-size:26px;
+      cursor:pointer;
+      color:var(--dark);
+    }
+
+    /* ================= HERO ================= */
+
+    .hero{
+      padding:135px 0 85px;
+      background:white;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      gap:60px;
+    }
+
+    .hero-small{
+      display:inline-block;
+      color:var(--primary);
+      font-size:13px;
+      font-weight:700;
+      margin-bottom:14px;
+      text-transform:uppercase;
+      letter-spacing:.5px;
+    }
+
+    .hero h1{
+      font-family:"Poppins",sans-serif;
+      font-size:clamp(42px,5vw,65px);
+      line-height:1.12;
+      letter-spacing:-2px;
+      margin-bottom:20px;
+    }
+
+    .hero h1 span{
+      color:var(--primary);
+    }
+
+    .hero p{
+      color:var(--text);
+      font-size:16px;
+      max-width:530px;
+      margin-bottom:29px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:13px 20px;
+      border-radius:7px;
+      font-size:14px;
+      font-weight:700;
+      transition:.2s;
+    }
+
+    .btn-primary{
+      background:var(--primary);
+      color:white;
+    }
+
+    .btn-primary:hover{
+      background:var(--primary-dark);
+    }
+
+    .btn-outline{
+      border:1px solid var(--border);
+      background:white;
+      color:var(--dark);
+    }
+
+    .btn-outline:hover{
+      border-color:var(--primary);
+      color:var(--primary);
+    }
+
+    .hero-photo{
+      height:510px;
+      border-radius:12px;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .hero-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .hero-box{
+      position:absolute;
+      left:20px;
+      bottom:20px;
+      background:white;
+      padding:17px 20px;
+      border-radius:8px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-box strong{
+      display:block;
+      font-size:14px;
+      margin-bottom:2px;
+    }
+
+    .hero-box span{
+      font-size:12px;
+      color:var(--text);
+    }
+
+    /* ================= QUICK INFO ================= */
+
+    .quick-info{
+      margin-top:-1px;
+      background:white;
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+    }
+
+    .quick-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+    }
+
+    .quick-item{
+      padding:24px;
+      border-right:1px solid var(--border);
+    }
+
+    .quick-item:last-child{
+      border-right:0;
+    }
+
+    .quick-item strong{
+      display:block;
+      font-size:15px;
+      margin-bottom:3px;
+    }
+
+    .quick-item span{
+      color:var(--text);
+      font-size:12px;
+    }
+
+    /* ================= GENERAL SECTION ================= */
+
+    section{
+      padding:90px 0;
+    }
+
+    .section-heading{
+      max-width:650px;
+      margin-bottom:42px;
+    }
+
+    .section-heading.center{
+      text-align:center;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .section-heading small{
+      color:var(--primary);
+      font-size:12px;
+      text-transform:uppercase;
+      font-weight:700;
+      letter-spacing:.8px;
+    }
+
+    .section-heading h2{
+      font-family:"Poppins",sans-serif;
+      font-size:clamp(31px,4vw,45px);
+      line-height:1.2;
+      letter-spacing:-1.2px;
+      margin:9px 0 12px;
+    }
+
+    .section-heading p{
+      color:var(--text);
+      font-size:15px;
+    }
+
+    /* ================= COURSES ================= */
+
+    .courses{
+      background:var(--bg);
+    }
+
+    .course-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .course{
+      background:white;
+      border:1px solid var(--border);
+      border-radius:10px;
+      overflow:hidden;
+      transition:.25s;
+    }
+
+    .course:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow);
+    }
+
+    .course-img{
+      height:190px;
+      overflow:hidden;
+    }
+
+    .course-img img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .course-content{
+      padding:22px;
+    }
+
+    .course-content h3{
+      font-family:"Poppins",sans-serif;
+      font-size:18px;
+      margin-bottom:7px;
+    }
+
+    .course-content p{
+      color:var(--text);
+      font-size:13px;
+      margin-bottom:18px;
+    }
+
+    .course-footer{
+      border-top:1px solid var(--border);
+      padding-top:14px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .course-footer span{
+      color:var(--primary);
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .course-footer a{
+      font-size:12px;
+      font-weight:700;
+    }
+
+    /* ================= ABOUT ================= */
+
+    .about{
+      background:white;
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:65px;
+      align-items:center;
+    }
+
+    .about-photo{
+      height:480px;
+      border-radius:11px;
+      overflow:hidden;
+    }
+
+    .about-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .about-content h2{
+      font-family:"Poppins",sans-serif;
+      font-size:clamp(31px,4vw,45px);
+      line-height:1.2;
+      letter-spacing:-1.3px;
+      margin:9px 0 16px;
+    }
+
+    .about-content > p{
+      color:var(--text);
+      font-size:15px;
+      margin-bottom:25px;
+    }
+
+    .points{
+      display:grid;
+      gap:15px;
+      margin-bottom:27px;
+    }
+
+    .point{
+      display:flex;
+      gap:12px;
+    }
+
+    .point-icon{
+      width:27px;
+      height:27px;
+      flex-shrink:0;
+      border-radius:50%;
+      background:#e9f6f1;
+      color:var(--green);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:12px;
+      font-weight:800;
+      margin-top:1px;
+    }
+
+    .point strong{
+      display:block;
+      font-size:14px;
+      margin-bottom:2px;
+    }
+
+    .point span{
+      color:var(--text);
+      font-size:12px;
+    }
+
+    /* ================= PROGRAMS ================= */
+
+    .programs{
+      background:#f2f5f9;
+    }
+
+    .program-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .program{
+      background:white;
+      border:1px solid var(--border);
+      border-radius:9px;
+      padding:28px;
+    }
+
+    .program-number{
+      color:#c8d3e4;
+      font-size:30px;
+      font-weight:700;
+      margin-bottom:20px;
+    }
+
+    .program h3{
+      font-family:"Poppins",sans-serif;
+      font-size:18px;
+      margin-bottom:8px;
+    }
+
+    .program p{
+      color:var(--text);
+      font-size:13px;
+    }
+
+    /* ================= FACULTY ================= */
+
+    .faculty{
+      background:white;
+    }
+
+    .teacher-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .teacher{
+      border:1px solid var(--border);
+      border-radius:10px;
+      overflow:hidden;
+      background:white;
+    }
+
+    .teacher-photo{
+      height:255px;
+      background:#e9edf4;
+    }
+
+    .teacher-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .teacher-info{
+      padding:17px;
+    }
+
+    .teacher-info h3{
+      font-family:"Poppins",sans-serif;
+      font-size:16px;
+      margin-bottom:2px;
+    }
+
+    .teacher-info p{
+      color:var(--text);
+      font-size:12px;
+    }
+
+    /* ================= ADMISSION ================= */
+
+    .admission{
+      background:var(--primary);
+      color:white;
+    }
+
+    .admission-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .admission h2{
+      font-family:"Poppins",sans-serif;
+      font-size:clamp(32px,4vw,48px);
+      line-height:1.15;
+      letter-spacing:-1.5px;
+      margin-bottom:15px;
+    }
+
+    .admission p{
+      color:#d9e6ff;
+      max-width:570px;
+      font-size:15px;
+      margin-bottom:25px;
+    }
+
+    .admission .btn{
+      background:white;
+      color:var(--primary);
+    }
+
+    .admission-card{
+      background:white;
+      color:var(--dark);
+      padding:28px;
+      border-radius:10px;
+    }
+
+    .admission-card h3{
+      font-family:"Poppins",sans-serif;
+      font-size:20px;
+      margin-bottom:15px;
+    }
+
+    .admission-row{
+      display:flex;
+      justify-content:space-between;
+      padding:12px 0;
+      border-bottom:1px solid var(--border);
+      font-size:13px;
+    }
+
+    .admission-row:last-child{
+      border-bottom:0;
+    }
+
+    .admission-row span{
+      color:var(--text);
+    }
+
+    /* ================= TESTIMONIAL ================= */
+
+    .testimonial{
+      background:var(--bg);
+    }
+
+    .testimonial-box{
+      background:white;
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:40px;
+      max-width:850px;
+      margin:auto;
+      text-align:center;
+    }
+
+    .testimonial-box p{
+      font-family:"Poppins",sans-serif;
+      font-size:22px;
+      line-height:1.5;
+      margin-bottom:18px;
+    }
+
+    .testimonial-box span{
+      color:var(--text);
+      font-size:13px;
+    }
+
+    /* ================= DEEPBYTO ================= */
+
+    .deepbyto{
+      padding:0 0 70px;
+      background:var(--bg);
+    }
+
+    .deepbyto-box{
+      background:#101827;
+      border-radius:10px;
+      padding:28px 32px;
+      color:white;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:25px;
+    }
+
+    .deepbyto-box h3{
+      font-family:"Poppins",sans-serif;
+      font-size:20px;
+      margin-bottom:3px;
+    }
+
+    .deepbyto-box p{
+      color:#98a5b9;
+      font-size:12px;
+    }
+
+    .deepbyto-box .btn{
+      background:white;
+      color:#101827;
+      white-space:nowrap;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+      background:#0c1320;
+      color:white;
+      padding:50px 0 22px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.5fr .7fr .7fr;
+      gap:50px;
+      padding-bottom:40px;
+    }
+
+    .footer-brand p{
+      max-width:350px;
+      color:#8793a6;
+      font-size:12px;
+      margin-top:14px;
+    }
+
+    .footer-title{
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      font-weight:700;
+      margin-bottom:14px;
+    }
+
+    .footer-links{
+      display:grid;
+      gap:8px;
+    }
+
+    .footer-links a{
+      color:#8793a6;
+      font-size:12px;
+    }
+
+    .footer-links a:hover{
+      color:white;
+    }
+
+    .footer-bottom{
+      border-top:1px solid #202a3b;
+      padding-top:22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .copyright{
+      color:#647187;
+      font-size:10px;
+    }
+
+    .developed{
+      display:flex;
+      align-items:center;
+      gap:9px;
+      color:#647187;
+      font-size:10px;
+    }
+
+    .deepbyto-wordmark{
+      width:105px;
+      height:auto;
+      opacity:.9;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width:950px){
+
+      .hero-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-content{
+        text-align:center;
+      }
+
+      .hero p{
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .hero-buttons{
+        justify-content:center;
+      }
+
+      .hero-photo{
+        max-width:700px;
+        width:100%;
+        margin:auto;
+      }
+
+      .quick-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .quick-item:nth-child(2){
+        border-right:0;
+      }
+
+      .quick-item{
+        border-bottom:1px solid var(--border);
+      }
+
+      .course-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .about-grid{
+        grid-template-columns:1fr;
+      }
+
+      .about-photo{
+        max-width:650px;
+        width:100%;
+        margin:auto;
+      }
+
+      .program-grid{
+        grid-template-columns:1fr;
+      }
+
+      .teacher-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .admission-grid{
+        grid-template-columns:1fr;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .footer-brand{
+        grid-column:1/-1;
+      }
+
+    }
+
+    @media(max-width:720px){
+
+      .nav{
+        height:68px;
+      }
+
+      .menu{
+        display:block;
+      }
+
+      .nav-links{
+        position:absolute;
+        top:68px;
+        left:0;
+        width:100%;
+        background:white;
+        border-bottom:1px solid var(--border);
+        padding:20px 4%;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+      }
+
+      .nav-links.active{
+        display:flex;
+      }
+
+      .nav-links a{
+        padding:12px 0;
+      }
+
+      .nav-admission{
+        text-align:center;
+        margin-top:8px;
+      }
+
+      .hero{
+        padding-top:115px;
+      }
+
+      .hero h1{
+        letter-spacing:-1.8px;
+      }
+
+      .hero-photo{
+        height:410px;
+      }
+
+      section{
+        padding:70px 0;
+      }
+
+      .course-grid,
+      .teacher-grid{
+        grid-template-columns:1fr;
+      }
+
+      .quick-grid{
+        grid-template-columns:1fr;
+      }
+
+      .quick-item{
+        border-right:0;
+      }
+
+      .quick-item:last-child{
+        border-bottom:0;
+      }
+
+      .about-photo{
+        height:400px;
+      }
+
+      .admission-card{
+        padding:23px;
+      }
+
+      .testimonial-box{
+        padding:28px 20px;
+      }
+
+      .testimonial-box p{
+        font-size:18px;
+      }
+
+      .deepbyto-box{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .deepbyto-box .btn{
+        width:100%;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+      .footer-brand{
+        grid-column:auto;
+      }
+
+      .footer-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+  <!-- ================= HEADER ================= -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a href="#" class="logo">
+
+        <span class="logo-icon">A</span>
+
+        <span>ACADEMY</span>
+
+      </a>
+
+
+      <button class="menu" id="menu">
+        ☰
+      </button>
+
+
+      <nav class="nav-links" id="navLinks">
+
+        <a href="#courses">Courses</a>
+
+        <a href="#about">About</a>
+
+        <a href="#programs">Programs</a>
+
+        <a href="#faculty">Faculty</a>
+
+        <a href="#contact" class="nav-admission">
+          Admissions
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <div class="container hero-grid">
+
+
+      <div class="hero-content">
+
+        <span class="hero-small">
+          Welcome to ACADEMY
+        </span>
+
+        <h1>
+          Education that helps you
+          <span>move forward.</span>
+        </h1>
+
+        <p>
+          A clean and professional academy website concept for
+          schools, tuition centers, coaching institutes, and
+          educational businesses.
+        </p>
+
+
+        <div class="hero-buttons">
+
+          <a href="#courses" class="btn btn-primary">
+            View Courses
+          </a>
+
+          <a href="#about" class="btn btn-outline">
+            Learn About Us
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-photo">
+
+        <img
+          src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1100&q=85"
+          alt="Students in classroom"
+        >
+
+        <div class="hero-box">
+
+          <strong>Focused on Better Learning</strong>
+
+          <span>
+            A simple education website demo
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= QUICK INFO ================= -->
+
+  <div class="quick-info">
+
+    <div class="container quick-grid">
+
+      <div class="quick-item">
+
+        <strong>Experienced Teachers</strong>
+
+        <span>
+          Dedicated guidance for students
+        </span>
+
+      </div>
+
+
+      <div class="quick-item">
+
+        <strong>Modern Classes</strong>
+
+        <span>
+          Comfortable learning environment
+        </span>
+
+      </div>
+
+
+      <div class="quick-item">
+
+        <strong>Practical Learning</strong>
+
+        <span>
+          Learn through practice and activities
+        </span>
+
+      </div>
+
+
+      <div class="quick-item">
+
+        <strong>Student Support</strong>
+
+        <span>
+          Guidance throughout your journey
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ================= COURSES ================= -->
+
+  <section class="courses" id="courses">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <small>Our Courses</small>
+
+        <h2>
+          Find the right course for your goals.
+        </h2>
+
+        <p>
+          Sample courses shown for this website demo.
+          Real subjects and programs can be added here.
+        </p>
+
+      </div>
+
+
+      <div class="course-grid">
+
+
+        <article class="course">
+
+          <div class="course-img">
+
+            <img
+              src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=900&q=80"
+              alt="Student studying"
+            >
+
+          </div>
+
+          <div class="course-content">
+
+            <h3>Academic Studies</h3>
+
+            <p>
+              Structured support for school and college students
+              across core subjects.
+            </p>
+
+            <div class="course-footer">
+
+              <span>
+                Academic
+              </span>
+
+              <a href="#contact">
+                Details →
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="course">
+
+          <div class="course-img">
+
+            <img
+              src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=900&q=80"
+              alt="Teacher teaching"
+            >
+
+          </div>
+
+          <div class="course-content">
+
+            <h3>Exam Preparation</h3>
+
+            <p>
+              Revision, practice, and guided preparation for
+              important examinations.
+            </p>
+
+            <div class="course-footer">
+
+              <span>
+                Preparation
+              </span>
+
+              <a href="#contact">
+                Details →
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="course">
+
+          <div class="course-img">
+
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+              alt="Programming"
+            >
+
+          </div>
+
+          <div class="course-content">
+
+            <h3>Computer & IT</h3>
+
+            <p>
+              Build useful computer, programming, and digital
+              skills through practical learning.
+            </p>
+
+            <div class="course-footer">
+
+              <span>
+                Technology
+              </span>
+
+              <a href="#contact">
+                Details →
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="course">
+
+          <div class="course-img">
+
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
+              alt="Students working together"
+            >
+
+          </div>
+
+          <div class="course-content">
+
+            <h3>Business Studies</h3>
+
+            <p>
+              Develop knowledge of business, communication,
+              management, and entrepreneurship.
+            </p>
+
+            <div class="course-footer">
+
+              <span>
+                Business
+              </span>
+
+              <a href="#contact">
+                Details →
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="course">
+
+          <div class="course-img">
+
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+              alt="Online learning"
+            >
+
+          </div>
+
+          <div class="course-content">
+
+            <h3>Digital Skills</h3>
+
+            <p>
+              Learn modern digital tools that can be useful for
+              education, work, and business.
+            </p>
+
+            <div class="course-footer">
+
+              <span>
+                Skills
+              </span>
+
+              <a href="#contact">
+                Details →
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="course">
+
+          <div class="course-img">
+
+            <img
+              src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=900&q=80"
+              alt="Books and education"
+            >
+
+          </div>
+
+          <div class="course-content">
+
+            <h3>Languages</h3>
+
+            <p>
+              Improve language, writing, speaking, and general
+              communication skills.
+            </p>
+
+            <div class="course-footer">
+
+              <span>
+                Languages
+              </span>
+
+              <a href="#contact">
+                Details →
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= ABOUT ================= -->
+
+  <section class="about" id="about">
+
+    <div class="container about-grid">
+
+
+      <div class="about-photo">
+
+        <img
+          src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1000&q=85"
+          alt="Students studying"
+        >
+
+      </div>
+
+
+      <div class="about-content">
+
+        <small style="color:#174ea6;font-size:12px;font-weight:700;text-transform:uppercase;">
+          About Us
+        </small>
+
+        <h2>
+          A place to learn, practice, and improve.
+        </h2>
+
+        <p>
+          This is a fictional academy website demo created by
+          DEEPBYTO. The content can be replaced with the real
+          academy's information, courses, teachers, timetable,
+          admissions, and contact details.
+        </p>
+
+
+        <div class="points">
+
+
+          <div class="point">
+
+            <div class="point-icon">
+              ✓
+            </div>
+
+            <div>
+
+              <strong>
+                Clear Learning
+              </strong>
+
+              <span>
+                Lessons and programs organized around student needs.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="point">
+
+            <div class="point-icon">
+              ✓
+            </div>
+
+            <div>
+
+              <strong>
+                Practical Approach
+              </strong>
+
+              <span>
+                Students get opportunities to practice what they learn.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="point">
+
+            <div class="point-icon">
+              ✓
+            </div>
+
+            <div>
+
+              <strong>
+                Friendly Environment
+              </strong>
+
+              <span>
+                A simple and welcoming environment for learning.
+              </span>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+        <a href="#contact" class="btn btn-primary">
+          Contact Us
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= PROGRAMS ================= -->
+
+  <section class="programs" id="programs">
+
+    <div class="container">
+
+      <div class="section-heading center">
+
+        <small>Learning Approach</small>
+
+        <h2>
+          A simple path to better learning.
+        </h2>
+
+        <p>
+          A sample three-step section for an academy website.
+        </p>
+
+      </div>
+
+
+      <div class="program-grid">
+
+
+        <div class="program">
+
+          <div class="program-number">
+            01
+          </div>
+
+          <h3>
+            Understand
+          </h3>
+
+          <p>
+            Learn the basic concepts with clear explanations
+            and structured lessons.
+          </p>
+
+        </div>
+
+
+        <div class="program">
+
+          <div class="program-number">
+            02
+          </div>
+
+          <h3>
+            Practice
+          </h3>
+
+          <p>
+            Strengthen your understanding through exercises,
+            assignments, and practical activities.
+          </p>
+
+        </div>
+
+
+        <div class="program">
+
+          <div class="program-number">
+            03
+          </div>
+
+          <h3>
+            Improve
+          </h3>
+
+          <p>
+            Review your progress, identify weaknesses, and
+            continue developing your skills.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= FACULTY ================= -->
+
+  <section class="faculty" id="faculty">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <small>Our Faculty</small>
+
+        <h2>
+          Learn with dedicated teachers.
+        </h2>
+
+        <p>
+          Sample faculty profiles for demonstration purposes.
+        </p>
+
+      </div>
+
+
+      <div class="teacher-grid">
+
+
+        <div class="teacher">
+
+          <div class="teacher-photo">
+
+            <img
+              src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=700&q=80"
+              alt="Teacher"
+            >
+
+          </div>
+
+          <div class="teacher-info">
+
+            <h3>
+              Academic Teacher
+            </h3>
+
+            <p>
+              Mathematics & Science
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="teacher">
+
+          <div class="teacher-photo">
+
+            <img
+              src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=700&q=80"
+              alt="Teacher"
+            >
+
+          </div>
+
+          <div class="teacher-info">
+
+            <h3>
+              IT Teacher
+            </h3>
+
+            <p>
+              Computer & Programming
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="teacher">
+
+          <div class="teacher-photo">
+
+            <img
+              src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=700&q=80"
+              alt="Teacher"
+            >
+
+          </div>
+
+          <div class="teacher-info">
+
+            <h3>
+              Language Teacher
+            </h3>
+
+            <p>
+              English & Communication
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="teacher">
+
+          <div class="teacher-photo">
+
+            <img
+              src="https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&w=700&q=80"
+              alt="Teacher"
+            >
+
+          </div>
+
+          <div class="teacher-info">
+
+            <h3>
+              Business Teacher
+            </h3>
+
+            <p>
+              Business & Management
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= ADMISSION ================= -->
+
+  <section class="admission" id="contact">
+
+    <div class="container admission-grid">
+
+
+      <div>
+
+        <h2>
+          Start your learning journey.
+        </h2>
+
+        <p>
+          Interested in joining? Contact the academy for
+          course information, schedules, admissions, and
+          further details.
+        </p>
+
+        <a
+          href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I'm%20interested%20in%20the%20Academy%20Website."
+          target="_blank"
+          class="btn"
+        >
+          Contact Us
+        </a>
+
+      </div>
+
+
+      <div class="admission-card">
+
+        <h3>
+          Admissions Information
+        </h3>
+
+
+        <div class="admission-row">
+
+          <strong>
+            Courses
+          </strong>
+
+          <span>
+            Multiple Programs
+          </span>
+
+        </div>
+
+
+        <div class="admission-row">
+
+          <strong>
+            Classes
+          </strong>
+
+          <span>
+            Flexible Schedule
+          </span>
+
+        </div>
+
+
+        <div class="admission-row">
+
+          <strong>
+            Learning
+          </strong>
+
+          <span>
+            In-Person / Online
+          </span>
+
+        </div>
+
+
+        <div class="admission-row">
+
+          <strong>
+            Contact
+          </strong>
+
+          <span>
+            Available on Request
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= TESTIMONIAL ================= -->
+
+  <section class="testimonial">
+
+    <div class="container">
+
+      <div class="section-heading center">
+
+        <small>Student Experience</small>
+
+        <h2>
+          What learning should feel like.
+        </h2>
+
+      </div>
+
+
+      <div class="testimonial-box">
+
+        <p>
+          “Good education is not only about passing exams.
+          It is about understanding, practicing, and becoming
+          better every day.”
+        </p>
+
+        <span>
+          Sample testimonial for website demonstration
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= DEEPBYTO ================= -->
+
+  <section class="deepbyto">
+
+    <div class="container">
+
+      <div class="deepbyto-box">
+
+        <div>
+
+          <h3>
+            Need a website for your academy?
+          </h3>
+
+          <p>
+            Modern websites for schools, academies,
+            coaching centers, and education businesses.
+          </p>
+
+        </div>
+
+
+        <a
+          href="https://wa.me/923047467957?text=Hi%20DEEPBYTO%2C%20I%20want%20a%20website%20for%20my%20academy."
+          target="_blank"
+          class="btn"
+        >
+          Contact DEEPBYTO →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="container">
+
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+
+            <span class="logo-icon">
+              A
+            </span>
+
+            <span style="color:white;">
+              ACADEMY
+            </span>
+
+          </a>
+
+
+          <p>
+            A clean and professional academy website demo.
+            Replace this content with your real academy
+            information when launching the website.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <div class="footer-title">
+            Pages
+          </div>
+
+          <div class="footer-links">
+
+            <a href="#courses">
+              Courses
+            </a>
+
+            <a href="#about">
+              About
+            </a>
+
+            <a href="#programs">
+              Programs
+            </a>
+
+            <a href="#faculty">
+              Faculty
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <div class="footer-title">
+            Contact
+          </div>
+
+          <div class="footer-links">
+
+            <a href="#contact">
+              Admissions
+            </a>
+
+            <a
+              href="https://wa.me/923047467957"
+              target="_blank"
+            >
+              WhatsApp
+            </a>
+
+            <a
+              href="https://deepbyto.github.io/"
+              target="_blank"
+            >
+              DEEPBYTO
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+
+        <div class="copyright">
+         © 2026 DEEPBYTO. All rights reserved.
+        </div>
+
+
+        <div class="developed">
+
+          <span>
+            Developed by
+          </span>
+
+
+          <a
+            href="https://deepbyto.github.io/"
+            target="_blank"
+            rel="noopener"
+            aria-label="DEEPBYTO website"
+          >
+
+            <img
+              src="https://raw.githubusercontent.com/DEEPBYTO/deepbyto.github.io/main/wordmark.png"
+              alt="DEEPBYTO"
+              class="deepbyto-wordmark"
+            >
+
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    const menu = document.getElementById("menu");
+    const navLinks = document.getElementById("navLinks");
+
+    menu.addEventListener("click", function(){
+
+      navLinks.classList.toggle("active");
+
+      if(navLinks.classList.contains("active")){
+        menu.textContent = "×";
+      }else{
+        menu.textContent = "☰";
+      }
+
+    });
+
+
+    document.querySelectorAll(".nav-links a").forEach(function(link){
+
+      link.addEventListener("click", function(){
+
+        navLinks.classList.remove("active");
+
+        menu.textContent = "☰";
+
+      });
+
+    });
+
+  </script>
+
+
+</body>
+</html>
